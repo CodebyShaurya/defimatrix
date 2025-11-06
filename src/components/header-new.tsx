@@ -232,10 +232,24 @@ export default function HeaderNew() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 mx-auto mt-4 max-w-7xl rounded-full bg-gradient-to-r from-pink-500 via-purple-500 to-violet-500 p-[4px]">
+    <header className="dm-navbar-wrapper sticky top-0 z-50 mx-auto mt-4 max-w-7xl rounded-full bg-gradient-to-r from-pink-500 via-purple-500 to-violet-500 p-[4px]">
+      {/* Decorative multi-layer border effect (dm-prefixed to avoid collisions) */}
+      <div className="dm-navbar-effect" aria-hidden="true">
+        <div className="dm-grid" />
+        <div id="dm-poda">
+          <div className="dm-glow" />
+          <div className="dm-darkBorderBg" />
+          <div className="dm-darkBorderBg" />
+          <div className="dm-darkBorderBg" />
+          <div className="dm-white" />
+          <div className="dm-border" />
+          <div id="dm-main" />
+        </div>
+      </div>
+
       <nav
         aria-label="Global"
-        className="flex items-center justify-between rounded-full bg-black p-6 backdrop-blur-md lg:px-8"
+        className="relative z-10 flex items-center justify-between rounded-full bg-black p-6 backdrop-blur-md lg:px-8"
       >
         {/* Left: Logo */}
         <div className="flex items-center flex-shrink-0">

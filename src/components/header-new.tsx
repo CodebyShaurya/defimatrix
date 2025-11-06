@@ -343,7 +343,7 @@ export default function HeaderNew() {
                       transition
                       className="data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in fixed left-0 right-0 top-24 z-[9999] mx-auto w-full max-w-7xl overflow-hidden rounded-3xl bg-black shadow-2xl ring-1 ring-white/10 backdrop-blur-xl transition"
                     >
-                  <div className="flex gap-4 p-6">
+                  <div className="flex gap-4 p-2">
                   {/* Left Featured Card */}
                   <div className="flex w-80 flex-col justify-between rounded-2xl bg-gradient-to-br from-gray-950 via-purple-950/50 to-gray-950 p-6 ring-1 ring-purple-500/20">
                     <div>
@@ -412,7 +412,7 @@ export default function HeaderNew() {
                  transition
                  className="data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in fixed left-0 right-0 top-24 z-[9999] mx-auto w-full max-w-7xl overflow-hidden rounded-3xl bg-black shadow-2xl ring-1 ring-white/10 backdrop-blur-xl transition"
                     >
-                  <div className="flex gap-4 p-6">
+                  <div className="flex gap-4 p-2">
                   {/* Left Featured Card */}
                   <div className="flex w-80 flex-col justify-between rounded-2xl bg-gradient-to-br from-gray-950 via-purple-950/50 to-gray-950 p-6 ring-1 ring-purple-500/20">
                     <div>
@@ -478,7 +478,8 @@ export default function HeaderNew() {
               <Popover className="relative">
                 {({ open }) => (
                   <>
-                    <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-semibold text-white hover:text-purple-300 whitespace-nowrap focus:outline-none focus:ring-0">
+                    {/* Ensure this renders as a real button element */}
+                    <PopoverButton as="button" type="button" className="flex items-center gap-x-1 text-sm/6 font-semibold text-white hover:text-purple-300 whitespace-nowrap focus:outline-none focus:ring-0">
                       About Us
                       {open ? (
                         <ChevronUpIcon aria-hidden="true" className="size-5 flex-none text-purple-300" />
@@ -487,6 +488,7 @@ export default function HeaderNew() {
                       )}
                     </PopoverButton>
 
+                    {/* Use fixed positioning for the small centered dropdown so it isn't clipped by the nav/overflow */}
                     <PopoverPanel
                       transition
                       className="data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in absolute left-1/2 z-[9999] mt-3 w-96 -translate-x-1/2 rounded-3xl bg-black p-4 shadow-lg ring-1 ring-white/10 transition"

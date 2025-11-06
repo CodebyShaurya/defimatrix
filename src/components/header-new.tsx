@@ -26,7 +26,7 @@ import {
   LinkIcon,
   LockClosedIcon,
 } from "@heroicons/react/24/outline";
-import { ChevronDownIcon } from "@heroicons/react/20/solid";
+import { ChevronDownIcon , ChevronUpIcon } from "@heroicons/react/20/solid";
 
 const defiMenuItems = [
   {
@@ -237,7 +237,8 @@ export default function HeaderNew() {
         aria-label="Global"
         className="flex items-center justify-between rounded-full bg-black p-6 backdrop-blur-md lg:px-8"
       >
-        <div className="flex items-center gap-x-8">
+        {/* Left: Logo */}
+        <div className="flex items-center flex-shrink-0">
           <a href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">DeFiMatrix</span>
             <Image
@@ -248,23 +249,32 @@ export default function HeaderNew() {
               className="h-8 w-auto md:h-10"
             />
           </a>
+        </div>
 
-          <PopoverGroup className="hidden lg:flex lg:gap-x-8">
-            <a href="#" className="text-sm/6 font-semibold text-white hover:text-purple-300">
+        {/* Center: navigation (kept on a single line) */}
+        <div className="hidden lg:flex flex-1 justify-center">
+          <PopoverGroup className="flex gap-x-8 whitespace-nowrap overflow-hidden">
+            <a href="#" className="text-sm/6 font-semibold text-white hover:text-purple-300 whitespace-nowrap">
               Home
             </a>
 
             <Popover>
-              <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-semibold text-white hover:text-purple-300">
-                DeFi
-                <ChevronDownIcon aria-hidden="true" className="size-5 flex-none text-purple-300" />
-              </PopoverButton>
+              {({ open }) => (
+                <>
+                  <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-semibold text-white hover:text-purple-300 whitespace-nowrap">
+                    DeFi
+                    {open ? (
+                      <ChevronUpIcon aria-hidden="true" className="size-5 flex-none text-purple-300" />
+                    ) : (
+                      <ChevronDownIcon aria-hidden="true" className="size-5 flex-none text-purple-300" />
+                    )}
+                  </PopoverButton>
 
-              <PopoverPanel
-                transition
-                className="data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in fixed left-0 right-0 top-24 z-10 mx-auto w-full max-w-7xl overflow-hidden rounded-3xl bg-black shadow-2xl ring-1 ring-white/10 backdrop-blur-xl transition"
-              >
-                <div className="flex gap-4 p-6">
+                  <PopoverPanel
+                    transition
+                    className="data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in fixed left-0 right-0 top-24 z-10 mx-auto w-full max-w-7xl overflow-hidden rounded-3xl bg-black shadow-2xl ring-1 ring-white/10 backdrop-blur-xl transition"
+                  >
+                <div className="flex gap-4 p-2">
                   {/* Left Featured Card */}
                   <div className="flex w-80 flex-col justify-between rounded-2xl bg-gradient-to-br from-gray-950 via-purple-950/50 to-gray-950 p-6 ring-1 ring-purple-500/20">
                     <div>
@@ -272,7 +282,7 @@ export default function HeaderNew() {
                         <SparklesIcon className="h-10 w-10 text-purple-400" />
                       </div>
                       <h3 className="mb-2 text-2xl font-bold text-white">DeFiMatrix</h3>
-                      <p className="text-sm leading-relaxed text-gray-400">
+                      <p className="text-sm leading-relaxed text-gray-400 break-words whitespace-normal">
                         An AI-powered DeFi ecosystem that automates yield optimization, liquidity management, and
                         cross-chain strategies across 88+ blockchains.
                       </p>
@@ -306,34 +316,42 @@ export default function HeaderNew() {
                             {item.name}
                             <span className="absolute inset-0" />
                           </a>
-                          <p className="mt-1 line-clamp-2 text-xs text-gray-400">{item.description}</p>
+                          <p className="mt-1  text-xs text-gray-400  break-words whitespace-normal">{item.description}</p>
                         </div>
                       </div>
                     ))}
                   </div>
                 </div>
-              </PopoverPanel>
+                  </PopoverPanel>
+                </>
+              )}
             </Popover>
 
-            <Popover>
-              <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-semibold text-white hover:text-purple-300">
-                DeFi Banking
-                <ChevronDownIcon aria-hidden="true" className="size-5 flex-none text-purple-300" />
-              </PopoverButton>
+              <Popover>
+                {({ open }) => (
+                  <>
+                    <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-semibold text-white hover:text-purple-300 whitespace-nowrap">
+                      DeFi Banking
+                      {open ? (
+                        <ChevronUpIcon aria-hidden="true" className="size-5 flex-none text-purple-300" />
+                      ) : (
+                        <ChevronDownIcon aria-hidden="true" className="size-5 flex-none text-purple-300" />
+                      )}
+                    </PopoverButton>
 
-              <PopoverPanel
-                transition
-                className="data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in fixed left-0 right-0 top-24 z-10 mx-auto w-full max-w-7xl overflow-hidden rounded-3xl bg-black shadow-2xl ring-1 ring-white/10 backdrop-blur-xl transition"
-              >
-                <div className="flex gap-4 p-6">
+                    <PopoverPanel
+                      transition
+                      className="data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in fixed left-0 right-0 top-24 z-10 mx-auto w-full max-w-7xl overflow-hidden rounded-3xl bg-black shadow-2xl ring-1 ring-white/10 backdrop-blur-xl transition"
+                    >
+                  <div className="flex gap-4 p-6">
                   {/* Left Featured Card */}
                   <div className="flex w-80 flex-col justify-between rounded-2xl bg-gradient-to-br from-gray-950 via-purple-950/50 to-gray-950 p-6 ring-1 ring-purple-500/20">
                     <div>
                       <div className="mb-4 flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br from-pink-500/20 to-purple-600/20 ring-1 ring-purple-500/30">
                         <CreditCardIcon className="h-10 w-10 text-purple-400" />
                       </div>
-                      <h3 className="mb-2 text-2xl font-bold text-white">DeFi Banking by DeFiMatrix</h3>
-                      <p className="text-sm leading-relaxed text-gray-400">
+                      <h3 className="mb-2 text-xl font-bold text-white">DeFi Banking by DeFiMatrix</h3>
+                      <p className="text-sm leading-relaxed text-gray-400 break-words whitespace-normal">
                         Next-generation Web3 banking tools for seamless, intelligent, and instant use of digital assets
                         every day.
                       </p>
@@ -367,26 +385,34 @@ export default function HeaderNew() {
                             {item.name}
                             <span className="absolute inset-0" />
                           </a>
-                          <p className="mt-1 line-clamp-2 text-xs text-gray-400">{item.description}</p>
+                          <p className="mt-1 line-clamp-2 text-xs text-gray-400  break-words whitespace-normal">{item.description}</p>
                         </div>
                       </div>
                     ))}
                   </div>
-                </div>
-              </PopoverPanel>
-            </Popover>
+                  </div>
+                    </PopoverPanel>
+                  </>
+                )}
+              </Popover>
 
-            <Popover>
-              <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-semibold text-white hover:text-purple-300">
-                Blockchain
-                <ChevronDownIcon aria-hidden="true" className="size-5 flex-none text-purple-300" />
-              </PopoverButton>
+              <Popover>
+                {({ open }) => (
+                  <>
+                    <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-semibold text-white hover:text-purple-300 whitespace-nowrap">
+                      Blockchain
+                      {open ? (
+                        <ChevronUpIcon aria-hidden="true" className="size-5 flex-none text-purple-300" />
+                      ) : (
+                        <ChevronDownIcon aria-hidden="true" className="size-5 flex-none text-purple-300" />
+                      )}
+                    </PopoverButton>
 
-              <PopoverPanel
-                transition
-                className="data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in fixed left-0 right-0 top-24 z-10 mx-auto w-full max-w-7xl overflow-hidden rounded-3xl bg-black shadow-2xl ring-1 ring-white/10 backdrop-blur-xl transition"
-              >
-                <div className="flex gap-4 p-6">
+                    <PopoverPanel
+                      transition
+                      className="data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in fixed left-0 right-0 top-24 z-10 mx-auto w-full max-w-7xl overflow-hidden rounded-3xl bg-black shadow-2xl ring-1 ring-white/10 backdrop-blur-xl transition"
+                    >
+                  <div className="flex gap-4 p-6">
                   {/* Left Featured Card */}
                   <div className="flex w-80 flex-col justify-between rounded-2xl bg-gradient-to-br from-gray-950 via-purple-950/50 to-gray-950 p-6 ring-1 ring-purple-500/20">
                     <div>
@@ -397,7 +423,7 @@ export default function HeaderNew() {
                         Blockchain – Coming Soon
                       </div>
                       <h3 className="mb-2 text-xl font-bold text-white">DeFiMatrix Chain</h3>
-                      <p className="text-sm leading-relaxed text-gray-400">
+                      <p className="text-sm leading-relaxed text-gray-400 break-words whitespace-normal">
                         A next-generation modular blockchain built for AI-powered decentralized finance. Unifies
                         performance, scalability, and intelligence through dual-core architecture.
                       </p>
@@ -430,64 +456,75 @@ export default function HeaderNew() {
                             {item.name}
                             <span className="absolute inset-0" />
                           </a>
-                          <p className="mt-1 line-clamp-2 text-xs text-gray-400">{item.description}</p>
+                          <p className="mt-1   text-xs text-gray-400 break-words whitespace-normal">{item.description}</p>
                         </div>
                       </div>
                     ))}
                   </div>
-                </div>
-              </PopoverPanel>
-            </Popover>
-
-            <a href="#" className="text-sm/6 font-semibold text-white hover:text-purple-300">
-              Pricing
-            </a>
-
-            <Popover className="relative">
-              <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-semibold text-white hover:text-purple-300">
-                About Us
-                <ChevronDownIcon aria-hidden="true" className="size-5 flex-none text-purple-300" />
-              </PopoverButton>
-
-              <PopoverPanel
-                transition
-                className="data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in absolute left-1/2 z-10 mt-3 w-96 -translate-x-1/2 rounded-3xl bg-black p-4 shadow-lg ring-1 ring-white/10 transition"
-              >
-                {aboutUsItems.map((item) => (
-                  <div key={item.name} className="relative rounded-lg p-3 hover:bg-purple-900/50">
-                    <a href={item.href} className="block text-sm/6 font-semibold text-white">
-                      {item.name}
-                      <span className="absolute inset-0" />
-                    </a>
-                    <p className="mt-1 text-sm/6 text-gray-400">{item.description}</p>
                   </div>
-                ))}
-              </PopoverPanel>
-            </Popover>
-          </PopoverGroup>
-        </div>
+                    </PopoverPanel>
+                  </>
+                )}
+              </Popover>
 
-        <div className="flex lg:hidden">
-          <button
-            type="button"
-            onClick={() => setMobileMenuOpen(true)}
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white"
-          >
-            <span className="sr-only">Open main menu</span>
-            <Bars3Icon aria-hidden="true" className="size-6" />
-          </button>
-        </div>
+              <a href="#" className="text-sm/6 font-semibold text-white hover:text-purple-300 whitespace-nowrap">
+                Pricing
+              </a>
 
-        <div className="hidden lg:flex lg:items-center lg:gap-x-4">
-        
-          <a
-            href="#"
-            className="rounded-full bg-white px-5 py-2 text-sm font-semibold text-purple-900 shadow-sm hover:bg-purple-100"
-          >
-            Launch App
-          </a>
-          {/* <button className="px-2 text-sm/6 font-semibold text-white hover:text-purple-300">En</button> */}
-        </div>
+              <Popover className="relative">
+                {({ open }) => (
+                  <>
+                    <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-semibold text-white hover:text-purple-300 whitespace-nowrap">
+                      About Us
+                      {open ? (
+                        <ChevronUpIcon aria-hidden="true" className="size-5 flex-none text-purple-300" />
+                      ) : (
+                        <ChevronDownIcon aria-hidden="true" className="size-5 flex-none text-purple-300" />
+                      )}
+                    </PopoverButton>
+
+                    <PopoverPanel
+                      transition
+                      className="data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in absolute left-1/2 z-10 mt-3 w-96 -translate-x-1/2 rounded-3xl bg-black p-4 shadow-lg ring-1 ring-white/10 transition"
+                    >
+                  {aboutUsItems.map((item) => (
+                    <div key={item.name} className="relative rounded-lg p-3 hover:bg-purple-900/50">
+                      <a href={item.href} className="block text-sm/6 font-semibold text-white whitespace-nowrap">
+                        {item.name}
+                        <span className="absolute inset-0" />
+                      </a>
+                      <p className="mt-1 text-sm/6 text-gray-400  break-words whitespace-normal">{item.description}</p>
+                    </div>
+                  ))}
+                    </PopoverPanel>
+                  </>
+                )}
+              </Popover>
+            </PopoverGroup>
+          </div>
+
+          {/* Right: mobile menu button + Launch App */}
+          <div className="flex items-center gap-x-4">
+            <div className="flex lg:hidden">
+              <button
+                type="button"
+                onClick={() => setMobileMenuOpen(true)}
+                className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white"
+              >
+                <span className="sr-only">Open main menu</span>
+                <Bars3Icon aria-hidden="true" className="size-6" />
+              </button>
+            </div>
+
+            <div className="hidden lg:flex lg:items-center lg:gap-x-4">
+              <a
+                href="#"
+                className="rounded-full bg-white px-5 py-2 text-sm font-semibold text-purple-900 shadow-sm hover:bg-purple-100 whitespace-nowrap"
+              >
+                Launch App
+              </a>
+            </div>
+          </div>
       </nav>
       <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
         <div className="fixed inset-0 z-10" />

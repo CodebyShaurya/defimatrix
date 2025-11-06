@@ -479,16 +479,14 @@ export default function HeaderNew() {
         </div>
 
         <div className="hidden lg:flex lg:items-center lg:gap-x-4">
-          <a href="#" className="text-sm/6 font-semibold text-white hover:text-purple-300">
-            Log In
-          </a>
+        
           <a
             href="#"
             className="rounded-full bg-white px-5 py-2 text-sm font-semibold text-purple-900 shadow-sm hover:bg-purple-100"
           >
             Launch App
           </a>
-          <button className="px-2 text-sm/6 font-semibold text-white hover:text-purple-300">En</button>
+          {/* <button className="px-2 text-sm/6 font-semibold text-white hover:text-purple-300">En</button> */}
         </div>
       </nav>
       <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
@@ -589,12 +587,7 @@ export default function HeaderNew() {
                   ))}
                 </div>
                 <div className="space-y-2 py-6">
-                  <a
-                    href="#"
-                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-white hover:bg-purple-900/50"
-                  >
-                    Log In
-                  </a>
+                  
                   <a
                     href="#"
                     className="-mx-3 block rounded-lg bg-white px-3 py-2.5 text-center text-base/7 font-semibold text-purple-900 hover:bg-purple-100"

@@ -271,8 +271,8 @@ export default function HeaderNew() {
                   </PopoverButton>
 
                   <PopoverPanel
-                    transition
-                    className="data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in fixed left-0 right-0 top-24 z-10 mx-auto w-full max-w-7xl overflow-hidden rounded-3xl bg-black shadow-2xl ring-1 ring-white/10 backdrop-blur-xl transition"
+            transition
+            className="data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in fixed left-0 right-0 top-24 z-[9999] mx-auto w-full max-w-7xl overflow-hidden rounded-3xl bg-black shadow-2xl ring-1 ring-white/10 backdrop-blur-xl transition"
                   >
                 <div className="flex gap-4 p-2">
                   {/* Left Featured Card */}
@@ -330,7 +330,7 @@ export default function HeaderNew() {
               <Popover>
                 {({ open }) => (
                   <>
-                    <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-semibold text-white hover:text-purple-300 whitespace-nowrap focus:outline-none focus:ring-0">
+                    <PopoverButton as="button" type="button" className="flex items-center gap-x-1 text-sm/6 font-semibold text-white hover:text-purple-300 whitespace-nowrap focus:outline-none focus:ring-0">
                       DeFi Banking
                       {open ? (
                         <ChevronUpIcon aria-hidden="true" className="size-5 flex-none text-purple-300" />
@@ -341,7 +341,7 @@ export default function HeaderNew() {
 
                     <PopoverPanel
                       transition
-                      className="data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in fixed left-0 right-0 top-24 z-10 mx-auto w-full max-w-7xl overflow-hidden rounded-3xl bg-black shadow-2xl ring-1 ring-white/10 backdrop-blur-xl transition"
+                      className="data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in fixed left-0 right-0 top-24 z-[9999] mx-auto w-full max-w-7xl overflow-hidden rounded-3xl bg-black shadow-2xl ring-1 ring-white/10 backdrop-blur-xl transition"
                     >
                   <div className="flex gap-4 p-6">
                   {/* Left Featured Card */}
@@ -409,8 +409,8 @@ export default function HeaderNew() {
                     </PopoverButton>
 
                     <PopoverPanel
-                      transition
-                      className="data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in fixed left-0 right-0 top-24 z-10 mx-auto w-full max-w-7xl overflow-hidden rounded-3xl bg-black shadow-2xl ring-1 ring-white/10 backdrop-blur-xl transition"
+                 transition
+                 className="data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in fixed left-0 right-0 top-24 z-[9999] mx-auto w-full max-w-7xl overflow-hidden rounded-3xl bg-black shadow-2xl ring-1 ring-white/10 backdrop-blur-xl transition"
                     >
                   <div className="flex gap-4 p-6">
                   {/* Left Featured Card */}
@@ -468,6 +468,10 @@ export default function HeaderNew() {
               </Popover>
 
               <a href="#" className="text-sm/6 font-semibold text-white hover:text-purple-300 whitespace-nowrap">
+                Digital Payments
+              </a>
+
+              <a href="#" className="text-sm/6 font-semibold text-white hover:text-purple-300 whitespace-nowrap">
                 Pricing
               </a>
 
@@ -485,7 +489,7 @@ export default function HeaderNew() {
 
                     <PopoverPanel
                       transition
-                      className="data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in absolute left-1/2 z-10 mt-3 w-96 -translate-x-1/2 rounded-3xl bg-black p-4 shadow-lg ring-1 ring-white/10 transition"
+                      className="data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in absolute left-1/2 z-[9999] mt-3 w-96 -translate-x-1/2 rounded-3xl bg-black p-4 shadow-lg ring-1 ring-white/10 transition"
                     >
                   {aboutUsItems.map((item) => (
                     <div key={item.name} className="relative rounded-lg p-3 hover:bg-purple-900/50">

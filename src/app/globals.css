@@ -67,6 +67,7 @@ body {
   background-size: 200% 100%;
   animation: glow-scroll 6s linear infinite;
   z-index: 0;
+  pointer-events: none;
   -webkit-mask: linear-gradient(#fff 0 0);
   mask: linear-gradient(#fff 0 0);
 }

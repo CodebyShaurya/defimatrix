@@ -39,7 +39,7 @@ export default function HeroSectionNew() {
       <div className="relative flex h-screen items-center justify-center px-4 -mt-24">
         <div className="text-center">
           {/* Main DEFIMATRIX Text */}
-          <h1 className="font-[family-name:var(--font-orbitron)] text-6xl font-bold tracking-[0.2em] text-white sm:text-7xl md:text-8xl lg:text-9xl">
+          <h1 className="font-[family-name:var(--font-orbitron)] text-[10vw] font-bold tracking-[0.2em] text-white  sm:text-7xl md:text-8xl lg:text-9xl">
             DEFIMATRIX
           </h1>
         </div>
@@ -48,7 +48,7 @@ export default function HeroSectionNew() {
       {/* Backed By Section */}
       <div className="absolute bottom-32 left-0 right-0 px-8 max-w-7xl mx-auto">
         <div className="flex items-center gap-8">
-          <h2 className="text-white text-3xl  whitespace-nowrap">Backed By -</h2>
+          <h2 className="text-white text-md sm:text-3xl  whitespace-nowrap">Backed By -</h2>
           <div className="flex-1 overflow-hidden">
             <div className="flex animate-scroll gap-24">
               {/* First set of logos */}

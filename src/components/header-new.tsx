@@ -512,13 +512,19 @@ export default function HeaderNew() {
           {/* Right: mobile menu button + Launch App */}
           <div className="flex items-center gap-x-4">
             <div className="flex lg:hidden">
+              {/* Toggle button: show burger when closed, close when open. Keep inside navbar with z-index. */}
               <button
-                  type="button"
-                  onClick={() => setMobileMenuOpen(true)}
-                  className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white focus:outline-none focus:ring-0"
-                >
-                <span className="sr-only">Open main menu</span>
-                <Bars3Icon aria-hidden="true" className="size-6" />
+                type="button"
+                onClick={() => setMobileMenuOpen((v) => !v)}
+                aria-expanded={mobileMenuOpen}
+                className="inline-flex items-center justify-center rounded-md p-2.5 text-white focus:outline-none focus:ring-0 relative z-20"
+              >
+                <span className="sr-only">{mobileMenuOpen ? "Close main menu" : "Open main menu"}</span>
+                {mobileMenuOpen ? (
+                  <XMarkIcon aria-hidden="true" className="size-6" />
+                ) : (
+                  <Bars3Icon aria-hidden="true" className="size-6" />
+                )}
               </button>
             </div>
 

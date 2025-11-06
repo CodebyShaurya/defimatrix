@@ -1,0 +1,110 @@
+.parent {
+  position: relative;
+}
+
+.videobg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 20px;
+  z-index: -1;
+}
+
+.nextGenSection {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  color: white;
+}
+
+.cardBackground {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+}
+
+.button {
+  background: linear-gradient(97.37deg, rgba(235, 235, 235, 0.1) 47.74%, rgba(235, 235, 235, 0) 100%);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  font-weight: 500;
+  font-size: 12px;
+  padding: 8px 14px;
+  color: white;
+  display: inline-block;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  color: white;
+}
+
+.subTitle {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 40px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.context {
+  font-size: 16px;
+  line-height: 24px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.strategiesTitle {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: white;
+}
+
+.toolTitle {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  color: white;
+}
+
+.toolContext {
+  font-size: 14px;
+  line-height: 20px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.makesUsText {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.uniqueText {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 56px;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  
+  .subTitle {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  
+  .uniqueText {
+    font-size: 36px;
+    line-height: 44px;
+  }
+} 

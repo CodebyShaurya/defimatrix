@@ -2,15 +2,16 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
-// TODO: Add your Firebase configuration
+// Firebase configuration read from environment variables.
+// For client-side access in Next.js these need the NEXT_PUBLIC_ prefix.
 const firebaseConfig = {
-    apiKey: "AIzaSyB_keZNa8y15rJEhp-iF1tFFWMqcG7vhVU",
-    authDomain: "defimatrix-780da.firebaseapp.com",
-    projectId: "defimatrix-780da",
-    storageBucket: "defimatrix-780da.appspot.com",
-    messagingSenderId: "778942570862",
-    appId: "1:778942570862:web:f649b934357fa6514c617f",
-    measurementId: "G-WNBRG2JN6J"
+    apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+    authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+    projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+    storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+    appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+    measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID,
 };
 
 // Initialize Firebase

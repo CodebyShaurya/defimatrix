@@ -254,19 +254,19 @@ export default function HeaderNew() {
         {/* Center: navigation (kept on a single line) */}
         <div className="hidden lg:flex flex-1 justify-center">
           <PopoverGroup className="flex gap-x-8 whitespace-nowrap overflow-hidden">
-            <a href="#" className="text-sm/6 font-semibold text-white hover:text-purple-300 whitespace-nowrap">
+            <a href="#" className="text-sm/6 font-semibold text-white hover:text-purple-300 whitespace-nowrap focus:outline-none focus:ring-0">
               Home
             </a>
 
             <Popover>
               {({ open }) => (
                 <>
-                  <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-semibold text-white hover:text-purple-300 whitespace-nowrap">
+                  <PopoverButton className="flex items-center  text-sm/6 font-semibold text-white hover:text-purple-300 whitespace-nowrap focus:outline-none focus:ring-0">
                     DeFi
                     {open ? (
-                      <ChevronUpIcon aria-hidden="true" className="size-5 flex-none text-purple-300" />
+                      <ChevronUpIcon  className="size-5  text-purple-300" />
                     ) : (
-                      <ChevronDownIcon aria-hidden="true" className="size-5 flex-none text-purple-300" />
+                      <ChevronDownIcon  className="size-5  text-purple-300" />
                     )}
                   </PopoverButton>
 
@@ -330,7 +330,7 @@ export default function HeaderNew() {
               <Popover>
                 {({ open }) => (
                   <>
-                    <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-semibold text-white hover:text-purple-300 whitespace-nowrap">
+                    <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-semibold text-white hover:text-purple-300 whitespace-nowrap focus:outline-none focus:ring-0">
                       DeFi Banking
                       {open ? (
                         <ChevronUpIcon aria-hidden="true" className="size-5 flex-none text-purple-300" />
@@ -399,7 +399,7 @@ export default function HeaderNew() {
               <Popover>
                 {({ open }) => (
                   <>
-                    <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-semibold text-white hover:text-purple-300 whitespace-nowrap">
+                    <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-semibold text-white hover:text-purple-300 whitespace-nowrap focus:outline-none focus:ring-0">
                       Blockchain
                       {open ? (
                         <ChevronUpIcon aria-hidden="true" className="size-5 flex-none text-purple-300" />
@@ -474,7 +474,7 @@ export default function HeaderNew() {
               <Popover className="relative">
                 {({ open }) => (
                   <>
-                    <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-semibold text-white hover:text-purple-300 whitespace-nowrap">
+                    <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-semibold text-white hover:text-purple-300 whitespace-nowrap focus:outline-none focus:ring-0">
                       About Us
                       {open ? (
                         <ChevronUpIcon aria-hidden="true" className="size-5 flex-none text-purple-300" />
@@ -507,10 +507,10 @@ export default function HeaderNew() {
           <div className="flex items-center gap-x-4">
             <div className="flex lg:hidden">
               <button
-                type="button"
-                onClick={() => setMobileMenuOpen(true)}
-                className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white"
-              >
+                  type="button"
+                  onClick={() => setMobileMenuOpen(true)}
+                  className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white focus:outline-none focus:ring-0"
+                >
                 <span className="sr-only">Open main menu</span>
                 <Bars3Icon aria-hidden="true" className="size-6" />
               </button>
@@ -519,7 +519,7 @@ export default function HeaderNew() {
             <div className="hidden lg:flex lg:items-center lg:gap-x-4">
               <a
                 href="#"
-                className="rounded-full bg-white px-5 py-2 text-sm font-semibold text-purple-900 shadow-sm hover:bg-purple-100 whitespace-nowrap"
+                className="rounded-full bg-white px-5 py-2 text-sm font-semibold text-purple-900 shadow-sm hover:bg-purple-100 whitespace-nowrap focus:outline-none focus:ring-0"
               >
                 Launch App
               </a>
@@ -544,7 +544,7 @@ export default function HeaderNew() {
               <button
                 type="button"
                 onClick={() => setMobileMenuOpen(false)}
-                className="-m-2.5 rounded-md p-2.5 text-white"
+                className="-m-2.5 rounded-md p-2.5 text-white focus:outline-none focus:ring-0"
               >
                 <span className="sr-only">Close menu</span>
                 <XMarkIcon aria-hidden="true" className="size-6" />
@@ -627,7 +627,7 @@ export default function HeaderNew() {
                   
                   <a
                     href="#"
-                    className="-mx-3 block rounded-lg bg-white px-3 py-2.5 text-center text-base/7 font-semibold text-purple-900 hover:bg-purple-100"
+                    className="-mx-3 block rounded-lg bg-white px-3 py-2.5 text-center text-base/7 font-semibold text-purple-900 hover:bg-purple-100 focus:outline-none focus:ring-0"
                   >
                     Launch App
                   </a>

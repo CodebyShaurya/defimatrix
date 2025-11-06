@@ -37,6 +37,46 @@ body {
   }
 }
 
+@keyframes glow-scroll {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+
+.animated-border-gradient {
+  /* Make the existing Tailwind gradient animate by changing background-position */
+  background-size: 200% 100%;
+  animation: glow-scroll 6s linear infinite;
+}
+
+.animated-border-glow {
+  /* subtle glow around the header border */
+  filter: drop-shadow(0 6px 18px rgba(139,92,246,0.18)) drop-shadow(0 2px 8px rgba(236,72,153,0.06));
+}
+
+/* More robust header animated ring using a pseudo-element so it's always visible behind the inner nav */
+.header-animated {
+  position: relative;
+}
+.header-animated::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 4px; /* matches header padding used to reveal the ring */
+  background: linear-gradient(90deg, #ec4899, #8b5cf6, #7c3aed);
+  background-size: 200% 100%;
+  animation: glow-scroll 6s linear infinite;
+  z-index: 0;
+  -webkit-mask: linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0);
+}
+
+.header-animated > * {
+  /* ensure header children sit above the animated ring */
+  position: relative;
+  z-index: 10;
+}
+
 .text-shadow {
   text-shadow:
     0 0 32px #9333ea,

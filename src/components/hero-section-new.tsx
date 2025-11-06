@@ -45,8 +45,41 @@ export default function HeroSectionNew() {
         </div>
       </div>
 
+      {/* Backed By Section */}
+      <div className="absolute bottom-32 left-0 right-0 px-8 max-w-7xl mx-auto">
+        <div className="flex items-center gap-8">
+          <h2 className="text-white text-3xl  whitespace-nowrap">Backed By -</h2>
+          <div className="flex-1 overflow-hidden">
+            <div className="flex animate-scroll gap-24">
+              {/* First set of logos */}
+              <img src="/logo1.png" alt="Company 1" className="h-8 opacity-60 hover:opacity-100 transition-opacity" />
+              <img src="/logo2.png" alt="Company 2" className="h-8 opacity-60 hover:opacity-100 transition-opacity" />
+              <img src="/logo3.png" alt="Company 3" className="h-8 opacity-60 hover:opacity-100 transition-opacity" />
+              <img src="/logo4.png" alt="Company 4" className="h-8 opacity-60 hover:opacity-100 transition-opacity" />
+              <img src="/logo5.png" alt="Company 5" className="h-8 opacity-60 hover:opacity-100 transition-opacity" />
+              {/* Duplicate set for seamless loop */}
+              <img src="/logo1.png" alt="Company 1" className="h-8 opacity-60 hover:opacity-100 transition-opacity" />
+              <img src="/logo2.png" alt="Company 2" className="h-8 opacity-60 hover:opacity-100 transition-opacity" />
+              <img src="/logo3.png" alt="Company 3" className="h-8 opacity-60 hover:opacity-100 transition-opacity" />
+              <img src="/logo4.png" alt="Company 4" className="h-8 opacity-60 hover:opacity-100 transition-opacity" />
+              <img src="/logo5.png" alt="Company 5" className="h-8 opacity-60 hover:opacity-100 transition-opacity" />
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Bottom gradient fade */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black to-transparent"></div>
+
+      <style jsx>{`
+        @keyframes scroll {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+        .animate-scroll {
+          animation: scroll 20s linear infinite;
+        }
+      `}</style>
     </section>
   );
 }

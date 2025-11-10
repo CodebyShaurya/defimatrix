@@ -122,7 +122,7 @@ export default function Footer() {
                   Stay updated with the latest DeFi insights and platform updates.
                 </p>
                 <form onSubmit={handleSubmit} className="mt-4 flex flex-col gap-2">
-                  <div className="flex gap-2">
+                  <div className="flex sm:flex-row flex-col gap-2">
                     <input
                       type="email"
                       value={email}

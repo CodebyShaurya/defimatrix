@@ -56,8 +56,8 @@ export default function PortalSection() {
   return (
     <div className="bg-black">
       <div id="portals" className="container relative mx-auto px-4 py-12 text-center lg:px-8 2xl:max-w-screen-2xl">
-        <div className="absolute inset-0 left-0 right-0 -z-10 mx-auto flex w-full items-center justify-center">
-          <img src="/images/gradient-bg.svg" className="absolute animate-pulse opacity-20 blur-3xl" alt="" />
+        <div className="absolute inset-0 left-0 right-0 -z-10 mx-auto flex w-full items-center justify-center w-screen">
+          {/* <img src="/images/gradient-bg.svg" className="absolute animate-pulse opacity-20 blur-3xl" alt="" /> */}
         </div>
         <div className="mx-auto mb-4 w-auto">
           <Image
@@ -72,7 +72,7 @@ export default function PortalSection() {
           Portals are open across{" "}
           <span className="relative whitespace-nowrap">
             <svg
-              className="absolute -bottom-2 left-0 w-full max-w-xs pt-2"
+              className="absolute -bottom-2 left-0 w-full max-w-xs pt-2 hidden sm:block"
               viewBox="0 0 340 14"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -110,10 +110,10 @@ export default function PortalSection() {
               href={portal.url || "#"}
               target="_blank"
               rel="noopener noreferrer"
-              className={`flex items-center gap-2 rounded-2xl text-white ${portal.url ? "cursor-pointer bg-white/15 transition-colors hover:bg-white/25" : "cursor-default bg-white/15"} p-4`}
+              className={`flex items-center gap-2 rounded-2xl text-white ${portal.url ? "cursor-pointer bg-white/15 transition-colors hover:bg-white/25" : "cursor-default bg-white/15"} p-2 sm:p-4`}
             >
-              <Image src={portal.src} alt={`${portal.name}-logo`} width={120} height={120} className="h-10 w-10" />
-              <p>{portal.name}</p>
+              <Image src={portal.src} alt={`${portal.name}-logo`} width={120} height={120} className="sm:h-10 sm:w-10 h-5 w-5" />
+              <p className="text-xs">{portal.name}</p>
             </a>
           ))}
         </div>

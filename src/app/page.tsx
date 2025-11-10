@@ -27,8 +27,8 @@ export default function Home() {
         <h2 className="mx-auto px-4 pb-10 text-center text-3xl font-bold tracking-tight text-white">
           Supported on 67+ chains
         </h2>
-        <Marquee className="items-center py-4" gradient gradientColor="#581c87">
-          <img className="h-12" src="/images/support.png" alt="Inbox user interface" />
+        <Marquee className="items-center py-4 w-screen" gradient gradientColor="#581c87">
+          <img className="sm:h-12 h-6" src="/images/support.png" alt="Inbox user interface" />
         </Marquee>
       </div>
       {/* <Feature3 /> */}
@@ -37,9 +37,9 @@ export default function Home() {
 
       <Faqs />
       <LogoCloud />
-      <div className="relative bg-[url('/images/footer-globe-bg.png')] bg-cover bg-top bg-no-repeat py-16 sm:py-64 2xl:py-[400px] min-[1900px]:py-[600px]">
+      {/* <div className="relative bg-[url('/images/footer-globe-bg.png')] bg-cover bg-top bg-no-repeat py-16 sm:py-64 2xl:py-[400px] min-[1900px]:py-[600px]"> */}
         <ContactUs />
-      </div>
+      {/* </div> */}
       <Footer />
       <BackToTopButton />
     </main>

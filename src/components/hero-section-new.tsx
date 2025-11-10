@@ -41,22 +41,26 @@ export default function HeroSectionNew() {
       {/* Content */}
         <div className="relative w-full h-screen overflow-hidden bg-black">
            <HeaderNew />
-      {/* First video */}
-     
-        <video
-          ref={secondVideoRef}
-          muted
-          loop
-          playsInline
-          autoPlay
-          preload="auto"
-          className="absolute inset-0 w-full h-full object-cover"
-        >
-          <source
-            src="/DefiMatrix.webm"
-            type="video/webm"
-          />
-        </video>
+      {/* Media: show an image on mobile (lg-) and keep the video on lg+ */}
+      {/* Mobile image background */}
+      <img
+        src="/Defimatrix_mobile.png"
+        alt="DeFiMatrix background"
+        className="absolute inset-0 w-full h-full object-cover block lg:hidden"
+      />
+
+      {/* Desktop video (hidden on small screens) */}
+      <video
+        ref={secondVideoRef}
+        muted
+        loop
+        playsInline
+        autoPlay
+        preload="auto"
+        className="absolute inset-0 w-full h-full object-cover hidden lg:block"
+      >
+        <source src="/DefiMatrix.webm" type="video/webm" />
+      </video>
     
 
       {/* Overlay content */}

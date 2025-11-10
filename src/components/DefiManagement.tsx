@@ -23,7 +23,7 @@ export default function DefiManagement() {
                 Defimatrix
               </button>
               <div className="mb-4 flex items-start justify-between">
-                <h1 className="text-pretty text-4xl font-bold leading-tight text-[#CAC6DD]">
+                <h1 className="text-pretty text-md sm:text-4xl font-bold leading-tight text-[#CAC6DD]">
                   We&apos;re proud to launch Defimatrix, An AI-powered yield optimizer that merges institutional-grade
                   strategy with effortless DeFi automation.
                 </h1>

@@ -1,11 +1,15 @@
 "use client";
 
 import React from "react";
+import { useRef, useState, useEffect } from "react";
 import HeaderNew from "./header-new";
 import { Spotlight } from "./ui/spotlight-new";
 import { DottedGlowBackground } from "./ui/dotted-glow-background";
 
 export default function HeroSectionNew() {
+    const secondVideoRef = useRef<HTMLVideoElement | null>(null);
+  
+   
   return (
     <section className="relative min-h-screen overflow-hidden bg-black">
       {/* Background Image */}
@@ -17,7 +21,7 @@ export default function HeroSectionNew() {
       />
 
       {/* Dotted Glow Background */}
-      <DottedGlowBackground
+      {/* <DottedGlowBackground
         className="pointer-events-none"
         opacity={1}
         gap={40}
@@ -30,20 +34,52 @@ export default function HeroSectionNew() {
         speedMin={0.3}
         speedMax={1.5}
         speedScale={1}
-      />
+      /> */}
 
-      {/* Header */}
-      <HeaderNew />
+    
 
       {/* Content */}
-      <div className="relative flex h-screen items-center justify-center px-4 -mt-24">
-        <div className="text-center">
-          {/* Main DEFIMATRIX Text */}
-          <h1 className="font-[family-name:var(--font-orbitron)] text-[10vw] font-bold tracking-[0.2em] text-white  sm:text-7xl md:text-8xl lg:text-9xl">
-            DEFIMATRIX
-          </h1>
-        </div>
-      </div>
+        <div className="relative w-full h-screen overflow-hidden bg-black">
+           <HeaderNew />
+      {/* First video */}
+     
+        <video
+          ref={secondVideoRef}
+          muted
+          loop
+          playsInline
+          autoPlay
+          preload="auto"
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source
+            src="/DefiMatrix.webm"
+            type="video/webm"
+          />
+        </video>
+    
+
+      {/* Overlay content */}
+      <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4">
+        {/* Logo */}
+        <svg
+          viewBox="0 0 343 30"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="w-64 mb-6"
+        >
+          <path
+            d="M20.2447 5.95L6.54473 29.6C6.39473 29.85..."
+            fill="currentColor"
+          />
+        </svg>
+
+        {/* Heading */}
+       
+    </div></div>
+
+      {/* Header */}
+     
 
       {/* Backed By Section */}
       <div className="absolute bottom-32 left-0 right-0 px-8 max-w-7xl mx-auto">

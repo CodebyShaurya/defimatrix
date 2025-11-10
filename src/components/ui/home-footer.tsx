@@ -107,7 +107,7 @@ export default function Footer() {
                 <br />
                 DeFi Platform
               </h2>
-              <div className="flex space-x-3">
+              <div className="flex gap-1 sm:space-x-3">
                 {navigation.social.map((item) => (
                   <a key={item.name} href={item.href} className="rounded-lg">
                     <span className="sr-only">{item.name}</span>

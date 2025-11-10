@@ -36,13 +36,13 @@ const AiToolsSection = () => {
 
             {/* Main Content Sections */}
             <div className={`${styles.parent} relative mx-auto w-full justify-between p-3 md:flex`}>
-              {/* Mobile Video Background */}
+        
               <video autoPlay loop playsInline muted className={`${styles.videobg} inline-block md:hidden`}>
                 <source src="/bubble-bg.mp4" type="video/mp4" />
                 Your browser does not support the video tag
               </video>
 
-              {/* Next-Gen AI Engine Section */}
+        
               <div
                 className={`${styles.nextGenSection} mb-6 min-w-[250px] px-5 pb-5 pt-16 md:mb-0 md:h-[420px] lg:pb-0 lg:pt-10 xl:h-[380px] 2xl:h-[435px] 2xl:w-[423px]`}
               >
@@ -60,7 +60,6 @@ const AiToolsSection = () => {
                 </p>
               </div>
 
-              {/* AI Driven Strategies Section */}
               <section className={`${styles.cardBackground} flex p-5 md:ml-1 lg:ml-0 2xl:p-[59px]`}>
                 <div>
                   <div className="flex items-center">
@@ -85,8 +84,7 @@ const AiToolsSection = () => {
                   </div>
 
                   <div className="flex flex-col">
-                    {/* Autonomous Yield Agent */}
-                    <div className="xl1:w-[344px] mb-8 w-[344px] md:w-[318px]">
+                    <div className="xl1:w-[344px] mb-8 w-[80vw] md:w-[318px]">
                       <div className="mb-3 flex w-full justify-between">
                         <span className={styles.toolTitle}>Autonomous Yield Agent</span>
                         <div className="hidden md:hidden">
@@ -109,9 +107,7 @@ const AiToolsSection = () => {
                         highest-yielding, pre-vetted pools with real-time risk adjustments.
                       </div>
                     </div>
-
-                    {/* Institutional Risk Management */}
-                    <div className="xl1:w-[344px] mb-8 w-[344px] md:w-[318px]">
+                    <div className="xl1:w-[344px] mb-8 w-[80vw] md:w-[318px]">
                       <div className="mb-3 flex w-full justify-between">
                         <span className={styles.toolTitle}>
                           {" "}
@@ -138,8 +134,8 @@ const AiToolsSection = () => {
                       </div>
                     </div>
 
-                    {/* Quant-Proven Strategies */}
-                    <div className="xl1:w-[344px] mb-8 w-[344px] md:w-[318px]">
+         
+                    <div className="xl1:w-[344px] mb-8 w-[80vw] md:w-[318px]">
                       <div className="mb-3 flex w-full justify-between">
                         <span className={styles.toolTitle}>Quant-Proven Strategies</span>
                         <div className="hidden md:hidden">
@@ -163,8 +159,8 @@ const AiToolsSection = () => {
                       </div>
                     </div>
 
-                    {/* On-Chain & Audited */}
-                    <div className="xl1:w-[344px] mb-8 w-[344px] md:w-[318px]">
+         
+                    <div className="xl1:w-[344px] mb-8 w-[80vw] md:w-[318px]">
                       <div className="mb-3 flex w-full justify-between">
                         <span className={styles.toolTitle}>Transparent & Trustless</span>
                         <div className="hidden md:hidden">
@@ -190,7 +186,6 @@ const AiToolsSection = () => {
                   </div>
                 </div>
 
-                {/* Eye Icon and Bar Chart */}
                 <div className="xl1:pl-10 -mr-4 hidden md:flex-col md:items-center md:justify-between md:pb-8 md:pl-0 xl:flex">
                   <div className="-mt-12">
                     <Image src="/assets/eye.svg" alt="eye icon" width={150} height={150} priority />
@@ -207,7 +202,7 @@ const AiToolsSection = () => {
               className="mb-10 mt-20 w-full pl-5 md:absolute md:top-[110%] md:mb-0 md:mt-0 xl:top-[87%] 2xl:top-[85%]"
               style={{ opacity: 1, transform: "none" }}
             >
-              <div className="relative -mt-5 mb-24 flex w-[304px] items-center md:mx-auto md:-mt-32 md:w-auto">
+              <div className="relative -mt-5 mb-24 flex w-full sm:w-[304px] items-center md:mx-auto md:-mt-32 md:w-auto">
                 <div className="relative flex h-8 w-8 justify-center rounded-full border border-white pt-2">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                     <g clipPath="url(#clip0_398_11060)">
@@ -233,7 +228,6 @@ const AiToolsSection = () => {
                   <span className={styles.uniqueText}> UNIQUE</span>
                 </h2>
                 <div className="relative mt-16 grid w-[232px] grid-cols-3 gap-y-[73px] xl:mt-0">
-                  {/* Grid of Dots */}
                   <svg xmlns="http://www.w3.org/2000/svg" width="4" height="4" viewBox="0 0 4 4" fill="none">
                     <circle cx="2" cy="2" r="2" fill="#F7F8F8" />
                   </svg>

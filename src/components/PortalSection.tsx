@@ -56,9 +56,7 @@ export default function PortalSection() {
   return (
     <div className="bg-black">
       <div id="portals" className="container relative mx-auto px-4 py-12 text-center lg:px-8 2xl:max-w-screen-2xl">
-        <div className="absolute inset-0 left-0 right-0 -z-10 mx-auto flex w-full items-center justify-center w-screen">
-          {/* <img src="/images/gradient-bg.svg" className="absolute animate-pulse opacity-20 blur-3xl" alt="" /> */}
-        </div>
+      
         <div className="mx-auto mb-4 w-auto">
           <Image
             src="/images/cta-icon.svg"
@@ -71,7 +69,7 @@ export default function PortalSection() {
         <h2 className="mx-auto max-w-4xl text-left text-3xl font-medium tracking-tight text-white sm:leading-loose md:text-center md:text-5xl lg:text-6xl">
           Portals are open across{" "}
           <span className="relative whitespace-nowrap">
-            <svg
+            {/* <svg
               className="absolute -bottom-2 left-0 w-full max-w-xs pt-2 hidden sm:block"
               viewBox="0 0 340 14"
               xmlns="http://www.w3.org/2000/svg"
@@ -93,7 +91,7 @@ export default function PortalSection() {
                   <stop offset={0.913} stopColor="#FF89C2" />
                 </radialGradient>
               </defs>
-            </svg>
+            </svg> */}
             <span className="relative">
               DeFi <br />{" "}
             </span>

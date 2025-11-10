@@ -44,7 +44,7 @@ export default function HeroSectionNew() {
       {/* Media: show an image on mobile (lg-) and keep the video on lg+ */}
       {/* Mobile image background */}
       <img
-        src="/Defimatrix_mobile.png"
+        src="/Defimatrix_Mobile.png"
         alt="DeFiMatrix background"
         className="absolute inset-0 w-full h-full object-cover block lg:hidden"
       />

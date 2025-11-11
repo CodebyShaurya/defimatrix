@@ -478,7 +478,7 @@ export default function HeaderNew() {
                 Digital Payments
               </a>
 
-              <a href="/pricing" className="text-sm/6 font-semibold text-white hover:text-purple-300 whitespace-nowrap">
+              <a href="https://www.defimatrix.io/pricing" className="text-sm/6 font-semibold text-white hover:text-purple-300 whitespace-nowrap">
                 Pricing
               </a>
 
@@ -537,7 +537,7 @@ export default function HeaderNew() {
 
             <div className="hidden lg:flex lg:items-center lg:gap-x-4">
               <a
-                href="#"
+                href="https://www.defimatrix.io/"
                 className="rounded-full bg-white px-5 py-2 text-sm font-semibold text-purple-900 shadow-sm hover:bg-purple-100 whitespace-nowrap focus:outline-none focus:ring-0"
               >
                 Launch App
@@ -573,7 +573,7 @@ export default function HeaderNew() {
               <div className="-my-6 divide-y divide-white/10">
                 <div className="space-y-2 py-6">
                   <a
-                    href="#"
+                    href="/"
                     className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-purple-900/50"
                   >
                     Home
@@ -626,7 +626,7 @@ export default function HeaderNew() {
                     ))}
                   </div>
                   <a
-                    href="#"
+                    href="https://www.defimatrix.io/pricing"
                     className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-purple-900/50"
                   >
                     Pricing
@@ -645,7 +645,7 @@ export default function HeaderNew() {
                 <div className="space-y-2 py-6">
                   
                   <a
-                    href="#"
+                    href="https://www.defimatrix.io/"
                     className="-mx-3 block rounded-lg bg-white px-3 py-2.5 text-center text-base/7 font-semibold text-purple-900 hover:bg-purple-100 focus:outline-none focus:ring-0"
                   >
                     Launch App

@@ -86,7 +86,7 @@ export default function HeroSectionNew() {
      
 
       {/* Backed By Section */}
-      <div className="absolute -mt-20 sm:bottom-32 left-0 right-0 sm:px-8 max-w-7xl mx-auto">
+      <div className="absolute -mt-[22vh] sm:-mt-20 sm:bottom-32 left-0 right-0 sm:px-8 max-w-7xl mx-auto">
         <h2 className="text-white text-md sm:text-3xl  mb-5 whitespace-nowrap text-center">Backed By </h2>
         <div className="flex items-center gap-8">
           

@@ -139,53 +139,60 @@ const blockchainItems = [
     name: "DeFiMatrix Chain",
     description:
       "A modular Layer 1 blockchain designed for AI-native DeFi, enabling cross-chain interoperability and autonomous execution.",
-    href: "#",
+    href: "/defimatrix-chain",
     icon: CubeTransparentIcon,
   },
   {
     name: "Matrix AI Layer",
     description:
       "The intelligent processing layer that powers automated strategies, adaptive learning, and real-time optimization onchain.",
-    href: "#",
+    href: "/matrix-ai-layer",
     icon: CpuChipIcon,
   },
   {
     name: "EVM+",
     description:
       "Enhanced EVM-compatible framework supporting smart contracts, agentic AI modules, and dynamic execution environments.",
-    href: "#",
+    href: "/evm-plus",
     icon: SquaresPlusIcon,
   },
   {
     name: "Mint Power (DMX)",
     description: "A computational unit representing the AI energy required to execute autonomous DeFi transactions.",
-    href: "#",
+    href: "/mint-power",
     icon: BoltIcon,
   },
   {
     name: "MatrixFi (MFI)",
     description:
       "The ecosystem's native utility token granting access to AI tools, liquidity pools, and governance features.",
-    href: "#",
+    href: "/matrixfi",
     icon: BanknotesIcon,
   },
   {
     name: "Cross-Chain Gateway",
     description: "A protocol-level bridge enabling instant asset transfer between 88+ supported blockchains.",
-    href: "#",
+    href: "/cross-chain-gateway",
     icon: LinkIcon,
   },
   {
     name: "AI Security Layer",
     description: "Built-in threat detection and anomaly response powered by AI for real-time onchain protection.",
-    href: "#",
+    href: "/ai-security-layer",
     icon: LockClosedIcon,
+  },
+  {
+    name: "Cosmos Layer",
+    description:
+      "The foundational infrastructure leveraging Cosmos SDK and Tendermint for high-performance, interoperable DeFi.",
+    href: "/cosmos-layer",
+    icon: CubeTransparentIcon,
   },
   {
     name: "eDMX",
     description:
       "A liquid EVM-compatible version of DMX with capped emission, ensuring sustainable liquidity and ecosystem balance.",
-    href: "#",
+    href: "/edmx",
     icon: ArrowsRightLeftIcon,
   },
 ];

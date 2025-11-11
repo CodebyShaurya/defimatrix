@@ -261,7 +261,7 @@ export default function HeaderNew() {
         {/* Center: navigation (kept on a single line) */}
         <div className="hidden lg:flex flex-1 justify-center">
           <PopoverGroup className="flex gap-x-8 whitespace-nowrap overflow-hidden">
-            <a href="#" className="text-sm/6 font-semibold text-white hover:text-purple-300 whitespace-nowrap focus:outline-none focus:ring-0">
+            <a href="/" className="text-sm/6 font-semibold text-white hover:text-purple-300 whitespace-nowrap focus:outline-none focus:ring-0">
               Home
             </a>
 
@@ -474,11 +474,11 @@ export default function HeaderNew() {
                 )}
               </Popover>
 
-              <a href="#" className="text-sm/6 font-semibold text-white hover:text-purple-300 whitespace-nowrap">
+              <a href="/dmx-402" className="text-sm/6 font-semibold text-white hover:text-purple-300 whitespace-nowrap">
                 Digital Payments
               </a>
 
-              <a href="#" className="text-sm/6 font-semibold text-white hover:text-purple-300 whitespace-nowrap">
+              <a href="/pricing" className="text-sm/6 font-semibold text-white hover:text-purple-300 whitespace-nowrap">
                 Pricing
               </a>
 

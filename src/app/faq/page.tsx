@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Header } from "@/components/ui/header";
-import Footer from "@/components/Footer";
+import Footer from "@/components/ui/home-footer";
 import { ChevronDown } from "lucide-react";
 
 const FAQPage = () => {

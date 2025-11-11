@@ -5,7 +5,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { Header } from "@/components/ui/header";
-import Footer from "@/components/Footer";
+import Footer from "@/components/ui/home-footer";
 
 export default function Page() {
   const [showComingSoon, setShowComingSoon] = useState(false);

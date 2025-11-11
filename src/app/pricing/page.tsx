@@ -1,6 +1,6 @@
 import PricingPlans from "@/components/PricingPlans";
 import { Header } from "@/components/ui/header";
-import Footer from "@/components/Footer";
+import Footer from "@/components/ui/home-footer";
 import { AffiliateFAQ } from "@/components/AffiliateFAQ";
 import EnterprisePlan from "@/components/enterprise-plan";
 

@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Header } from "@/components/ui/header";
-import Footer from "@/components/Footer";
+import Footer from "@/components/ui/home-footer";
 import Link from "next/link";
 import { Mail, Handshake, Beaker, Megaphone, Lock, GraduationCap, Send, Globe } from "lucide-react";
 import { JobListings } from "@/components/JobListings";

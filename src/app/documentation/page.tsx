@@ -1,6 +1,6 @@
 import React from "react";
 import HeaderNew from "@/components/header-new";
-import Footer from "@/components/Footer";
+import Footer from "@/components/ui/home-footer";
 
 export default function DocumentationPage() {
   return (

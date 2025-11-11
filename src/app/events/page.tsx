@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Header } from "@/components/ui/header";
-import Footer from "@/components/Footer";
+import Footer from "@/components/ui/home-footer";
 import { motion } from "framer-motion";
 
 interface Event {

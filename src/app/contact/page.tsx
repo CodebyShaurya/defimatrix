@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Header } from "@/components/ui/header";
-import Footer from "@/components/Footer";
+import Footer from "@/components/ui/home-footer";
 import { Mail } from "lucide-react";
 import { useState } from "react";
 import Xicon from "@/components/Xicon";

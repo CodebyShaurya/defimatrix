@@ -1,6 +1,6 @@
 import React from "react";
 import { Header } from "@/components/ui/header";
-import Footer from "@/components/Footer";
+import Footer from "@/components/ui/home-footer";
 
 export default function CookiePolicy() {
   return (

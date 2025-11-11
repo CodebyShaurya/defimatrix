@@ -11,7 +11,7 @@ export default function HeroSectionNew() {
   
    
   return (
-    <section className="relative min-h-screen overflow-hidden bg-black">
+    <section className="relative h-[80vh] sm:min-h-screen overflow-hidden bg-black">
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -39,14 +39,14 @@ export default function HeroSectionNew() {
     
 
       {/* Content */}
-        <div className="relative w-full h-screen overflow-hidden bg-black">
+        <div className="relative w-screen h-[80vh] sm:min-h-screen overflow-hidden bg-black">
            <HeaderNew />
       {/* Media: show an image on mobile (lg-) and keep the video on lg+ */}
       {/* Mobile image background */}
       <img
         src="/Defimatrix_Mobile.png"
         alt="DeFiMatrix background"
-        className="absolute inset-0 w-full h-full object-cover block lg:hidden"
+        className="absolute inset-0 w-screen h-full  block lg:hidden"
       />
 
       {/* Desktop video (hidden on small screens) */}
@@ -86,12 +86,12 @@ export default function HeroSectionNew() {
      
 
       {/* Backed By Section */}
-      <div className="absolute bottom-32 left-0 right-0 px-8 max-w-7xl mx-auto">
+      <div className="absolute -mt-20 sm:bottom-32 left-0 right-0 sm:px-8 max-w-7xl mx-auto">
         <h2 className="text-white text-md sm:text-3xl  mb-5 whitespace-nowrap text-center">Backed By </h2>
         <div className="flex items-center gap-8">
           
           <div className="flex-1 overflow-hidden">
-            <div className="flex animate-scroll gap-24">
+            <div className="flex animate-scroll gap-12 sm:gap-24">
               {/* First set of logos */}
               <img src="/logo1.png" alt="Company 1" className="h-8 " />
               <img src="/logo2.png" alt="Company 2" className="h-8 " />

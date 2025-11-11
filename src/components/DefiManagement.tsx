@@ -4,7 +4,7 @@ export default function DefiManagement() {
   return (
     <div id="about" className="relative mx-auto overflow-hidden">
       {/* DeFi Portfolio Management Section with Video Background */}
-      <section className="relative flex min-h-screen w-full items-center justify-center overflow-hidden py-8 md:py-16">
+      <section className="relative flex min-h-screen w-full items-center justify-center overflow-hidden py-8 md:py-1">
         {/* Video Background */}
         <div className="absolute bottom-0 left-[-300%] -z-[99] w-[600%] md:left-0 md:w-full lg:left-[-50%] lg:w-[200%] xl:left-0 xl:w-full">
           <video autoPlay loop playsInline muted className="mx-auto h-full w-full">

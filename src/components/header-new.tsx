@@ -215,7 +215,7 @@ const aboutUsItems = [
   },
   {
     name: "Build with DeFiGPT",
-    href: "#",
+    href: "https://app.defimatrix.io/",
     description: "Integrate AI-powered DeFi tools and automate strategies using DeFiGPT technology.",
   },
   {

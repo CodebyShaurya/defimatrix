@@ -101,7 +101,7 @@ export default function Footer() {
       <footer className="bg-black text-white">
         <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8">
           {/* Navigation Section */}
-          <div className="mt-12 flex justify-between">
+          <div className="mt-12 flex flex-col justify-between sm:flex-row">
             {/* Header Section */}
             <div className="mb-8">
               <h2 className="mb-4 text-3xl font-semibold">
@@ -109,7 +109,7 @@ export default function Footer() {
                 <br />
                 DeFi Platform
               </h2>
-              <div className="flex space-x-3">
+              <div className="flex gap-1 sm:space-x-3">
                 {navigation.social.map((item) => (
                   <a key={item.name} href={item.href} className="rounded-lg">
                     <span className="sr-only">{item.name}</span>
@@ -124,7 +124,7 @@ export default function Footer() {
                   Stay updated with the latest DeFi insights and platform updates.
                 </p>
                 <form onSubmit={handleSubmit} className="mt-4 flex flex-col gap-2">
-                  <div className="flex gap-2">
+                  <div className="flex sm:flex-row flex-col gap-2">
                     <input
                       type="email"
                       value={email}
@@ -149,26 +149,28 @@ export default function Footer() {
                 </form>
               </div>
             </div>
-            {/* Main Navigation */}
-            <div className="space-y-4">
-              {navigation.main.map((item) => (
-                <div key={item.name}>
-                  <a href={item.href} className="text-gray-300 hover:text-white">
-                    {item.name}
-                  </a>
-                </div>
-              ))}
-            </div>
+            <div className="flex gap-12 sm:flex-row">
+              {/* Main Navigation */}
+              <div className="space-y-4">
+                {navigation.main.map((item) => (
+                  <div key={item.name}>
+                    <a href={item.href} className="text-gray-300 hover:text-white">
+                      {item.name}
+                    </a>
+                  </div>
+                ))}
+              </div>
 
-            {/* Legal Links */}
-            <div className="space-y-4">
-              {navigation.legal.map((item) => (
-                <div key={item.name}>
-                  <a href={item.href} className="text-gray-300 hover:text-white">
-                    {item.name}
-                  </a>
-                </div>
-              ))}
+              {/* Legal Links */}
+              <div className="space-y-4">
+                {navigation.legal.map((item) => (
+                  <div key={item.name}>
+                    <a href={item.href} className="text-gray-300 hover:text-white">
+                      {item.name}
+                    </a>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
 

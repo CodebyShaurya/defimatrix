@@ -7,6 +7,7 @@ import LinkedinIcon from "../icons/LinkedinIcon";
 import YoutubeIcon from "@/components/icons/YoutubeIcon";
 import GithubIcon from "@/components/icons/GithubIcon";
 import CoinMarketIcon from "@/components/icons/CoinMarketIcon";
+import { CTABanner } from "../cta-banner";
 
 const navigation = {
   main: [
@@ -96,6 +97,7 @@ export default function Footer() {
 
   return (
     <>
+    <CTABanner />
       <footer className="bg-black text-white">
         <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8">
           {/* Navigation Section */}

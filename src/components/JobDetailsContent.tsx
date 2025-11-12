@@ -1,7 +1,7 @@
 "use client";
 
 import { Header } from "@/components/ui/header";
-import Footer from "@/components/ui/home-footer";
+import Footer from "@/components/Footer";
 import ReactMarkdown from "react-markdown";
 import { motion } from "framer-motion";
 import type { Job } from "@/utils/jobs";

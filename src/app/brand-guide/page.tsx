@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Header } from "@/components/ui/header";
-import Footer from "@/components/ui/home-footer";
+import Footer from "@/components/Footer";
 
 const BrandGuidePage = () => {
   const fadeIn = {

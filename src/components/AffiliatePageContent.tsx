@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Header } from "@/components/ui/header";
-import Footer from "@/components/ui/home-footer";
+import Footer from "@/components/Footer";
 import Link from "next/link";
 import Image from "next/image";
 import { AffiliateHowItWorks } from "./AffiliateHowItWorks";

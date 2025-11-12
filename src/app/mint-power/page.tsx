@@ -1,6 +1,6 @@
 import React from "react";
 import HeaderNew from "@/components/header-new";
-import Footer from "@/components/ui/home-footer";
+import Footer from "@/components/Footer";
 
 export default function MintPowerPage() {
   return (

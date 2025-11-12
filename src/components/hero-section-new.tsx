@@ -95,16 +95,30 @@ export default function HeroSectionNew() {
               {/* First set of logos */}
               <img src="/logo1.png" alt="Company 1" className="h-8 " />
               <img src="/logo2.png" alt="Company 2" className="h-8 " />
-              <img src="/logo3.png" alt="Company 3" className="h-8 " />
-              <img src="/logo4.png" alt="Company 4" className="h-8 " />
-              <img src="/logo5.png" alt="Company 5" className="h-8 " />
+              {/* <img src="/logo3.png" alt="Company 3" className="h-8 " /> */}
+              <img src="/logo4.png" alt="Company 4" className="h-10 " />
+              {/* <img src="/logo5.png" alt="Company 5" className="h-8 " /> */}
               <img src="/logo6.png" alt="Company 6" className="h-8 " />
               {/* Duplicate set for seamless loop */}
               <img src="/logo1.png" alt="Company 1" className="h-8 " />
               <img src="/logo2.png" alt="Company 2" className="h-8 " />
-              <img src="/logo3.png" alt="Company 3" className="h-8 " />
-              <img src="/logo4.png" alt="Company 4" className="h-8 " />
-              <img src="/logo5.png" alt="Company 5" className="h-8 " />
+              {/* <img src="/logo3.png" alt="Company 3" className="h-8 " /> */}
+              <img src="/logo4.png" alt="Company 4" className="h-10 " />
+              {/* <img src="/logo5.png" alt="Company 5" className="h-8 " /> */}
+              <img src="/logo6.png" alt="Company 6" className="h-8 " />
+              {/* Duplicate set for seamless loop */}
+              <img src="/logo1.png" alt="Company 1" className="h-8 " />
+              <img src="/logo2.png" alt="Company 2" className="h-8 " />
+              {/* <img src="/logo3.png" alt="Company 3" className="h-8 " /> */}
+              <img src="/logo4.png" alt="Company 4" className="h-10 " />
+              {/* <img src="/logo5.png" alt="Company 5" className="h-8 " /> */}
+              <img src="/logo6.png" alt="Company 6" className="h-8 " />
+              {/* Duplicate set for seamless loop */}
+              <img src="/logo1.png" alt="Company 1" className="h-8 " />
+              <img src="/logo2.png" alt="Company 2" className="h-8 " />
+              {/* <img src="/logo3.png" alt="Company 3" className="h-8 " /> */}
+              <img src="/logo4.png" alt="Company 4" className="h-10 " />
+              {/* <img src="/logo5.png" alt="Company 5" className="h-8 " /> */}
               <img src="/logo6.png" alt="Company 6" className="h-8 " />
             </div>
           </div>

@@ -14,7 +14,7 @@ const navigation = {
     { name: "Home", href: "/" },
     { name: "API", href: "/api" },
     { name: "Company", href: "/about-us" },
-    { name: "Documentation", href: "1 - https://docs.defimatrix.io/docs/Introduction/introduction" },
+    { name: "Documentation", href: "https://docs.defimatrix.io/docs/Introduction/introduction" },
     { name: "Careers", href: "/careers" },
     { name: "Blog", href: "/blog" },
     { name: "Contact Us", href: "/contact" },
@@ -97,7 +97,7 @@ export default function Footer() {
 
   return (
     <>
-    <CTABanner />
+    {/* <CTABanner /> */}
       <footer className="bg-black text-white">
         <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8">
           {/* Navigation Section */}

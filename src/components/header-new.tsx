@@ -200,17 +200,17 @@ const blockchainItems = [
 const aboutUsItems = [
   {
     name: "About Us",
-    href: "#",
+    href: "/about-us",
     description: "Learn how DeFiMatrix is redefining decentralized finance with autonomous AI-driven solutions.",
   },
   {
     name: "Company",
-    href: "#",
+    href: "/company",
     description: "Explore our mission, leadership, and commitment to building the future of DeFi.",
   },
   {
     name: "Affiliate",
-    href: "#",
+    href: "/affiliate",
     description: "Partner with us and earn rewards by promoting the DeFiMatrix ecosystem.",
   },
   {
@@ -220,17 +220,17 @@ const aboutUsItems = [
   },
   {
     name: "Careers",
-    href: "#",
+    href: "/careers",
     description: "Join our global team and help shape the next evolution of intelligent decentralized finance.",
   },
   {
     name: "Blog",
-    href: "#",
+    href: "/blog",
     description: "Stay updated with the latest insights, product updates, and industry trends from DeFiMatrix.",
   },
   {
     name: "Contact Us",
-    href: "#",
+    href: "/contact",
     description: "Get in touch with our team for collaborations, partnerships, or general inquiries.",
   },
 ];
@@ -498,17 +498,56 @@ export default function HeaderNew() {
                     {/* Use fixed positioning for the small centered dropdown so it isn't clipped by the nav/overflow */}
                     <PopoverPanel
                       transition
-                      className="data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in absolute left-1/2 z-[9999] mt-3 w-96 -translate-x-1/2 rounded-3xl bg-black p-4 shadow-lg ring-1 ring-white/10 transition"
+                      className="data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in fixed left-0 right-0 top-24 z-[9999] mx-auto w-full max-w-7xl overflow-hidden rounded-3xl bg-black shadow-2xl ring-1 ring-white/10 backdrop-blur-xl transition"
                     >
-                  {aboutUsItems.map((item) => (
-                    <div key={item.name} className="relative rounded-lg p-3 hover:bg-purple-900/50">
-                      <a href={item.href} className="block text-sm/6 font-semibold text-white whitespace-nowrap">
-                        {item.name}
-                        <span className="absolute inset-0" />
-                      </a>
-                      <p className="mt-1 text-sm/6 text-gray-400  break-words whitespace-normal">{item.description}</p>
+                  <div className="flex gap-4 p-2">
+                  {/* Left Featured Card */}
+                  <div className="flex w-80 flex-col justify-between rounded-2xl bg-gradient-to-br from-gray-950 via-purple-950/50 to-gray-950 p-6 ring-1 ring-purple-500/20">
+                    <div>
+                      <div className="mb-4 flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br from-pink-500/20 to-purple-600/20 ring-1 ring-purple-500/30">
+                        <CreditCardIcon className="h-10 w-10 text-purple-400" />
+                      </div>
+                      <h3 className="mb-2 text-xl font-bold text-white">About DeFiMatrix</h3>
+                      <p className="text-sm leading-relaxed text-gray-400 break-words whitespace-normal">
+                        Next-generation Web3 banking tools for seamless, intelligent, and instant use of digital assets
+                        every day.
+                      </p>
                     </div>
-                  ))}
+                    <div className="mt-6">
+                      <Image
+                        src="/defimatrix-logo.svg"
+                        alt="DeFiMatrix"
+                        width={200}
+                        height={100}
+                        className="w-32 opacity-50"
+                      />
+                    </div>
+                  </div>
+
+                  {/* Right Menu Items Grid */}
+                  <div className="grid flex-1 grid-cols-2 gap-3">
+                    {aboutUsItems.map((item) => (
+                      <div
+                        key={item.name}
+                        className="group relative flex items-start gap-x-3 rounded-xl p-4 transition-colors hover:bg-purple-900/30"
+                      >
+                        {/* <div className="flex size-10 flex-none items-center justify-center rounded-lg bg-purple-900/30 ring-1 ring-purple-500/20 transition-colors group-hover:bg-purple-800/50">
+                          <item.icon
+                            aria-hidden="true"
+                            className="size-5 text-purple-300 group-hover:text-purple-200"
+                          />
+                        </div> */}
+                        <div className="flex-auto">
+                          <a href={item.href} className="block text-sm font-semibold text-white">
+                            {item.name}
+                            <span className="absolute inset-0" />
+                          </a>
+                          <p className="mt-1 line-clamp-2 text-xs text-gray-400  break-words whitespace-normal">{item.description}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  </div>
                     </PopoverPanel>
                   </>
                 )}

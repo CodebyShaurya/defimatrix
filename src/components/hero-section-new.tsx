@@ -3,8 +3,6 @@
 import React from "react";
 import { useRef, useState, useEffect } from "react";
 import HeaderNew from "./header-new";
-import { Spotlight } from "./ui/spotlight-new";
-import { DottedGlowBackground } from "./ui/dotted-glow-background";
 
 export default function HeroSectionNew() {
     const secondVideoRef = useRef<HTMLVideoElement | null>(null);
@@ -85,43 +83,34 @@ export default function HeroSectionNew() {
       {/* Header */}
      
 
-      {/* Backed By Section */}
+      {/* Backed By / Promo Grid Section */}
       <div className="absolute -mt-[22vh] sm:-mt-20 sm:bottom-32 left-0 right-0 sm:px-8 max-w-7xl mx-auto">
-        <h2 className="text-white text-md sm:text-3xl  mb-5 whitespace-nowrap text-center">Backed By </h2>
-        <div className="flex items-center gap-8">
-          
-          <div className="flex-1 overflow-hidden">
-            <div className="flex animate-scroll gap-12 sm:gap-24">
-              {/* First set of logos */}
-              <img src="/logo1.png" alt="Company 1" className="h-8 " />
-              <img src="/logo2.png" alt="Company 2" className="h-8 " />
-              {/* <img src="/logo3.png" alt="Company 3" className="h-8 " /> */}
-              <img src="/logo4.png" alt="Company 4" className="h-10 " />
-              {/* <img src="/logo5.png" alt="Company 5" className="h-8 " /> */}
-              <img src="/logo6.png" alt="Company 6" className="h-8 " />
-              {/* Duplicate set for seamless loop */}
-              <img src="/logo1.png" alt="Company 1" className="h-8 " />
-              <img src="/logo2.png" alt="Company 2" className="h-8 " />
-              {/* <img src="/logo3.png" alt="Company 3" className="h-8 " /> */}
-              <img src="/logo4.png" alt="Company 4" className="h-10 " />
-              {/* <img src="/logo5.png" alt="Company 5" className="h-8 " /> */}
-              <img src="/logo6.png" alt="Company 6" className="h-8 " />
-              {/* Duplicate set for seamless loop */}
-              <img src="/logo1.png" alt="Company 1" className="h-8 " />
-              <img src="/logo2.png" alt="Company 2" className="h-8 " />
-              {/* <img src="/logo3.png" alt="Company 3" className="h-8 " /> */}
-              <img src="/logo4.png" alt="Company 4" className="h-10 " />
-              {/* <img src="/logo5.png" alt="Company 5" className="h-8 " /> */}
-              <img src="/logo6.png" alt="Company 6" className="h-8 " />
-              {/* Duplicate set for seamless loop */}
-              <img src="/logo1.png" alt="Company 1" className="h-8 " />
-              <img src="/logo2.png" alt="Company 2" className="h-8 " />
-              {/* <img src="/logo3.png" alt="Company 3" className="h-8 " /> */}
-              <img src="/logo4.png" alt="Company 4" className="h-10 " />
-              {/* <img src="/logo5.png" alt="Company 5" className="h-8 " /> */}
-              <img src="/logo6.png" alt="Company 6" className="h-8 " />
-            </div>
+        <div className="bg-black/60 backdrop-blur-md rounded-xl p-6 border border-purple-500/10 grid grid-cols-4 gap-6 items-center">
+          {/* Text block spanning 2 cols */}
+          <div className="col-span-4 lg:col-span-2">
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-purple-500 to-violet-500">
+              DeFiMatrix.io — the Autonomous AI DeFi Revolution
+            </h3>
+            <p className="mt-3 text-sm sm:text-base text-gray-300 leading-relaxed">
+              Redefining the future of decentralized finance by empowering intelligent capital deployment, automated portfolio management, and seamless optimization across DeFi Banking, Digital Payments, and Blockchain Ecosystems.
+            </p>
           </div>
+
+          {/* Two action buttons in the other two columns */}
+          <div className="col-span-2 flex flex-col sm:flex-row gap-3 justify-center lg:justify-end">
+            <a href="/defigpt" className="inline-flex items-center justify-center px-5 py-3 bg-gradient-to-r from-pink-500 to-violet-500 text-white rounded-md font-medium shadow-md hover:opacity-95">
+              Build with defiGPT
+            </a>
+            <a href="/documentation" className="inline-flex items-center justify-center px-5 py-3 border border-purple-500/30 text-purple-200 rounded-md font-medium bg-black/40 hover:bg-black/30">
+              Documentation
+            </a>
+          </div>
+        </div>
+
+        {/* Built on + logo area placed further down (mt-50vh as requested) */}
+        <div className="mt-[50vh] flex items-center justify-center gap-4">
+          <span className="text-xs sm:text-sm uppercase tracking-wide text-gray-400">Built on</span>
+          <img src="/logo3.png" alt="Built on logo" className="h-8 w-auto" />
         </div>
       </div>
 

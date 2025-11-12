@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Header } from "@/components/ui/header";
+import Header from "@/components/header-new";
 import Footer from "@/components/Footer";
 
 export default function Page() {

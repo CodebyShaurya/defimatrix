@@ -1,10 +1,10 @@
 import React from "react";
-import { Header } from "@/components/ui/header";
+import Header from "@/components/header-new";
 import Footer from "@/components/Footer";
 
 export default function CookiePolicy() {
   return (
-    <main>
+    <main className="pt-4">
       <Header />
       <div className="mx-auto max-w-4xl px-4 py-12">
         <article className="prose prose-lg prose-invert max-w-none">

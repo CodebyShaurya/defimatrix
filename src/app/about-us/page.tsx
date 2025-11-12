@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Header } from "@/components/ui/header";
+import Header from "@/components/header-new";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import {
@@ -46,7 +46,7 @@ const AboutUsPage = () => {
 
   return (
     <>
-      <div className="w-full">
+      <div className="w-full pt-4">
         <Header />
       </div>
       <main className="relative min-h-screen bg-black pt-20 text-white">

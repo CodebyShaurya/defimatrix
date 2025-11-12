@@ -1,12 +1,12 @@
 "use client";
 
 import React from "react";
-import { Header } from "@/components/ui/header";
+import Header from "@/components/header-new";
 import Footer from "@/components/Footer";
 
 export default function Page() {
   return (
-    <>
+    <div className="pt-2">
       <Header />
       <main className="prose prose-invert mx-auto px-4 py-8 lg:prose-lg">
         <h1>Disclaimer</h1>
@@ -86,6 +86,6 @@ export default function Page() {
         </p>
       </main>
       <Footer />
-    </>
+    </div>
   );
 }

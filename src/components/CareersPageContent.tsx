@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Header } from "@/components/ui/header";
+import Header from "@/components/header-new";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import { Mail, Handshake, Beaker, Megaphone, Lock, GraduationCap, Send, Globe } from "lucide-react";

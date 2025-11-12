@@ -239,7 +239,7 @@ export default function HeaderNew() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 mx-auto mt-4 max-w-7xl rounded-full  p-[3px] animated-border-gradient animated-border-glow header-animated">
+    <header className="sticky top-0 z-50 mx-auto mt-2 max-w-7xl rounded-full  p-[3px] animated-border-gradient animated-border-glow header-animated">
       <nav
         aria-label="Global"
         className="relative z-10 flex items-center justify-between rounded-full bg-black p-6 backdrop-blur-md lg:px-8"

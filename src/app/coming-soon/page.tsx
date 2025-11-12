@@ -4,14 +4,14 @@ import { useState } from "react";
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { Header } from "@/components/ui/header";
+import Header from "@/components/header-new";
 import Footer from "@/components/ui/home-footer";
 
 export default function Page() {
   const [showComingSoon, setShowComingSoon] = useState(false);
   const text3 = "COMING SOON".split(" ");
   return (
-    <main className="h-screen">
+    <main className="h-screen pt-4">
       <Header />
       <div className="mx-auto mt-24 flex w-full max-w-6xl flex-col items-center justify-center">
         <a href="./">

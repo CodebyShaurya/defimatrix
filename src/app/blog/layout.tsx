@@ -1,14 +1,14 @@
 "use client";
 
-import { Header } from "@/components/ui/header";
+import Header from "@/components/header-new";
 import Footer from "@/components/Footer";
 
 export default function BlogLayout({ children }: { children: React.ReactNode }) {
   return (
-    <>
+    <div className="p-4">
       <Header />
       <main>{children}</main>
       <Footer />
-    </>
+    </div>
   );
 }

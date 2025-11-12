@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Header } from "@/components/ui/header";
+import Header from "@/components/header-new";
 import Footer from "@/components/ui/home-footer";
 import { motion } from "framer-motion";
 
@@ -121,7 +121,7 @@ const allEvents: Event[] = [
 export default function Events() {
   return (
     <>
-      <div className="w-full">
+      <div className="w-full pt-4">
         <Header />
       </div>
       <div className="min-h-screen bg-black pt-20 text-white">

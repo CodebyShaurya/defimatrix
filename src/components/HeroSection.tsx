@@ -3,7 +3,7 @@
 import { ArrowRight, Paperclip, RotateCcw } from "lucide-react";
 import BackgroundShader from "@/components/ui/background-shader";
 import ShadedLogo from "@/components/ui/shaded-logo";
-import { Header } from "@/components/ui/header";
+import Header from "@/components/header-new";
 import { useState } from "react";
 import HeaderNew from "./header-new";
 

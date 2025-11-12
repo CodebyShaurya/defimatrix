@@ -59,11 +59,40 @@ export default function HeroSectionNew() {
       >
         <source src="/DefiMatrix.webm" type="video/webm" />
       </video>
+
+      <div className="flex items-center justify-center gap-4 relative mt-[47vh] z-[99]  max-w-4xl mx-auto ">
+        <div className="bg-black/60 flex items-center rounded-2xl px-4 py-2 border-2 border-gray-700">
+          <span className="text-xs sm:text-sm uppercase tracking-wide text-gray-400">Built on</span>
+          <img src="/logo3.png" alt="Built on logo" className="h-6 w-auto ml-3" />
+        </div>
+      </div>
+
+      <div className="mt-[10vh] sm:px-8 max-w-5xl mx-auto  backdrop-blur-md rounded-xl z-[99] p-2 grid grid-cols-4 gap-6 items-center">
+          {/* Text block spanning 2 cols */}
+          <div className="col-span-4 lg:col-span-2">
+            {/* <h3 className="text-md sm:text-lg md:text-lg font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-purple-500 to-violet-500">
+              DeFiMatrix.io, the Autonomous AI DeFi Revolution
+            </h3> */}
+            <p className="mt-1 text-sm sm:text-sm text-gray-300 leading-relaxed">
+              DeFiMatrix.io, the Autonomous AI DeFi Revolution. Redefining the future of decentralized finance by empowering intelligent capital deployment, automated portfolio management, and seamless optimization across DeFi Banking, Digital Payments, and Blockchain Ecosystems
+            </p>
+          </div>
+
+          {/* Two action buttons in the other two columns */}
+          <div className="col-span-2 flex flex-col sm:flex-row gap-3 justify-center lg:justify-end">
+            <a href="/defigpt" className="inline-flex items-center justify-center px-5 py-3 border border-purple-500/30 text-purple-200 text-white rounded-2xl font-medium bg-black/40 hover:bg-black/30">
+              Build with defiGPT
+            </a>
+            <a href="/documentation" className="inline-flex items-center justify-center px-5 py-3 border border-purple-500/30 text-purple-200 rounded-2xl font-medium bg-black/40 hover:bg-black/30">
+              Documentation
+            </a>
+          </div>
+        </div>
     
 
       {/* Overlay content */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4">
-        {/* Logo */}
+      {/* <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4 ">
+       
         <svg
           viewBox="0 0 343 30"
           fill="none"
@@ -76,55 +105,26 @@ export default function HeroSectionNew() {
           />
         </svg>
 
-        {/* Heading */}
+
        
-    </div></div>
-
+    </div> */}
+    
+    
+    </div>
+        
       {/* Header */}
-     
+      
 
-      {/* Backed By / Promo Grid Section */}
-      <div className="absolute -mt-[22vh] sm:-mt-20 sm:bottom-32 left-0 right-0 sm:px-8 max-w-7xl mx-auto">
-        <div className="bg-black/60 backdrop-blur-md rounded-xl p-6 border border-purple-500/10 grid grid-cols-4 gap-6 items-center">
-          {/* Text block spanning 2 cols */}
-          <div className="col-span-4 lg:col-span-2">
-            <h3 className="text-xl sm:text-2xl md:text-3xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-purple-500 to-violet-500">
-              DeFiMatrix.io — the Autonomous AI DeFi Revolution
-            </h3>
-            <p className="mt-3 text-sm sm:text-base text-gray-300 leading-relaxed">
-              Redefining the future of decentralized finance by empowering intelligent capital deployment, automated portfolio management, and seamless optimization across DeFi Banking, Digital Payments, and Blockchain Ecosystems.
-            </p>
-          </div>
+      
 
-          {/* Two action buttons in the other two columns */}
-          <div className="col-span-2 flex flex-col sm:flex-row gap-3 justify-center lg:justify-end">
-            <a href="/defigpt" className="inline-flex items-center justify-center px-5 py-3 bg-gradient-to-r from-pink-500 to-violet-500 text-white rounded-md font-medium shadow-md hover:opacity-95">
-              Build with defiGPT
-            </a>
-            <a href="/documentation" className="inline-flex items-center justify-center px-5 py-3 border border-purple-500/30 text-purple-200 rounded-md font-medium bg-black/40 hover:bg-black/30">
-              Documentation
-            </a>
-          </div>
-        </div>
+       
 
-        {/* Built on + logo area placed further down (mt-50vh as requested) */}
-        <div className="mt-[50vh] flex items-center justify-center gap-4">
-          <span className="text-xs sm:text-sm uppercase tracking-wide text-gray-400">Built on</span>
-          <img src="/logo3.png" alt="Built on logo" className="h-8 w-auto" />
-        </div>
-      </div>
 
       {/* Bottom gradient fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black to-transparent"></div>
+      <div className="absolute -bottom-10 left-0 right-0 h-32 bg-gradient-to-t from-black to-transparent "></div>
 
       <style jsx>{`
-        @keyframes scroll {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
-        }
-        .animate-scroll {
-          animation: scroll 20s linear infinite;
-        }
+       
       `}</style>
     </section>
   );

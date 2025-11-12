@@ -1,7 +1,6 @@
 "use client";
 
 import Footer from "@/components/ui/home-footer";
-
 import Faqs from "@/components/Faqs";
 import FeaturesSection from "@/components/FeaturesSection";
 import PortalSection from "@/components/PortalSection";
@@ -19,7 +18,7 @@ export default function Home() {
   return (
     <main>
       <HeroSectionNew />
-       <div className="absolute -mt-[22vh] sm:-mt-20 sm:bottom-32 left-0 right-0 sm:px-8 max-w-7xl mx-auto">
+       <div className=" sm:px-8 max-w-7xl mx-auto">
         <h2 className="text-white text-md sm:text-3xl  mb-5 whitespace-nowrap text-center">Backed By </h2>
         <div className="flex items-center gap-8">
           

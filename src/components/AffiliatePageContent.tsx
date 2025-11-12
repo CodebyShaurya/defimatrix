@@ -14,7 +14,7 @@ export const AffiliatePageContent: React.FC = () => {
     <>
       <main className="relative bg-[url('/why-background.png')] bg-cover bg-top text-white">
         <div className="w-full">
-          <Header transparent />
+          <Header />
         </div>
 
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

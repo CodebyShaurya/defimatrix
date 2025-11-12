@@ -60,10 +60,10 @@ export default function HeroSectionNew() {
         <source src="/DefiMatrix.webm" type="video/webm" />
       </video>
 
-      <div className="flex items-center justify-center gap-4 relative mt-[47vh] z-[99]  max-w-4xl mx-auto ">
+      <div className="flex items-center justify-center gap-4 relative mt-[47vh] z-10  max-w-4xl mx-auto ">
         <div className="bg-black/60 flex items-center rounded-2xl px-4 py-2 border-2 border-gray-700">
           <span className="text-xs sm:text-sm uppercase tracking-wide text-gray-400">Built on</span>
-          <img src="/logo3.png" alt="Built on logo" className="h-6 w-auto ml-3" />
+          <img src="/logo3.png" alt="Built on logo" className="h-3 sm:h-6 w-auto ml-3" />
         </div>
       </div>
 

@@ -478,7 +478,7 @@ export default function HeaderNew() {
                 Digital Payments
               </a>
 
-              <a href="https://www.defimatrix.io/pricing" className="text-sm/6 font-semibold text-white hover:text-purple-300 whitespace-nowrap">
+              <a href="/pricing" className="text-sm/6 font-semibold text-white hover:text-purple-300 whitespace-nowrap">
                 Pricing
               </a>
 

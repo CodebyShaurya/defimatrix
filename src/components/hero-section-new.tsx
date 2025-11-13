@@ -60,14 +60,14 @@ export default function HeroSectionNew() {
         <source src="/DefiMatrix.webm" type="video/webm" />
       </video>
 
-      <div className="flex items-center justify-center gap-4 relative mt-[47vh] z-10  max-w-4xl mx-auto ">
+      <div className="flex items-center justify-center gap-4 relative mt-[50vh] z-10  max-w-4xl mx-auto ">
         <div className="bg-black/60 flex items-center rounded-2xl px-4 py-2 border-2 border-gray-700">
           <span className="text-xs sm:text-sm uppercase tracking-wide text-gray-400">Built on</span>
           <img src="/logo3.png" alt="Built on logo" className="h-3 sm:h-6 w-auto ml-3" />
         </div>
       </div>
 
-      <div className="mt-[10vh] sm:px-8 max-w-5xl mx-auto  backdrop-blur-md rounded-xl z-[99] p-2 grid grid-cols-4 gap-6 items-center">
+      <div className="mt-[8vh] sm:px-8 max-w-5xl mx-auto  backdrop-blur-md rounded-xl z-[99] p-2 grid grid-cols-4 gap-6 items-center">
           {/* Text block spanning 2 cols */}
           <div className="col-span-4 lg:col-span-2">
             {/* <h3 className="text-md sm:text-lg md:text-lg font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-purple-500 to-violet-500">

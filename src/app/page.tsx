@@ -12,50 +12,15 @@ import DefiManagement from "@/components/DefiManagement";
 import DefiTools from "@/components/DefiTools";
 import AiToolsSection from "@/components/AiToolsSection";
 import Marquee from "react-fast-marquee";
+import ChainBased from "@/components/ChainBased";
 import LogoCloud from "@/components/logo-cloud";
 
 export default function Home() {
   return (
     <main>
       <HeroSectionNew />
-       <div className=" sm:px-8 max-w-7xl mx-auto">
-        <h2 className="text-white text-md sm:text-3xl  mb-5 whitespace-nowrap text-center">Backed By </h2>
-        <div className="flex items-center gap-8">
-          
-          <div className="flex-1 overflow-hidden">
-            <div className="flex animate-scroll gap-12 sm:gap-24">
-              {/* First set of logos */}
-              <img src="/logo1.png" alt="Company 1" className="h-8 " />
-              <img src="/logo2.png" alt="Company 2" className="h-8 " />
-              {/* <img src="/logo3.png" alt="Company 3" className="h-8 " /> */}
-              <img src="/logo4.png" alt="Company 4" className="h-10 " />
-              {/* <img src="/logo5.png" alt="Company 5" className="h-8 " /> */}
-              <img src="/logo6.png" alt="Company 6" className="h-8 " />
-              {/* Duplicate set for seamless loop */}
-              <img src="/logo1.png" alt="Company 1" className="h-8 " />
-              <img src="/logo2.png" alt="Company 2" className="h-8 " />
-              {/* <img src="/logo3.png" alt="Company 3" className="h-8 " /> */}
-              <img src="/logo4.png" alt="Company 4" className="h-10 " />
-              {/* <img src="/logo5.png" alt="Company 5" className="h-8 " /> */}
-              <img src="/logo6.png" alt="Company 6" className="h-8 " />
-              {/* Duplicate set for seamless loop */}
-              <img src="/logo1.png" alt="Company 1" className="h-8 " />
-              <img src="/logo2.png" alt="Company 2" className="h-8 " />
-              {/* <img src="/logo3.png" alt="Company 3" className="h-8 " /> */}
-              <img src="/logo4.png" alt="Company 4" className="h-10 " />
-              {/* <img src="/logo5.png" alt="Company 5" className="h-8 " /> */}
-              <img src="/logo6.png" alt="Company 6" className="h-8 " />
-              {/* Duplicate set for seamless loop */}
-              <img src="/logo1.png" alt="Company 1" className="h-8 " />
-              <img src="/logo2.png" alt="Company 2" className="h-8 " />
-              {/* <img src="/logo3.png" alt="Company 3" className="h-8 " /> */}
-              <img src="/logo4.png" alt="Company 4" className="h-10 " />
-              {/* <img src="/logo5.png" alt="Company 5" className="h-8 " /> */}
-              <img src="/logo6.png" alt="Company 6" className="h-8 " />
-            </div>
-          </div>
-        </div>
-      </div>
+      <ChainBased/>
+      
       <DefiManagement />
       <DefiTools />
       <AiToolsSection />

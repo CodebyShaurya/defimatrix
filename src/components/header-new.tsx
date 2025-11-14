@@ -237,17 +237,16 @@ const aboutUsItems = [
 
 export default function HeaderNew() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [navBgWhite, setNavBgWhite] = useState(false);
 
   return (
     <header className="sticky top-0 z-50 mx-auto mt-4 max-w-7xl rounded-full  p-[3px] animated-border-gradient animated-border-glow header-animated">
       <nav
         aria-label="Global"
-        className={`relative z-10 flex items-center justify-between rounded-full p-6 backdrop-blur-md lg:px-8 ${navBgWhite ? 'bg-white text-purple-900' : 'bg-black text-white'}`}
+        className="relative z-10 flex items-center justify-between rounded-full bg-black p-6 backdrop-blur-md lg:px-8"
       >
         {/* Left: Logo */}
         <div className="flex items-center flex-shrink-0">
-          <a href="/" className="-m-1.5 p-1.5" onClick={() => setNavBgWhite((v) => !v)}>
+          <a href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">DeFiMatrix</span>
             <Image
               src="/defimatrix-logo.svg"
@@ -590,7 +589,7 @@ export default function HeaderNew() {
         <DialogPanel className="fixed inset-y-0 right-0 z-10 flex w-full flex-col justify-between overflow-y-auto bg-gradient-to-b from-black via-purple-900 to-violet-900 sm:max-w-sm sm:ring-1 sm:ring-white/10">
           <div className="p-6">
             <div className="flex items-center justify-between">
-              <a href="/" className="-m-1.5 p-1.5" onClick={() => setNavBgWhite((v) => !v)}>
+              <a href="/" className="-m-1.5 p-1.5">
                 <span className="sr-only">DeFiMatrix</span>
                 <Image
                   src="/defimatrix-logo.svg"

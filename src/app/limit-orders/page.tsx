@@ -9,7 +9,7 @@ export default function LimitOrdersPage() {
       <main className="max-w-5xl mx-auto px-6 py-16 text-white">
         <div className="w-full mb-8">
           <img
-            src="/Banners/DefiMatrix Limit Orders.png"
+            src="/Banners/Limit Orders.png"
             alt="DeFiGPT banner"
             className="w-full h-96 md:object-cover object-fit h-24 rounded-xl shadow-lg"
           />

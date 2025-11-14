@@ -10,8 +10,8 @@ export default function DeFiMatrixBusinessCardPage() {
         <div className="w-full mb-8">
           <img
             src="/Banners/DeFiMatrix Business.png"
-            alt="DeFiGPT banner"
-            className="w-full h-96 md:object-cover object-fit h-24 rounded-xl shadow-lg"
+            alt="DeFiMatrix Business Card banner"
+            className="w-full h-96 object-fit h-24 rounded-xl shadow-lg"
           />
         </div>
         <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-pink-500 via-purple-500 to-violet-500 bg-clip-text text-transparent">

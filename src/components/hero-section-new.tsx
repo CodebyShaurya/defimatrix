@@ -60,34 +60,53 @@ export default function HeroSectionNew() {
         <source src="/DefiMatrix.webm" type="video/webm" />
       </video>
 
-      <div className="flex items-center justify-center gap-4 relative mt-[26vh] sm:mt-[50vh] z-10  max-w-4xl mx-auto ">
-        <div className="bg-black/60 flex items-center rounded-2xl px-4 py-2 border-2 border-gray-700">
-          <span className="text-xs sm:text-sm uppercase tracking-wide text-gray-400">Built on</span>
-          <img src="/logo3.png" alt="Built on logo" className="h-3 sm:h-6 w-auto ml-3" />
-        </div>
-      </div>
+   
+      <div className="absolute bottom-4 left-0 right-0 sm:bottom-8 md:bottom-16">
+  <div className="mx-auto flex max-w-7xl flex-col px-4 sm:px-6 md:items-center md:justify-between md:gap-8 lg:flex-row lg:px-8">
+    <a href="#about" className="mb-4 hidden md:mb-0 md:block">
+      <svg
+        width={20}
+        height={20}
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        className="text-white/50"
+      >
+        <path
+          d="M12 5L12 19M12 19L19 12M12 19L5 12"
+          stroke="currentColor"
+          strokeWidth={2}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    </a>
+    <div className="mb-6 md:mb-0">
+      <p className="max-w-xl text-sm text-gray-400 sm:text-base">
+        DeFiMatrix.io, the Autonomous AI DeFi Revolution. Redefining the future of decentralized finance by empowering intelligent capital deployment, automated portfolio management, and seamless optimization across DeFi Banking, Digital Payments, and Blockchain Ecosystems
+      </p>
+    </div>
+    <div className="flex flex-col space-y-3 sm:flex-row sm:space-x-4 sm:space-y-0">
+      <a
+        href="https://docs.google.com/forms/d/e/1FAIpQLSdOX0jlgPL6MwDgYApNRl1d8exeX3toD5zvSD9VAaOzQ-1-sw/viewform"
+        target="_blank"
+        className="rounded-full border border-white/20 bg-black/40 px-4 py-2 text-sm font-medium uppercase tracking-wider text-white hover:bg-black/60 sm:px-6 sm:py-3 sm:text-base"
+      >
+        Build with DefiGPT
+      </a>
+      <a
+        href="https://docs.defimatrix.io/docs/Introduction/introduction"
+        target="_blank"
+        className="rounded-full border border-white/20 bg-black/40 px-4 py-2 text-sm font-medium uppercase tracking-wider text-white hover:bg-black/60 sm:px-6 sm:py-3 sm:text-base"
+      >
+        Documentation
+      </a>
+    </div>
+  </div>
+</div>
 
-      <div className="mt-[3vh] sm:mt-[8vh] sm:px-8 max-w-5xl mx-auto  backdrop-blur-md rounded-xl z-[99] p-2 grid sm:grid-cols-4 grid-cols-2 sm:gap-6 items-center">
-          {/* Text block spanning 2 cols */}
-          <div className="col-span-4 lg:col-span-2">
-            {/* <h3 className="text-md sm:text-lg md:text-lg font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-purple-500 to-violet-500">
-              DeFiMatrix.io, the Autonomous AI DeFi Revolution
-            </h3> */}
-            <p className="mt-1 text-xs sm:text-sm text-gray-600 leading-relaxed text-center sm:text-left">
-              DeFiMatrix.io, the Autonomous AI DeFi Revolution. Redefining the future of decentralized finance by empowering intelligent capital deployment, automated portfolio management, and seamless optimization across DeFi Banking, Digital Payments, and Blockchain Ecosystems
-            </p>
-          </div>
 
-          {/* Two action buttons in the other two columns */}
-          <div className="col-span-2 flex flex-row gap-3 justify-center lg:justify-end w-full">
-            <a href="https://www.defimatrix.io/" className="inline-flex text-xs sm:text-md items-center justify-center px-2 sm:px-5 py-2 sm:py-3 border border-purple-500/30 text-purple-200 text-white rounded-2xl font-medium bg-black/40 hover:bg-black/30">
-              Build with defiGPT
-            </a>
-            <a href="https://docs.defimatrix.io/docs/Introduction/introduction" className="inline-flex text-xs sm:text-md items-center justify-center px-2 sm:px-5 py-2 sm:py-3 border border-purple-500/30 text-purple-200 rounded-2xl font-medium bg-black/40 hover:bg-black/30">
-              Documentation
-            </a>
-          </div>
-        </div>
+     
     
 
       {/* Overlay content */}

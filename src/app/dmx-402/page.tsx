@@ -6,7 +6,14 @@ export default function DMX402Page() {
   return (
     <div className="min-h-screen bg-black">
       <HeaderNew />
-      <main className="max-w-5xl mx-auto px-6 py-16 text-white">
+      <main className="max-w-5xl mx-auto px-6 py-10 text-white">
+        <div className="w-full mb-8">
+          <img
+            src="/Banners/DMX-402.png"
+            alt="DeFiMatrix DMX-402 banner"
+            className="w-full h-[450px] md:object-cover object-fit h-24 rounded-xl shadow-lg"
+          />
+        </div>
         <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-pink-500 via-purple-500 to-violet-500 bg-clip-text text-transparent">
           DeFiMatrix DMX-402: The Open Standard for Internet-Native Payments in Agentic DeFi
         </h1>

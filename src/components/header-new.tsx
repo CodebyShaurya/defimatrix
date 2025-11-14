@@ -237,12 +237,13 @@ const aboutUsItems = [
 
 export default function HeaderNew() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [navBgWhite, setNavBgWhite] = useState(false);
 
   return (
     <header className="sticky top-0 z-50 mx-auto mt-4 max-w-7xl rounded-full  p-[3px] animated-border-gradient animated-border-glow header-animated">
       <nav
         aria-label="Global"
-        className="relative z-10 flex items-center justify-between rounded-full bg-black p-6 backdrop-blur-md lg:px-8"
+        className={`relative z-10 flex items-center justify-between rounded-full p-6 backdrop-blur-md lg:px-8 ${navBgWhite ? 'bg-white text-purple-900' : 'bg-black text-white'}`}
       >
         {/* Left: Logo */}
         <div className="flex items-center flex-shrink-0">
@@ -337,7 +338,7 @@ export default function HeaderNew() {
               <Popover>
                 {({ open }) => (
                   <>
-                    <PopoverButton as="button" type="button" className="flex items-center gap-x-1 text-sm/6 font-semibold text-current hover:text-purple-300 whitespace-nowrap focus:outline-none focus:ring-0">
+                    <PopoverButton as="button" type="button" className="flex items-center gap-x-1 text-sm/6 font-semibold text-white hover:text-purple-300 whitespace-nowrap focus:outline-none focus:ring-0">
                       DeFi Banking
                       {open ? (
                         <ChevronUpIcon aria-hidden="true" className="size-5 flex-none text-purple-300" />
@@ -406,7 +407,7 @@ export default function HeaderNew() {
               <Popover>
                 {({ open }) => (
                   <>
-                    <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-semibold text-current hover:text-purple-300 whitespace-nowrap focus:outline-none focus:ring-0">
+                    <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-semibold text-white hover:text-purple-300 whitespace-nowrap focus:outline-none focus:ring-0">
                       Blockchain
                       {open ? (
                         <ChevronUpIcon aria-hidden="true" className="size-5 flex-none text-purple-300" />
@@ -474,11 +475,11 @@ export default function HeaderNew() {
                 )}
               </Popover>
 
-              <a href="/dmx-402" className="text-sm/6 font-semibold text-current hover:text-purple-300 whitespace-nowrap">
+              <a href="/dmx-402" className="text-sm/6 font-semibold text-white hover:text-purple-300 whitespace-nowrap">
                 Digital Payments
               </a>
 
-              <a href="/pricing" className="text-sm/6 font-semibold text-current hover:text-purple-300 whitespace-nowrap">
+              <a href="/pricing" className="text-sm/6 font-semibold text-white hover:text-purple-300 whitespace-nowrap">
                 Pricing
               </a>
 
@@ -486,7 +487,7 @@ export default function HeaderNew() {
                 {({ open }) => (
                   <>
                     {/* Ensure this renders as a real button element */}
-                    <PopoverButton as="button" type="button" className="flex items-center gap-x-1 text-sm/6 font-semibold text-current hover:text-purple-300 whitespace-nowrap focus:outline-none focus:ring-0">
+                    <PopoverButton as="button" type="button" className="flex items-center gap-x-1 text-sm/6 font-semibold text-white hover:text-purple-300 whitespace-nowrap focus:outline-none focus:ring-0">
                       About Us
                       {open ? (
                         <ChevronUpIcon aria-hidden="true" className="size-5 flex-none text-purple-300" />
@@ -563,7 +564,7 @@ export default function HeaderNew() {
                 type="button"
                 onClick={() => setMobileMenuOpen((v) => !v)}
                 aria-expanded={mobileMenuOpen}
-                className="inline-flex items-center justify-center rounded-md p-2.5 text-current focus:outline-none focus:ring-0 relative z-20"
+                className="inline-flex items-center justify-center rounded-md p-2.5 text-white focus:outline-none focus:ring-0 relative z-20"
               >
                 <span className="sr-only">{mobileMenuOpen ? "Close main menu" : "Open main menu"}</span>
                 {mobileMenuOpen ? (

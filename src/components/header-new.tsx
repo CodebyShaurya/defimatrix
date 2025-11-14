@@ -237,16 +237,17 @@ const aboutUsItems = [
 
 export default function HeaderNew() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [navBgWhite, setNavBgWhite] = useState(false);
 
   return (
     <header className="sticky top-0 z-50 mx-auto mt-4 max-w-7xl rounded-full  p-[3px] animated-border-gradient animated-border-glow header-animated">
       <nav
         aria-label="Global"
-        className="relative z-10 flex items-center justify-between rounded-full bg-black p-6 backdrop-blur-md lg:px-8"
+        className={`relative z-10 flex items-center justify-between rounded-full p-6 backdrop-blur-md lg:px-8 ${navBgWhite ? 'bg-white text-purple-900' : 'bg-black text-white'}`}
       >
         {/* Left: Logo */}
         <div className="flex items-center flex-shrink-0">
-          <a href="/" className="-m-1.5 p-1.5">
+          <a href="/" className="-m-1.5 p-1.5" onClick={() => setNavBgWhite((v) => !v)}>
             <span className="sr-only">DeFiMatrix</span>
             <Image
               src="/defimatrix-logo.svg"
@@ -261,14 +262,14 @@ export default function HeaderNew() {
         {/* Center: navigation (kept on a single line) */}
         <div className="hidden lg:flex flex-1 justify-center">
           <PopoverGroup className="flex gap-x-8 whitespace-nowrap overflow-hidden">
-            <a href="/" className="text-sm/6 font-semibold text-white hover:text-purple-300 whitespace-nowrap focus:outline-none focus:ring-0">
+            <a href="/" className="text-sm/6 font-semibold text-current hover:text-purple-300 whitespace-nowrap focus:outline-none focus:ring-0">
               Home
             </a>
 
             <Popover>
               {({ open }) => (
                 <>
-                  <PopoverButton className="flex items-center  text-sm/6 font-semibold text-white hover:text-purple-300 whitespace-nowrap focus:outline-none focus:ring-0">
+                  <PopoverButton className="flex items-center  text-sm/6 font-semibold text-current hover:text-purple-300 whitespace-nowrap focus:outline-none focus:ring-0">
                     DeFi
                     {open ? (
                       <ChevronUpIcon  className="size-5  text-purple-300" />
@@ -337,7 +338,7 @@ export default function HeaderNew() {
               <Popover>
                 {({ open }) => (
                   <>
-                    <PopoverButton as="button" type="button" className="flex items-center gap-x-1 text-sm/6 font-semibold text-white hover:text-purple-300 whitespace-nowrap focus:outline-none focus:ring-0">
+                    <PopoverButton as="button" type="button" className="flex items-center gap-x-1 text-sm/6 font-semibold text-current hover:text-purple-300 whitespace-nowrap focus:outline-none focus:ring-0">
                       DeFi Banking
                       {open ? (
                         <ChevronUpIcon aria-hidden="true" className="size-5 flex-none text-purple-300" />
@@ -406,7 +407,7 @@ export default function HeaderNew() {
               <Popover>
                 {({ open }) => (
                   <>
-                    <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-semibold text-white hover:text-purple-300 whitespace-nowrap focus:outline-none focus:ring-0">
+                    <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-semibold text-current hover:text-purple-300 whitespace-nowrap focus:outline-none focus:ring-0">
                       Blockchain
                       {open ? (
                         <ChevronUpIcon aria-hidden="true" className="size-5 flex-none text-purple-300" />
@@ -474,11 +475,11 @@ export default function HeaderNew() {
                 )}
               </Popover>
 
-              <a href="/dmx-402" className="text-sm/6 font-semibold text-white hover:text-purple-300 whitespace-nowrap">
+              <a href="/dmx-402" className="text-sm/6 font-semibold text-current hover:text-purple-300 whitespace-nowrap">
                 Digital Payments
               </a>
 
-              <a href="/pricing" className="text-sm/6 font-semibold text-white hover:text-purple-300 whitespace-nowrap">
+              <a href="/pricing" className="text-sm/6 font-semibold text-current hover:text-purple-300 whitespace-nowrap">
                 Pricing
               </a>
 
@@ -486,7 +487,7 @@ export default function HeaderNew() {
                 {({ open }) => (
                   <>
                     {/* Ensure this renders as a real button element */}
-                    <PopoverButton as="button" type="button" className="flex items-center gap-x-1 text-sm/6 font-semibold text-white hover:text-purple-300 whitespace-nowrap focus:outline-none focus:ring-0">
+                    <PopoverButton as="button" type="button" className="flex items-center gap-x-1 text-sm/6 font-semibold text-current hover:text-purple-300 whitespace-nowrap focus:outline-none focus:ring-0">
                       About Us
                       {open ? (
                         <ChevronUpIcon aria-hidden="true" className="size-5 flex-none text-purple-300" />
@@ -563,7 +564,7 @@ export default function HeaderNew() {
                 type="button"
                 onClick={() => setMobileMenuOpen((v) => !v)}
                 aria-expanded={mobileMenuOpen}
-                className="inline-flex items-center justify-center rounded-md p-2.5 text-white focus:outline-none focus:ring-0 relative z-20"
+                className="inline-flex items-center justify-center rounded-md p-2.5 text-current focus:outline-none focus:ring-0 relative z-20"
               >
                 <span className="sr-only">{mobileMenuOpen ? "Close main menu" : "Open main menu"}</span>
                 {mobileMenuOpen ? (
@@ -589,7 +590,7 @@ export default function HeaderNew() {
         <DialogPanel className="fixed inset-y-0 right-0 z-10 flex w-full flex-col justify-between overflow-y-auto bg-gradient-to-b from-black via-purple-900 to-violet-900 sm:max-w-sm sm:ring-1 sm:ring-white/10">
           <div className="p-6">
             <div className="flex items-center justify-between">
-              <a href="/" className="-m-1.5 p-1.5">
+              <a href="/" className="-m-1.5 p-1.5" onClick={() => setNavBgWhite((v) => !v)}>
                 <span className="sr-only">DeFiMatrix</span>
                 <Image
                   src="/defimatrix-logo.svg"

@@ -49,7 +49,7 @@ export default function ContactUs() {
 
 
           <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 md:justify-start">
-              <div className="flex items-end justify-center gap-x-6 mt-4">
+              <div className="flex items-end justify-center gap-x-6 mt-4 w-full">
             <Link href="mailto:support@defimatrix.io" target="_blank" className="relative p-[3px]">
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-b from-purple-400 to-pink-400" />
               <div className="group relative rounded-2xl bg-black px-8 py-3.5 text-xs font-semibold uppercase text-white transition duration-200 hover:bg-transparent flex">
@@ -59,7 +59,7 @@ export default function ContactUs() {
             </Link>
           </div>
 
-          <div className="flex items-end justify-center gap-x-6 mt-4">
+          <div className="flex items-end justify-center gap-x-6 mt-4 w-full">
             <Link href="https://x.com/DeFiMatrixOS" target="_blank" className="relative p-[3px]">
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-b from-purple-400 to-pink-400" />
               <div className="group relative rounded-2xl bg-black px-8 py-3.5 text-xs font-semibold uppercase text-white transition duration-200 hover:bg-transparent flex">

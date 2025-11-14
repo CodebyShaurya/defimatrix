@@ -7,6 +7,13 @@ export default function AISecurityLayerPage() {
     <div className="min-h-screen bg-black">
       <HeaderNew />
       <main className="max-w-5xl mx-auto px-6 py-16 text-white">
+        <div className="w-full mb-8">
+          <img
+            src="/Banners/AI Security Layer.png"
+            alt="AI Security Layer banner"
+            className="w-full h-96 md:object-cover object-fit h-24 rounded-xl shadow-lg"
+          />
+        </div>
         <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-pink-500 via-purple-500 to-violet-500 bg-clip-text text-transparent">
           The DeFiMatrix AI Security Layer: An Intelligent, Autonomous Defense System
         </h1>

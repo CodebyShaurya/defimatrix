@@ -7,6 +7,13 @@ export default function MintPowerPage() {
     <div className="min-h-screen bg-black">
       <HeaderNew />
       <main className="max-w-5xl mx-auto px-6 py-16 text-white">
+        <div className="w-full mb-8">
+          <img
+            src="/Banners/Mint Power (DMX).png"
+            alt="Mint Power banner"
+            className="w-full h-96 md:object-cover object-fit h-24 rounded-xl shadow-lg"
+          />
+        </div>
         <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-pink-500 via-purple-500 to-violet-500 bg-clip-text text-transparent">
           Mint Power (DMX): The Foundational Utility Token of the DeFiMatrix Chain
         </h1>

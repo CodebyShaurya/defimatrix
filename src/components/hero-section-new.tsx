@@ -3,6 +3,7 @@
 import React from "react";
 import { useRef, useState, useEffect } from "react";
 import HeaderNew from "./header-new";
+import Link from "next/link";
 
 export default function HeroSectionNew() {
     const secondVideoRef = useRef<HTMLVideoElement | null>(null);
@@ -87,7 +88,23 @@ export default function HeroSectionNew() {
       </p>
     </div>
     <div className="flex flex-col space-y-3 sm:flex-row sm:space-x-4 sm:space-y-0">
-      <a
+      <div className="flex items-center gap-x-6">
+        <Link href="https://app.defimatrix.io/" target="_blank" className="relative p-[3px]">
+          <div className="absolute inset-0 rounded-2xl bg-gradient-to-b from-purple-400 to-pink-400" />
+          <div className="group relative rounded-2xl bg-black px-8 py-3.5 text-xs font-semibold uppercase text-white transition duration-200 hover:bg-transparent">
+            Build with DefiGPT
+          </div>
+        </Link>
+      </div>
+      <div className=" flex items-center gap-x-6">
+        <Link href="https://docs.defimatrix.io/docs/Introduction/introduction" target="_blank" className="relative p-[3px]">
+          <div className="absolute inset-0 rounded-2xl bg-gradient-to-b from-purple-400 to-pink-400" />
+          <div className="group relative rounded-2xl bg-black px-8 py-3.5 text-xs font-semibold uppercase text-white transition duration-200 hover:bg-transparent">
+            Documentation
+          </div>
+        </Link>
+      </div>
+      {/* <a
         href="https://docs.google.com/forms/d/e/1FAIpQLSdOX0jlgPL6MwDgYApNRl1d8exeX3toD5zvSD9VAaOzQ-1-sw/viewform"
         target="_blank"
         className="rounded-full border border-white/20 bg-black/40 px-4 py-2 text-sm font-medium uppercase tracking-wider text-white hover:bg-black/60 sm:px-6 sm:py-3 sm:text-base"
@@ -100,7 +117,7 @@ export default function HeroSectionNew() {
         className="rounded-full border border-white/20 bg-black/40 px-4 py-2 text-sm font-medium uppercase tracking-wider text-white hover:bg-black/60 sm:px-6 sm:py-3 sm:text-base"
       >
         Documentation
-      </a>
+      </a> */}
     </div>
   </div>
 </div>

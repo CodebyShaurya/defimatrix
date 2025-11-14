@@ -1,4 +1,5 @@
 import { IconBrandX, IconMail } from "@tabler/icons-react";
+import Link from "next/link";
 
 export default function ContactUs() {
   return (
@@ -26,8 +27,48 @@ export default function ContactUs() {
               </a>
             </p>
           </div>
+          {/* <div className="flex items-end justify-center gap-x-6 mt-4">
+            <Link href="mailto:support@defimatrix.io" target="_blank" className="relative p-[3px]">
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-b from-purple-400 to-pink-400" />
+              <div className="group relative rounded-2xl bg-black px-8 py-3.5 text-xs font-semibold uppercase text-white transition duration-200 hover:bg-transparent">
+                <IconMail className="mr-2 h-5 w-5 text-white" />
+                Contact by email
+              </div>
+            </Link>
+          </div>
+
+          <div className="flex items-end justify-center gap-x-6 mt-4">
+            <Link href="https://x.com/DeFiMatrixOS" target="_blank" className="relative p-[3px]">
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-b from-purple-400 to-pink-400" />
+              <div className="group relative rounded-2xl bg-black px-8 py-3.5 text-xs font-semibold uppercase text-white transition duration-200 hover:bg-transparent">
+                <IconBrandX className="mr-2 h-5 w-5 text-white" />
+                Contact on X
+              </div>
+            </Link>
+          </div> */}
+
+
           <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 md:justify-start">
-            <a
+              <div className="flex items-end justify-center gap-x-6 mt-4">
+            <Link href="mailto:support@defimatrix.io" target="_blank" className="relative p-[3px]">
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-b from-purple-400 to-pink-400" />
+              <div className="group relative rounded-2xl bg-black px-8 py-3.5 text-xs font-semibold uppercase text-white transition duration-200 hover:bg-transparent flex">
+                <IconMail className="mr-2 h-5 w-5 text-white" />
+                Contact by email
+              </div>
+            </Link>
+          </div>
+
+          <div className="flex items-end justify-center gap-x-6 mt-4">
+            <Link href="https://x.com/DeFiMatrixOS" target="_blank" className="relative p-[3px]">
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-b from-purple-400 to-pink-400" />
+              <div className="group relative rounded-2xl bg-black px-8 py-3.5 text-xs font-semibold uppercase text-white transition duration-200 hover:bg-transparent flex">
+                <IconBrandX className="mr-2 h-5 w-5 text-white" />
+                Contact on X
+              </div>
+            </Link>
+          </div>
+            {/* <a
               className="group inline-flex items-center justify-center rounded-md border border-white bg-black px-5 py-3 text-sm font-semibold text-white hover:bg-white/10 focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white active:bg-blue-200 active:text-slate-600"
               color="white"
               href="mailto:support@defimatrix.io"
@@ -42,7 +83,7 @@ export default function ContactUs() {
             >
               <IconBrandX className="mr-2 h-5 w-5 text-white" />
               Contact on X
-            </a>
+            </a> */}
           </div>
         </div>
       </div>

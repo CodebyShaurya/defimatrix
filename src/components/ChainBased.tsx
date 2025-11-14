@@ -1,4 +1,5 @@
 import { AtomIcon, DiamondIcon, EthereumIcon, PolygonIcon } from "./icons";
+import Link from "next/link";
 
 export default function DefiManagement() {
   return (
@@ -10,10 +11,13 @@ export default function DefiManagement() {
           <h1 className="text-white text-2xl sm:text-4xl font-extrabold mt-2">
             DeFiMatrix offers the fastest and most seamless way to use your crypto like cash — anytime, anywhere.
           </h1>
-          <div className="mt-4">
-            <a href="/defimatrix-card" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-pink-500 to-violet-500 text-white rounded-md shadow-md">
-              Get your card Now
-            </a>
+          <div className="flex items-end justify-center gap-x-6 mt-4">
+            <Link href="https://app.defimatrix.io/" target="_blank" className="relative p-[3px]">
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-b from-purple-400 to-pink-400" />
+              <div className="group relative rounded-2xl bg-black px-8 py-3.5 text-xs font-semibold uppercase text-white transition duration-200 hover:bg-transparent">
+                Get your card Now
+              </div>
+            </Link>
           </div>
 
           {/* Hidden placeholder image (40vh) kept hidden for now */}

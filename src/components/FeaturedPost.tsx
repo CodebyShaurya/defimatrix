@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { memo } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -21,12 +21,12 @@ interface FeaturedPostProps {
   };
 }
 
-const FeaturedPost = ({ post }: FeaturedPostProps) => {
+const FeaturedPost = memo(({ post }: FeaturedPostProps) => {
   return (
     <div className="relative overflow-hidden bg-black py-12">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-8 lg:grid-cols-2 lg:items-center">
-          <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} className="relative z-10">
+          <div className="relative z-10">
             <span className="mb-2 inline-block rounded-full bg-[#C450D5] px-3 py-1 text-sm capitalize text-white">
               {post.categories?.[0]?.name || "Uncategorized"}
             </span>
@@ -42,7 +42,7 @@ const FeaturedPost = ({ post }: FeaturedPostProps) => {
               </span>
               <Link href={`/blog/${post.slug}`} className="group inline-flex items-center gap-2 text-white">
                 Read more
-                <motion.svg
+                <svg
                   width="24"
                   height="24"
                   viewBox="0 0 24 24"
@@ -57,22 +57,20 @@ const FeaturedPost = ({ post }: FeaturedPostProps) => {
                     strokeLinecap="round"
                     strokeLinejoin="round"
                   />
-                </motion.svg>
+                </svg>
               </Link>
             </div>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            className="relative aspect-[4/3] overflow-hidden rounded-xl lg:aspect-[3/2]"
-          >
+          <div className="relative aspect-[4/3] overflow-hidden rounded-xl lg:aspect-[3/2]">
             <Image src={post.coverImage} alt={post.title} className="object-cover" width={800} height={600} priority />
-          </motion.div>
+          </div>
         </div>
       </div>
     </div>
   );
-};
+});
+
+FeaturedPost.displayName = "FeaturedPost";
 
 export default FeaturedPost;

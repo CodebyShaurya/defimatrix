@@ -1,8 +1,8 @@
 import { supabase } from "@/utils/supabase";
 import RealtimeBlogList from "@/components/RealtimeBlogList";
 
-// This ensures the page is not cached and always fetches fresh data
-export const revalidate = 0; // revalidate this page on every request
+// Revalidate every 60 seconds instead of on every request for better performance
+export const revalidate = 60;
 
 interface BlogPost {
   id: string;
@@ -23,7 +23,7 @@ interface BlogPost {
 }
 
 async function getBlogPosts(): Promise<BlogPost[]> {
-  // Fetch posts from Supabase
+  // Fetch posts from Supabase with limit for faster loading
   const { data: posts, error } = await supabase
     .from("posts")
     .select(
@@ -34,7 +34,8 @@ async function getBlogPosts(): Promise<BlogPost[]> {
     `,
     )
     .eq("status", "published")
-    .order("created_at", { ascending: false });
+    .order("created_at", { ascending: false })
+    .limit(50); // Limit to 50 most recent posts for faster loading
 
   if (error) {
     console.error("Error fetching posts:", error);

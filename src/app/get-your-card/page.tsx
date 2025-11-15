@@ -49,28 +49,28 @@ export default function PricingPage() {
               <img 
                 src='/Card1.png' 
                 alt='Get Your Card' 
-                className='h-[80vh] rounded-xl shadow-lg animate-float mx-auto' 
+                className='h-[30vh] sm:h-[80vh] rounded-xl shadow-lg animate-float mx-auto' 
               />
               
               {/* Top-left floating image */}
               <img 
                 src='/Frame1.png' 
                 alt='Feature 1' 
-                className='absolute top-0 left-[-10%] h-[30vh] object-contain rounded-lg shadow-md animate-slide-from-left' 
+                className='absolute top-0 left-[-5%] sm:left-[-10%] h-[8vh] sm:h-[30vh] object-contain rounded-lg shadow-md animate-slide-from-left' 
               />
               
               {/* Bottom-left floating image */}
               <img 
                 src='/Frame.png' 
                 alt='Feature 2' 
-                className='absolute bottom-0 left-[-12%] h-[30vh] object-contain rounded-lg shadow-md animate-slide-from-left-delayed' 
+                className='absolute bottom-0 left-[-12%] h-[8vh] sm:h-[30vh] object-contain rounded-lg shadow-md animate-slide-from-left-delayed' 
               />
               
               {/* Mid-right floating image */}
               <img 
                 src='/DefiCard.png' 
                 alt='Feature 3' 
-                className='absolute top-1/2 right-[-10%] transform -translate-y-1/2 h-[50vh] object-contain rounded-lg shadow-md animate-slide-from-right' 
+                className='absolute top-1/2 right-[-10%] transform -translate-y-1/2 h-[15vh] sm:h-[50vh] object-contain rounded-lg shadow-md animate-slide-from-right' 
               />
             </div>
           </div>

@@ -43,7 +43,37 @@ export default function PricingPage() {
             The Most Rewarding Crypto Card
           </p>
         </div>
-        <img src='/Card.png' alt='Get Your Card' className='  w-[50vw] mt-5  rounded-xl shadow-lg  mx-auto' />
+        <div className="mt-20 relative" aria-hidden="true" >
+            <div className="relative w-[50vw] mx-auto mt-5 py-5">
+              {/* Center main card image */}
+              <img 
+                src='/Card1.png' 
+                alt='Get Your Card' 
+                className='h-[80vh] rounded-xl shadow-lg animate-float mx-auto' 
+              />
+              
+              {/* Top-left floating image */}
+              <img 
+                src='/Frame1.png' 
+                alt='Feature 1' 
+                className='absolute top-0 left-[-10%] h-[30vh] object-contain rounded-lg shadow-md animate-slide-from-left' 
+              />
+              
+              {/* Bottom-left floating image */}
+              <img 
+                src='/Frame.png' 
+                alt='Feature 2' 
+                className='absolute bottom-0 left-[-12%] h-[30vh] object-contain rounded-lg shadow-md animate-slide-from-left-delayed' 
+              />
+              
+              {/* Mid-right floating image */}
+              <img 
+                src='/DefiCard.png' 
+                alt='Feature 3' 
+                className='absolute top-1/2 right-[-10%] transform -translate-y-1/2 h-[50vh] object-contain rounded-lg shadow-md animate-slide-from-right' 
+              />
+            </div>
+          </div>
     </div>
       <div className="hidden md:grid grid-cols-2 gap-8 max-w-7xl mx-auto px-6 lg:px-8 mb-16">
        

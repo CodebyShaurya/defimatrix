@@ -7,8 +7,8 @@ export default function DefiManagement() {
        <div className=" sm:px-8 max-w-7xl mx-auto">
         {/* Trusted / CTA area */}
         <div className="text-center mb-6">
-          <p className="mx-auto max-w-4xl text-left text-3xl font-medium tracking-tight text-white sm:leading-tight md:text-center md:text-5xl lg:text-6xl">Trusted by DeFi users in 150+ countries.</p>
-          <h1 className="mx-auto mt-6 max-w-3xl text-left text-lg tracking-tight text-gray-300 md:text-center">
+          <p className="mx-auto max-w-4xl text-left text-3xl font-medium tracking-tight text-white sm:leading-tight text-center md:text-5xl lg:text-6xl">Trusted by DeFi users in 150+ countries.</p>
+          <h1 className="mx-auto mt-6 max-w-3xl text-left text-lg tracking-tight text-gray-300 text-center">
             DeFiMatrix offers the fastest and most seamless way to use your crypto like cash — anytime, anywhere.
           </h1>
           <div className="flex items-end justify-center gap-x-6 mt-4">
@@ -27,28 +27,28 @@ export default function DefiManagement() {
               <img 
                 src='/Card1.png' 
                 alt='Get Your Card' 
-                className='h-[80vh] rounded-xl shadow-lg animate-float mx-auto' 
+                className='h-[30vh] sm:h-[80vh] rounded-xl shadow-lg animate-float mx-auto' 
               />
               
               {/* Top-left floating image */}
               <img 
                 src='/Frame1.png' 
                 alt='Feature 1' 
-                className='absolute top-0 left-[-10%] h-[30vh] object-contain rounded-lg shadow-md animate-slide-from-left' 
+                className='absolute top-0 left-[-5%] sm:left-[-10%] h-[8vh] sm:h-[30vh] object-contain rounded-lg shadow-md animate-slide-from-left' 
               />
               
               {/* Bottom-left floating image */}
               <img 
                 src='/Frame.png' 
                 alt='Feature 2' 
-                className='absolute bottom-0 left-[-12%] h-[30vh] object-contain rounded-lg shadow-md animate-slide-from-left-delayed' 
+                className='absolute bottom-0 left-[-12%] h-[8vh] sm:h-[30vh] object-contain rounded-lg shadow-md animate-slide-from-left-delayed' 
               />
               
               {/* Mid-right floating image */}
               <img 
                 src='/DefiCard.png' 
                 alt='Feature 3' 
-                className='absolute top-1/2 right-[-10%] transform -translate-y-1/2 h-[50vh] object-contain rounded-lg shadow-md animate-slide-from-right' 
+                className='absolute top-1/2 right-[-10%] transform -translate-y-1/2 h-[15vh] sm:h-[50vh] object-contain rounded-lg shadow-md animate-slide-from-right' 
               />
             </div>
           </div>
@@ -58,14 +58,12 @@ export default function DefiManagement() {
         <h2 className="text-white text-md sm:text-4xl  mb-5 whitespace-nowrap text-center mt-16">Backed By </h2>
         <div className="flex items-center gap-8">
 
-          <div className="flex-1 overflow-hidden">
-            <div className="flex items-center justify-center  gap-12 sm:gap-24">
+          <div className=" flex mx-auto overflow-hidden">
+            <div className="flex flex-col sm:flex-row items-center justify-center  gap-12 sm:gap-24">
               {/* First set of logos */}
               <img src="/logo1.png" alt="Company 1" className="h-12 " />
-              <img src="/logo2.png" alt="Company 2" className="h-12" />
-              {/* <img src="/logo3.png" alt="Company 3" className="h-8 " /> */}
+              <img src="/logo2.png" alt="Company 2" className="h-12 " />
               <img src="/logo4.png" alt="Company 4" className="h-16 " />
-              {/* <img src="/logo5.png" alt="Company 5" className="h-8 " /> */}
               <img src="/logo6.png" alt="Company 6" className="h-12 " />
               {/* Duplicate set for seamless loop */}
             

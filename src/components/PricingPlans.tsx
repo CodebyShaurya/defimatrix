@@ -4,7 +4,7 @@ import { CheckIcon } from "@heroicons/react/20/solid";
 
 const subscriptionPlans = [
   {
-    name: "Trial",
+    name: "Explorer",
     priceUSD: 0,
     duration: "15 Days",
     durationDays: 15,
@@ -20,7 +20,7 @@ const subscriptionPlans = [
     isPopular: false,
   },
   {
-    name: "Starter",
+    name: "Navigator",
     priceUSD: 25,
     duration: "1 Month",
     durationDays: 30,
@@ -36,7 +36,7 @@ const subscriptionPlans = [
     isPopular: false,
   },
   {
-    name: "Pro",
+    name: "Strategist",
     priceUSD: 60,
     duration: "3 Months",
     durationDays: 90,
@@ -52,7 +52,7 @@ const subscriptionPlans = [
     isPopular: true,
   },
   {
-    name: "Enterprise",
+    name: "Sovereign",
     priceUSD: 90,
     duration: "6 Months",
     durationDays: 180,

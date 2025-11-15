@@ -3,11 +3,39 @@ import Link from "next/link";
 
 export default function DefiManagement() {
   return (
-    <div  className="relative mx-auto overflow-hidden mt-12 sm:mt-24" style={{ backgroundImage: 'url(/Group1261155851.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+    <div  className="relative mx-auto overflow-hidden pt-12 sm:pt-24" style={{ backgroundImage: 'url(/Group1261155851.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
        <div className=" sm:px-8 max-w-7xl mx-auto">
         {/* Trusted / CTA area */}
         <div className="text-center mb-6">
-          <p className="mx-auto max-w-4xl text-left text-3xl font-medium tracking-tight text-white sm:leading-tight text-center md:text-5xl lg:text-6xl">Trusted by DeFi users in 150+ countries.</p>
+          <p className="mx-auto max-w-3xl text-left text-3xl font-medium tracking-tight text-white sm:leading-tight text-center md:text-5xl lg:text-6xl">Trusted by DeFi users in 150+ <span className="relative whitespace-nowrap">
+            <svg
+              className="absolute -bottom-2 left-0 w-full pt-2"
+              viewBox="0 0 364 10"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1 8C63.6538 3.47226 223.769 -2.86658 363 8"
+                stroke="url(#paint0_radial_2482_631)"
+                strokeWidth="3"
+              />
+              <defs>
+                <radialGradient
+                  id="paint0_radial_2482_631"
+                  cx="0"
+                  cy="0"
+                  r="1"
+                  gradientUnits="userSpaceOnUse"
+                  gradientTransform="translate(158.651 6.91635) scale(777.036 11.0605)"
+                >
+                  <stop stopColor="#C450D5" />
+                  <stop offset="1" stopColor="#D43E76" />
+                </radialGradient>
+              </defs>
+            </svg>
+
+            <span className="relative"> countries.</span>
+          </span> </p>
           <h1 className="mx-auto mt-6 max-w-3xl text-left text-lg tracking-tight text-gray-300 text-center">
             DeFiMatrix offers the fastest and most seamless way to use your crypto like cash — anytime, anywhere.
           </h1>

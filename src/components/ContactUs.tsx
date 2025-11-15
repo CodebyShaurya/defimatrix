@@ -11,7 +11,7 @@ export default function ContactUs() {
           alt="contact-us-element"
         />
       </div>
-      <div className="pt-16 sm:pt-24 lg:mx-auto lg:grid lg:max-w-6xl lg:grid-cols-2 lg:px-8 lg:pt-32 2xl:max-w-7xl">
+      <div className="pt-16 sm:pt-24 lg:mx-auto lg:grid lg:max-w-6xl lg:grid-cols-2 lg:px-8 lg:pt-24 2xl:max-w-7xl">
         <div className="p-4 sm:rounded-3xl sm:bg-black/20 sm:py-8">
           <div className="max-w-xl lg:max-w-lg">
             <h2 className="text-3xl font-bold tracking-tight text-white">Get in touch</h2>
@@ -23,7 +23,7 @@ export default function ContactUs() {
               <br />
               or X{" "}
               <a href="https://x.com/DeFiMatrixOS" className="font-semibold text-purple-500">
-                @DeFiMatrixIO.
+                @DeFiMatrixOS
               </a>
             </p>
           </div>

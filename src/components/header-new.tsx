@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Dialog, DialogPanel, Popover, PopoverButton, PopoverGroup, PopoverPanel } from "@headlessui/react";
@@ -234,6 +234,14 @@ const aboutUsItems = [
 export default function HeaderNew() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [navBgWhite, setNavBgWhite] = useState(false);
+  const [openDeFi, setOpenDeFi] = useState(false);
+  const [openBanking, setOpenBanking] = useState(false);
+  const [openBlockchain, setOpenBlockchain] = useState(false);
+  const [openAbout, setOpenAbout] = useState(false);
+  const deFiCloseRef = useRef<any>(null);
+  const bankingCloseRef = useRef<any>(null);
+  const blockchainCloseRef = useRef<any>(null);
+  const aboutCloseRef = useRef<any>(null);
 
   return (
     <header className="sticky top-0 z-50 mx-auto mt-4 max-w-7xl rounded-full  p-[3px] animated-border-gradient animated-border-glow header-animated">
@@ -258,297 +266,324 @@ export default function HeaderNew() {
         {/* Center: navigation (kept on a single line) */}
         <div className="hidden lg:flex flex-1 justify-center">
           <PopoverGroup className="flex gap-x-8 whitespace-nowrap overflow-hidden">
-            <a href="/" className="text-sm/6 font-semibold text-current hover:text-purple-300 whitespace-nowrap focus:outline-none focus:ring-0">
+            <a href="/" className="text-base font-semibold text-current hover:text-purple-300 whitespace-nowrap focus:outline-none focus:ring-0">
               Home
             </a>
 
-            <Popover>
-              {({ open }) => (
-                <>
-                  <PopoverButton className="flex items-center  text-sm/6 font-semibold text-current hover:text-purple-300 whitespace-nowrap focus:outline-none focus:ring-0">
-                    DeFi
-                    {open ? (
-                      <ChevronUpIcon  className="size-5  text-purple-300" />
-                    ) : (
-                      <ChevronDownIcon  className="size-5  text-purple-300" />
-                    )}
-                  </PopoverButton>
+            <div
+              className="relative"
+              onMouseEnter={() => {
+                clearTimeout(deFiCloseRef.current);
+                setOpenDeFi(true);
+                setOpenBanking(false);
+                setOpenBlockchain(false);
+                setOpenAbout(false);
+              }}
+              onMouseLeave={() => {
+                deFiCloseRef.current = window.setTimeout(() => setOpenDeFi(false), 150);
+              }}
+            >
+              <button
+                type="button"
+                className="flex items-center text-base font-semibold text-current hover:text-purple-300 whitespace-nowrap focus:outline-none focus:ring-0"
+                aria-expanded={openDeFi}
+              >
+                DeFi
+                {openDeFi ? (
+                  <ChevronUpIcon className="size-5 text-purple-300" />
+                ) : (
+                  <ChevronDownIcon className="size-5 text-purple-300" />
+                )}
+              </button>
 
-                  <PopoverPanel
-            transition
-            className="data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in fixed left-0 right-0 top-24 z-[9999] mx-auto w-full max-w-7xl overflow-hidden rounded-3xl bg-black shadow-2xl ring-1 ring-white/10 backdrop-blur-xl transition"
-                  >
-                <div className="flex gap-4 p-2">
-                  {/* Left Featured Card */}
-                  <div className="flex w-80 flex-col justify-between rounded-2xl bg-gradient-to-br from-gray-950 via-purple-950/50 to-gray-950 p-6 ring-1 ring-purple-500/20">
-                    <div>
-                      <div className="mb-4 flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br from-pink-500/20 to-purple-600/20 ring-1 ring-purple-500/30">
-                        <SparklesIcon className="h-10 w-10 text-purple-400" />
+              {openDeFi && (
+                <div
+                  className="fixed left-0 right-0 top-24 z-[9999] mx-auto w-full max-w-7xl overflow-hidden rounded-3xl bg-black shadow-2xl ring-1 ring-white/10 backdrop-blur-xl"
+                  onMouseEnter={() => {
+                    clearTimeout(deFiCloseRef.current);
+                    setOpenDeFi(true);
+                  }}
+                  onMouseLeave={() => {
+                    deFiCloseRef.current = window.setTimeout(() => setOpenDeFi(false), 150);
+                  }}
+                >
+                  <div className="flex gap-4 p-2">
+                    {/* Left Featured Card */}
+                    <div className="flex w-80 flex-col justify-between rounded-2xl bg-gradient-to-br from-gray-950 via-purple-950/50 to-gray-950 p-6 ring-1 ring-purple-500/20">
+                      <div>
+                        <div className="mb-4 flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br from-pink-500/20 to-purple-600/20 ring-1 ring-purple-500/30">
+                          <SparklesIcon className="h-10 w-10 text-purple-400" />
+                        </div>
+                        <h3 className="mb-2 text-2xl font-bold text-white">DeFiMatrix</h3>
+                        <p className="text-sm leading-relaxed text-gray-400 break-words whitespace-normal">
+                          An AI-powered DeFi ecosystem that automates yield optimization, liquidity management, and
+                          cross-chain strategies across 88+ blockchains.
+                        </p>
                       </div>
-                      <h3 className="mb-2 text-2xl font-bold text-white">DeFiMatrix</h3>
-                      <p className="text-sm leading-relaxed text-gray-400 break-words whitespace-normal">
-                        An AI-powered DeFi ecosystem that automates yield optimization, liquidity management, and
-                        cross-chain strategies across 88+ blockchains.
-                      </p>
+                      <div className="mt-6">
+                        <Image src="/defimatrix-logo.svg" alt="DeFiMatrix" width={200} height={100} className="w-32 opacity-50" />
+                      </div>
                     </div>
-                    <div className="mt-6">
-                      <Image
-                        src="/defimatrix-logo.svg"
-                        alt="DeFiMatrix"
-                        width={200}
-                        height={100}
-                        className="w-32 opacity-50"
-                      />
-                    </div>
-                  </div>
 
-                  {/* Right Menu Items Grid */}
-                  <div className="grid flex-1 grid-cols-3 gap-3">
-                    {defiMenuItems.map((item) => (
-                      <div
-                        key={item.name}
-                        className="group relative flex items-start gap-x-3 rounded-xl p-4 transition-colors hover:bg-purple-900/30"
-                      >
-                        <div className="flex size-10 flex-none items-center justify-center rounded-lg bg-purple-900/30 ring-1 ring-purple-500/20 transition-colors group-hover:bg-purple-800/50">
-                          <item.icon
-                            aria-hidden="true"
-                            className="size-5 text-purple-300 group-hover:text-purple-200"
-                          />
+                    {/* Right Menu Items Grid */}
+                    <div className="grid flex-1 grid-cols-3 gap-3">
+                      {defiMenuItems.map((item) => (
+                        <div
+                          key={item.name}
+                          className="group relative flex items-start gap-x-3 rounded-xl p-4 transition-colors hover:bg-purple-900/30"
+                        >
+                          <div className="flex size-10 flex-none items-center justify-center rounded-lg bg-purple-900/30 ring-1 ring-purple-500/20 transition-colors group-hover:bg-purple-800/50">
+                            <item.icon aria-hidden="true" className="size-5 text-purple-300 group-hover:text-purple-200" />
+                          </div>
+                          <div className="flex-auto">
+                            <a href={item.href} className="block text-sm font-semibold text-white">
+                              {item.name}
+                              <span className="absolute inset-0" />
+                            </a>
+                            <p className="mt-1  text-xs text-gray-400  break-words whitespace-normal">{item.description}</p>
+                          </div>
                         </div>
-                        <div className="flex-auto">
-                          <a href={item.href} className="block text-sm font-semibold text-white">
-                            {item.name}
-                            <span className="absolute inset-0" />
-                          </a>
-                          <p className="mt-1  text-xs text-gray-400  break-words whitespace-normal">{item.description}</p>
-                        </div>
-                      </div>
-                    ))}
+                      ))}
+                    </div>
                   </div>
                 </div>
-                  </PopoverPanel>
-                </>
               )}
-            </Popover>
+            </div>
 
-              <Popover>
-                {({ open }) => (
-                  <>
-                    <PopoverButton as="button" type="button" className="flex items-center gap-x-1 text-sm/6 font-semibold text-white hover:text-purple-300 whitespace-nowrap focus:outline-none focus:ring-0">
-                      DeFi Banking
-                      {open ? (
-                        <ChevronUpIcon aria-hidden="true" className="size-5 flex-none text-purple-300" />
-                      ) : (
-                        <ChevronDownIcon aria-hidden="true" className="size-5 flex-none text-purple-300" />
-                      )}
-                    </PopoverButton>
+              <div
+                className="relative"
+                onMouseEnter={() => {
+                  clearTimeout(bankingCloseRef.current);
+                  setOpenBanking(true);
+                  setOpenDeFi(false);
+                  setOpenBlockchain(false);
+                  setOpenAbout(false);
+                }}
+                onMouseLeave={() => {
+                  bankingCloseRef.current = window.setTimeout(() => setOpenBanking(false), 150);
+                }}
+              >
+                <button
+                  type="button"
+                  className="flex items-center gap-x-1 text-base font-semibold text-current hover:text-purple-300 whitespace-nowrap focus:outline-none focus:ring-0"
+                  aria-expanded={openBanking}
+                >
+                  DeFi Banking
+                  {openBanking ? (
+                    <ChevronUpIcon aria-hidden="true" className="size-5 flex-none text-purple-300" />
+                  ) : (
+                    <ChevronDownIcon aria-hidden="true" className="size-5 flex-none text-purple-300" />
+                  )}
+                </button>
 
-                    <PopoverPanel
-                      transition
-                      className="data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in fixed left-0 right-0 top-24 z-[9999] mx-auto w-full max-w-7xl overflow-hidden rounded-3xl bg-black shadow-2xl ring-1 ring-white/10 backdrop-blur-xl transition"
-                    >
-                  <div className="flex gap-4 p-2">
-                  {/* Left Featured Card */}
-                  <div className="flex w-80 flex-col justify-between rounded-2xl bg-gradient-to-br from-gray-950 via-purple-950/50 to-gray-950 p-6 ring-1 ring-purple-500/20">
-                    <div>
-                      <div className="mb-4 flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br from-pink-500/20 to-purple-600/20 ring-1 ring-purple-500/30">
-                        <CreditCardIcon className="h-10 w-10 text-purple-400" />
-                      </div>
-                      <h3 className="mb-2 text-xl font-bold text-white">DeFi Banking by DeFiMatrix</h3>
-                      <p className="text-sm leading-relaxed text-gray-400 break-words whitespace-normal">
-                        Next-generation Web3 banking tools for seamless, intelligent, and instant use of digital assets
-                        every day.
-                      </p>
-                    </div>
-                    <div className="mt-6">
-                      <Image
-                        src="/defimatrix-logo.svg"
-                        alt="DeFiMatrix"
-                        width={200}
-                        height={100}
-                        className="w-32 opacity-50"
-                      />
-                    </div>
-                  </div>
-
-                  {/* Right Menu Items Grid */}
-                  <div className="grid flex-1 grid-cols-2 gap-3">
-                    {defiBankingItems.map((item) => (
-                      <div
-                        key={item.name}
-                        className="group relative flex items-start gap-x-3 rounded-xl p-4 transition-colors hover:bg-purple-900/30"
-                      >
-                        <div className="flex size-10 flex-none items-center justify-center rounded-lg bg-purple-900/30 ring-1 ring-purple-500/20 transition-colors group-hover:bg-purple-800/50">
-                          <item.icon
-                            aria-hidden="true"
-                            className="size-5 text-purple-300 group-hover:text-purple-200"
-                          />
+                {openBanking && (
+                  <div
+                    className="fixed left-0 right-0 top-24 z-[9999] mx-auto w-full max-w-7xl overflow-hidden rounded-3xl bg-black shadow-2xl ring-1 ring-white/10 backdrop-blur-xl"
+                    onMouseEnter={() => {
+                      clearTimeout(bankingCloseRef.current);
+                      setOpenBanking(true);
+                    }}
+                    onMouseLeave={() => {
+                      bankingCloseRef.current = window.setTimeout(() => setOpenBanking(false), 150);
+                    }}
+                  >
+                    <div className="flex gap-4 p-2">
+                      <div className="flex w-80 flex-col justify-between rounded-2xl bg-gradient-to-br from-gray-950 via-purple-950/50 to-gray-950 p-6 ring-1 ring-purple-500/20">
+                        <div>
+                          <div className="mb-4 flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br from-pink-500/20 to-purple-600/20 ring-1 ring-purple-500/30">
+                            <CreditCardIcon className="h-10 w-10 text-purple-400" />
+                          </div>
+                          <h3 className="mb-2 text-xl font-bold text-white">DeFi Banking by DeFiMatrix</h3>
+                          <p className="text-sm leading-relaxed text-gray-400 break-words whitespace-normal">
+                            Next-generation Web3 banking tools for seamless, intelligent, and instant use of digital assets
+                            every day.
+                          </p>
                         </div>
-                        <div className="flex-auto">
-                          <a href={item.href} className="block text-sm font-semibold text-white">
-                            {item.name}
-                            <span className="absolute inset-0" />
-                          </a>
-                          <p className="mt-1 line-clamp-2 text-xs text-gray-400  break-words whitespace-normal">{item.description}</p>
+                        <div className="mt-6">
+                          <Image src="/defimatrix-logo.svg" alt="DeFiMatrix" width={200} height={100} className="w-32 opacity-50" />
                         </div>
                       </div>
-                    ))}
+
+                      <div className="grid flex-1 grid-cols-2 gap-3">
+                        {defiBankingItems.map((item) => (
+                          <div
+                            key={item.name}
+                            className="group relative flex items-start gap-x-3 rounded-xl p-4 transition-colors hover:bg-purple-900/30"
+                          >
+                            <div className="flex size-10 flex-none items-center justify-center rounded-lg bg-purple-900/30 ring-1 ring-purple-500/20 transition-colors group-hover:bg-purple-800/50">
+                              <item.icon aria-hidden="true" className="size-5 text-purple-300 group-hover:text-purple-200" />
+                            </div>
+                            <div className="flex-auto">
+                              <a href={item.href} className="block text-sm font-semibold text-white">
+                                {item.name}
+                                <span className="absolute inset-0" />
+                              </a>
+                              <p className="mt-1 line-clamp-2 text-xs text-gray-400  break-words whitespace-normal">{item.description}</p>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
                   </div>
-                  </div>
-                    </PopoverPanel>
-                  </>
                 )}
-              </Popover>
+              </div>
 
-              <Popover>
-                {({ open }) => (
-                  <>
-                    <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-semibold text-white hover:text-purple-300 whitespace-nowrap focus:outline-none focus:ring-0">
-                      Blockchain
-                      {open ? (
-                        <ChevronUpIcon aria-hidden="true" className="size-5 flex-none text-purple-300" />
-                      ) : (
-                        <ChevronDownIcon aria-hidden="true" className="size-5 flex-none text-purple-300" />
-                      )}
-                    </PopoverButton>
+              <div
+                className="relative"
+                onMouseEnter={() => {
+                  clearTimeout(blockchainCloseRef.current);
+                  setOpenBlockchain(true);
+                  setOpenDeFi(false);
+                  setOpenBanking(false);
+                  setOpenAbout(false);
+                }}
+                onMouseLeave={() => {
+                  blockchainCloseRef.current = window.setTimeout(() => setOpenBlockchain(false), 150);
+                }}
+              >
+                <button
+                  type="button"
+                  className="flex items-center gap-x-1 text-base font-semibold text-current hover:text-purple-300 whitespace-nowrap focus:outline-none focus:ring-0"
+                  aria-expanded={openBlockchain}
+                >
+                  Blockchain
+                  {openBlockchain ? (
+                    <ChevronUpIcon aria-hidden="true" className="size-5 flex-none text-purple-300" />
+                  ) : (
+                    <ChevronDownIcon aria-hidden="true" className="size-5 flex-none text-purple-300" />
+                  )}
+                </button>
 
-                    <PopoverPanel
-                 transition
-                 className="data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in fixed left-0 right-0 top-24 z-[9999] mx-auto w-full max-w-7xl overflow-hidden rounded-3xl bg-black shadow-2xl ring-1 ring-white/10 backdrop-blur-xl transition"
-                    >
-                  <div className="flex gap-4 p-2">
-                  {/* Left Featured Card */}
-                  <div className="flex w-80 flex-col justify-between rounded-2xl bg-gradient-to-br from-gray-950 via-purple-950/50 to-gray-950 p-6 ring-1 ring-purple-500/20">
-                    <div>
-                      <div className="mb-4 flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br from-pink-500/20 to-purple-600/20 ring-1 ring-purple-500/30">
-                        <CubeTransparentIcon className="h-10 w-10 text-purple-400" />
-                      </div>
-                      <div className="mb-2 text-xs font-semibold uppercase tracking-wider text-purple-400">
-                        Blockchain – Coming Soon
-                      </div>
-                      <h3 className="mb-2 text-xl font-bold text-white">DeFiMatrix Chain</h3>
-                      <p className="text-sm leading-relaxed text-gray-400 break-words whitespace-normal">
-                        A next-generation modular blockchain built for AI-powered decentralized finance. Unifies
-                        performance, scalability, and intelligence through dual-core architecture.
-                      </p>
-                    </div>
-                    <div className="mt-6 flex gap-2">
-                      <button className="rounded-full bg-gradient-to-r from-pink-500 to-purple-600 px-4 py-2 text-xs font-semibold text-white hover:from-pink-600 hover:to-purple-700">
-                        GET DMX
-                      </button>
-                      <button className="rounded-full bg-purple-900/50 px-4 py-2 text-xs font-semibold text-white ring-1 ring-purple-500/30 hover:bg-purple-800/50">
-                        GET MFI
-                      </button>
-                    </div>
-                  </div>
-
-                  {/* Right Menu Items Grid */}
-                  <div className="grid flex-1 grid-cols-3 gap-3">
-                    {blockchainItems.map((item) => (
-                      <div
-                        key={item.name}
-                        className="group relative flex items-start gap-x-3 rounded-xl p-4 transition-colors hover:bg-purple-900/30"
-                      >
-                        <div className="flex size-10 flex-none items-center justify-center rounded-lg bg-purple-900/30 ring-1 ring-purple-500/20 transition-colors group-hover:bg-purple-800/50">
-                          <item.icon
-                            aria-hidden="true"
-                            className="size-5 text-purple-300 group-hover:text-purple-200"
-                          />
+                {openBlockchain && (
+                  <div
+                    className="fixed left-0 right-0 top-24 z-[9999] mx-auto w-full max-w-7xl overflow-hidden rounded-3xl bg-black shadow-2xl ring-1 ring-white/10 backdrop-blur-xl"
+                    onMouseEnter={() => {
+                      clearTimeout(blockchainCloseRef.current);
+                      setOpenBlockchain(true);
+                    }}
+                    onMouseLeave={() => {
+                      blockchainCloseRef.current = window.setTimeout(() => setOpenBlockchain(false), 150);
+                    }}
+                  >
+                    <div className="flex gap-4 p-2">
+                      <div className="flex w-80 flex-col justify-between rounded-2xl bg-gradient-to-br from-gray-950 via-purple-950/50 to-gray-950 p-6 ring-1 ring-purple-500/20">
+                        <div>
+                          <div className="mb-4 flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br from-pink-500/20 to-purple-600/20 ring-1 ring-purple-500/30">
+                            <CubeTransparentIcon className="h-10 w-10 text-purple-400" />
+                          </div>
+                          <div className="mb-2 text-xs font-semibold uppercase tracking-wider text-purple-400">Blockchain – Coming Soon</div>
+                          <h3 className="mb-2 text-xl font-bold text-white">DeFiMatrix Chain</h3>
+                          <p className="text-sm leading-relaxed text-gray-400 break-words whitespace-normal">
+                            A next-generation modular blockchain built for AI-powered decentralized finance. Unifies
+                            performance, scalability, and intelligence through dual-core architecture.
+                          </p>
                         </div>
-                        <div className="flex-auto">
-                          <a href={item.href} className="block text-sm font-semibold text-white">
-                            {item.name}
-                            <span className="absolute inset-0" />
-                          </a>
-                          <p className="mt-1   text-xs text-gray-400 break-words whitespace-normal">{item.description}</p>
+                        <div className="mt-6 flex gap-2">
+                          <button className="rounded-full bg-gradient-to-r from-pink-500 to-purple-600 px-4 py-2 text-xs font-semibold text-white hover:from-pink-600 hover:to-purple-700">GET DMX</button>
+                          <button className="rounded-full bg-purple-900/50 px-4 py-2 text-xs font-semibold text-white ring-1 ring-purple-500/30 hover:bg-purple-800/50">GET MFI</button>
                         </div>
                       </div>
-                    ))}
+
+                      <div className="grid flex-1 grid-cols-3 gap-3">
+                        {blockchainItems.map((item) => (
+                          <div key={item.name} className="group relative flex items-start gap-x-3 rounded-xl p-4 transition-colors hover:bg-purple-900/30">
+                            <div className="flex size-10 flex-none items-center justify-center rounded-lg bg-purple-900/30 ring-1 ring-purple-500/20 transition-colors group-hover:bg-purple-800/50">
+                              <item.icon aria-hidden="true" className="size-5 text-purple-300 group-hover:text-purple-200" />
+                            </div>
+                            <div className="flex-auto">
+                              <a href={item.href} className="block text-sm font-semibold text-white">
+                                {item.name}
+                                <span className="absolute inset-0" />
+                              </a>
+                              <p className="mt-1 text-xs text-gray-400 break-words whitespace-normal">{item.description}</p>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
                   </div>
-                  </div>
-                    </PopoverPanel>
-                  </>
                 )}
-              </Popover>
+              </div>
 
-              <a href="/dmx-402" className="text-sm/6 font-semibold text-white hover:text-purple-300 whitespace-nowrap">
+              <a href="/dmx-402" className="text-base font-semibold text-white hover:text-purple-300 whitespace-nowrap">
                 Digital Payments
               </a>
 
-              <a href="/pricing" className="text-sm/6 font-semibold text-white hover:text-purple-300 whitespace-nowrap">
+              <a href="/pricing" className="text-base font-semibold text-white hover:text-purple-300 whitespace-nowrap">
                 Pricing
               </a>
 
-              <Popover className="relative">
-                {({ open }) => (
-                  <>
-                    {/* Ensure this renders as a real button element */}
-                    <PopoverButton as="button" type="button" className="flex items-center gap-x-1 text-sm/6 font-semibold text-white hover:text-purple-300 whitespace-nowrap focus:outline-none focus:ring-0">
-                      About Us
-                      {open ? (
-                        <ChevronUpIcon aria-hidden="true" className="size-5 flex-none text-purple-300" />
-                      ) : (
-                        <ChevronDownIcon aria-hidden="true" className="size-5 flex-none text-purple-300" />
-                      )}
-                    </PopoverButton>
+              <div
+                className="relative"
+                onMouseEnter={() => {
+                  clearTimeout(aboutCloseRef.current);
+                  setOpenAbout(true);
+                  setOpenDeFi(false);
+                  setOpenBanking(false);
+                  setOpenBlockchain(false);
+                }}
+                onMouseLeave={() => {
+                  aboutCloseRef.current = window.setTimeout(() => setOpenAbout(false), 150);
+                }}
+              >
+                <button
+                  type="button"
+                  className="flex items-center gap-x-1 text-base font-semibold text-current hover:text-purple-300 whitespace-nowrap focus:outline-none focus:ring-0"
+                  aria-expanded={openAbout}
+                >
+                  About Us
+                  {openAbout ? (
+                    <ChevronUpIcon aria-hidden="true" className="size-5 flex-none text-purple-300" />
+                  ) : (
+                    <ChevronDownIcon aria-hidden="true" className="size-5 flex-none text-purple-300" />
+                  )}
+                </button>
 
-                    {/* Use fixed positioning for the small centered dropdown so it isn't clipped by the nav/overflow */}
-                    <PopoverPanel
-                      transition
-                      className="data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in fixed left-0 right-0 top-24 z-[9999] mx-auto w-full max-w-7xl overflow-hidden rounded-3xl bg-black shadow-2xl ring-1 ring-white/10 backdrop-blur-xl transition"
-                    >
-                  <div className="flex gap-4 p-2">
-                  {/* Left Featured Card */}
-                  <div className="flex w-80 flex-col justify-between rounded-2xl bg-gradient-to-br from-gray-950 via-purple-950/50 to-gray-950 p-6 ring-1 ring-purple-500/20">
-                    <div>
-                      <div className="mb-4 flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br from-pink-500/20 to-purple-600/20 ring-1 ring-purple-500/30">
-                        <CreditCardIcon className="h-10 w-10 text-purple-400" />
-                      </div>
-                      <h3 className="mb-2 text-xl font-bold text-white">About DeFiMatrix</h3>
-                      <p className="text-sm leading-relaxed text-gray-400 break-words whitespace-normal">
-                        Next-generation Web3 tools for seamless, intelligent, and instant use of digital assets
-                        every day.
-                      </p>
-                    </div>
-                    <div className="mt-6">
-                      <Image
-                        src="/defimatrix-logo.svg"
-                        alt="DeFiMatrix"
-                        width={200}
-                        height={100}
-                        className="w-32 opacity-50"
-                      />
-                    </div>
-                  </div>
-
-                  {/* Right Menu Items Grid */}
-                  <div className="grid flex-1 grid-cols-2 gap-3">
-                    {aboutUsItems.map((item) => (
-                      <div
-                        key={item.name}
-                        className="group relative flex items-start gap-x-3 rounded-xl p-4 transition-colors hover:bg-purple-900/30"
-                      >
-                        {/* <div className="flex size-10 flex-none items-center justify-center rounded-lg bg-purple-900/30 ring-1 ring-purple-500/20 transition-colors group-hover:bg-purple-800/50">
-                          <item.icon
-                            aria-hidden="true"
-                            className="size-5 text-purple-300 group-hover:text-purple-200"
-                          />
-                        </div> */}
-                        <div className="flex-auto">
-                          <a href={item.href} className="block text-sm font-semibold text-white">
-                            {item.name}
-                            <span className="absolute inset-0" />
-                          </a>
-                          <p className="mt-1 line-clamp-2 text-xs text-gray-400  break-words whitespace-normal">{item.description}</p>
+                {openAbout && (
+                  <div
+                    className="fixed left-0 right-0 top-24 z-[9999] mx-auto w-full max-w-7xl overflow-hidden rounded-3xl bg-black shadow-2xl ring-1 ring-white/10 backdrop-blur-xl"
+                    onMouseEnter={() => {
+                      clearTimeout(aboutCloseRef.current);
+                      setOpenAbout(true);
+                    }}
+                    onMouseLeave={() => {
+                      aboutCloseRef.current = window.setTimeout(() => setOpenAbout(false), 150);
+                    }}
+                  >
+                    <div className="flex gap-4 p-2">
+                      <div className="flex w-80 flex-col justify-between rounded-2xl bg-gradient-to-br from-gray-950 via-purple-950/50 to-gray-950 p-6 ring-1 ring-purple-500/20">
+                        <div>
+                          <div className="mb-4 flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br from-pink-500/20 to-purple-600/20 ring-1 ring-purple-500/30">
+                            <CreditCardIcon className="h-10 w-10 text-purple-400" />
+                          </div>
+                          <h3 className="mb-2 text-xl font-bold text-white">About DeFiMatrix</h3>
+                          <p className="text-sm leading-relaxed text-gray-400 break-words whitespace-normal">
+                            Next-generation Web3 tools for seamless, intelligent, and instant use of digital assets
+                            every day.
+                          </p>
+                        </div>
+                        <div className="mt-6">
+                          <Image src="/defimatrix-logo.svg" alt="DeFiMatrix" width={200} height={100} className="w-32 opacity-50" />
                         </div>
                       </div>
-                    ))}
+
+                      <div className="grid flex-1 grid-cols-2 gap-3">
+                        {aboutUsItems.map((item) => (
+                          <div key={item.name} className="group relative flex items-start gap-x-3 rounded-xl p-4 transition-colors hover:bg-purple-900/30">
+                            <div className="flex-auto">
+                              <a href={item.href} className="block text-sm font-semibold text-white">
+                                {item.name}
+                                <span className="absolute inset-0" />
+                              </a>
+                              <p className="mt-1 line-clamp-2 text-xs text-gray-400  break-words whitespace-normal">{item.description}</p>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
                   </div>
-                  </div>
-                    </PopoverPanel>
-                  </>
                 )}
-              </Popover>
+              </div>
             </PopoverGroup>
           </div>
 

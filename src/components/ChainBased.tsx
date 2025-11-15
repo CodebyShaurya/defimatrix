@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function DefiManagement() {
   return (
-    <div  className="relative mx-auto overflow-hidden mt-12">
+    <div  className="relative mx-auto overflow-hidden mt-12 sm:mt-24">
        <div className=" sm:px-8 max-w-7xl mx-auto">
         {/* Trusted / CTA area */}
         <div className="text-center mb-6">
@@ -22,12 +22,12 @@ export default function DefiManagement() {
 
           {/* Hidden placeholder image (40vh) kept hidden for now */}
           <div className="mt-6 " aria-hidden="true">
-            <img src='/Card.png' alt='Get Your Card' className='  w-[50vw] mt-5  rounded-xl shadow-lg  mx-auto' />
+            <img src='/Card.png' alt='Get Your Card' className='  w-[50vw] mt-5 py-5 rounded-xl shadow-lg  mx-auto' />
     {/* </div> */}
           </div>
         </div>
 
-        <h2 className="text-white text-md sm:text-3xl  mb-5 whitespace-nowrap text-center">Backed By </h2>
+        <h2 className="text-white text-md sm:text-4xl  mb-5 whitespace-nowrap text-center mt-16">Backed By </h2>
         <div className="flex items-center gap-8">
 
           <div className="flex-1 overflow-hidden">

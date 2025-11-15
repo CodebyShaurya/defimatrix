@@ -54,12 +54,12 @@ export default function WhyChooseSpedax() {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl text-white sm:text-4xl lg:text-5xl mb-6">
-            Why Choose the <span className='text-purple-400 transition-colors hover:text-purple-300'>Chainbased Card ?</span> 
+            Why Choose the <span className='text-[#C450D5] transition-colors hover:text-purple-300'>Chainbased Card ?</span> 
           </h2>
         </div>
 
         {/* Comparison Layout - Desktop */}
-        <div className="hidden lg:grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto items-start">
+        <div className="hidden lg:grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto items-start mt-12">
           {/* Features Column */}
           <div className="space-y-6">
             <h3 className="text-2xl font-semibold text-white mb-8">Features</h3>

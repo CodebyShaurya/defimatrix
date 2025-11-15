@@ -9,7 +9,7 @@ export default function UnstakePage() {
       <main className="max-w-5xl mx-auto px-6 py-16 text-white">
         <div className="w-full mb-8">
           <img
-            src="/Banners/unstake.png"
+            src="/Banners/Unstake.png"
             alt="DeFiGPT banner"
             className="w-full h-[450px] md:object-cover object-fit h-24 rounded-xl shadow-lg"
           />

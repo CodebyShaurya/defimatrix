@@ -247,7 +247,7 @@ export default function HeaderNew() {
     <header className="sticky top-0 z-50 mx-auto mt-4 max-w-7xl rounded-full  p-[3px] animated-border-gradient animated-border-glow header-animated">
       <nav
         aria-label="Global"
-        className={`relative z-10 flex items-center justify-between rounded-full p-6 backdrop-blur-md lg:px-8 `}
+        className={`relative z-10 flex items-center justify-between rounded-full p-6 backdrop-blur-md lg:px-8 bg-black text-white`}
       >
         {/* Left: Logo */}
         <div className="flex items-center flex-shrink-0">

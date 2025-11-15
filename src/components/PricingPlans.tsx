@@ -125,7 +125,7 @@ export default function PricingPlans() {
                   </h3>
                   <div className="">
                     {plan.isPopular && (
-                      <p className="-translate-y-12 rounded-full bg-[#4031B3] px-2.5 py-1 text-xs/5 font-semibold text-white">
+                      <p className="-translate-y-12 rounded-full bg-[#4031B3] px-2 py-1 text-xs/5 font-semibold text-white">
                         MOST POPULAR
                       </p>
                     )}

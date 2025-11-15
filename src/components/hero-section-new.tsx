@@ -63,8 +63,9 @@ export default function HeroSectionNew() {
 
    
       <div className="absolute bottom-4 left-0 right-0 sm:bottom-8 md:bottom-16">
-  <div className="mx-auto flex max-w-7xl flex-col px-4 sm:px-6 md:items-center md:justify-between md:gap-8 lg:flex-row lg:px-8">
-    <a href="#about" className="mb-4 hidden md:mb-0 md:block">
+  <div className="mx-auto flex max-w-7xl flex-col px-4 sm:px-6 md:items-center md:justify-between md:gap-1 lg:flex-row lg:px-2">
+    <div className=" flex  gap-4">
+    <a href="#about" className="mb-4 hidden md:mb-0 md:block mt-3">
       <svg
         width={20}
         height={20}
@@ -83,9 +84,10 @@ export default function HeroSectionNew() {
       </svg>
     </a>
     <div className="mb-6 md:mb-0">
-      <p className="max-w-2xl text-xs text-gray-400 sm:text-sm">
+      <p className="max-w-3xl text-xs text-gray-400 sm:text-sm">
         DeFiMatrix.io delivers autonomous AI-driven DeFi, enabling intelligent capital deployment, automated portfolios, and seamless optimization across digital payments, DeFi banking, and blockchain ecosystems.
       </p>
+    </div>
     </div>
     <div className="flex flex-col space-y-3 sm:flex-row sm:space-x-4 sm:space-y-0">
       <div className="flex items-center gap-x-6">

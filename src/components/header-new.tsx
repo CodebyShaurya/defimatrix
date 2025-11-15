@@ -266,9 +266,9 @@ export default function HeaderNew() {
         {/* Center: navigation (kept on a single line) */}
         <div className="hidden lg:flex flex-1 justify-center">
           <PopoverGroup className="flex gap-x-8 whitespace-nowrap overflow-hidden">
-            <a href="/" className="text-base font-semibold text-current hover:text-purple-300 whitespace-nowrap focus:outline-none focus:ring-0">
+            {/* <a href="/" className="text-base font-semibold text-current hover:text-purple-300 whitespace-nowrap focus:outline-none focus:ring-0">
               Home
-            </a>
+            </a> */}
 
             <div
               className="relative"

@@ -116,7 +116,9 @@ export default function LogoCloud() {
          <div className="flex items-center justify-center gap-4 relative mb-8 z-10  max-w-4xl mx-auto ">
         <div className="bg-black/60 flex items-center rounded-2xl px-4 py-2 mt-7">
           <span className="text-xs sm:text-2xl uppercase tracking-wide text-gray-400">Built on</span>
-          <img src="/logo3.png" alt="Built on logo" className="h-3 sm:h-6 w-auto ml-3" />
+          <a href="https://www.near.org/" target="_blank" rel="noopener noreferrer">
+            <img src="/logo3.png" alt="Built on logo" className="h-3 sm:h-6 w-auto ml-3" />
+          </a>
         </div>
       </div>
       </div>

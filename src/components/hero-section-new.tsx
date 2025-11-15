@@ -89,7 +89,7 @@ export default function HeroSectionNew() {
       </p>
     </div>
     </div>
-    <div className="flex flex-col space-y-3 sm:flex-row sm:space-x-4 sm:space-y-0">
+    <div className="flex flex-col space-y-3 sm:flex-row sm:space-x-4 sm:space-y-0 justify-center md:justify-end items-center z-[98]">
       <div className="flex items-center gap-x-6">
         <Link href="https://docs.google.com/forms/d/e/1FAIpQLSdOX0jlgPL6MwDgYApNRl1d8exeX3toD5zvSD9VAaOzQ-1-sw/viewform" target="_blank" className="relative p-[3px]">
           <div className="absolute inset-0 rounded-2xl bg-gradient-to-b from-purple-400 to-pink-400" />
@@ -159,7 +159,7 @@ export default function HeroSectionNew() {
 
 
       {/* Bottom gradient fade */}
-      <div className="absolute -bottom-10 left-0 right-0 h-32 bg-gradient-to-t from-black to-transparent "></div>
+      <div className="absolute -bottom-12 left-0 right-0 h-32 bg-gradient-to-t from-black to-transparent "></div>
 
       <style jsx>{`
        

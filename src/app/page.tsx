@@ -25,11 +25,11 @@ export default function Home() {
       <DefiTools />
       <AiToolsSection />
       <FeaturesSection />
-      <div className="bg-black py-24">
+      <div className="bg-black pt-12 md:pt-24">
         <h2 className="mx-auto px-4 pb-10 text-center text-3xl font-bold tracking-tight text-white">
           Supported on 67+ chains
         </h2>
-        <Marquee className="items-center py-4 w-screen" gradient gradientColor="#581c87">
+        <Marquee className="items-center  w-screen" gradient gradientColor="#581c87">
           <img className="sm:h-12 h-6" src="/images/support.png" alt="Inbox user interface" />
         </Marquee>
       </div>

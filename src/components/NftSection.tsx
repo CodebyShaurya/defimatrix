@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function NftSection() {
   return (
     <div className="bg-black">
-      <div id="use-cases" className="container relative mx-auto px-4 py-16 text-center lg:px-8 2xl:max-w-screen-2xl">
+      <div id="use-cases" className="container relative mx-auto px-4 pt-12 md:pt-24 text-center lg:px-8 2xl:max-w-screen-2xl">
         <div className="absolute inset-0 left-0 right-0 -z-10 mx-auto flex w-full items-center justify-center">
           <img src="/images/gradient-bg.svg" className="absolute animate-pulse opacity-20 blur-3xl" alt="" />
         </div>

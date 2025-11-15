@@ -50,7 +50,7 @@ const partnerLogos = [
 
 export default function LogoCloud() {
   return (
-    <div className="py-12 md:py-24">
+    <div className="pt-12 md:pt-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <h2 className="mb-8 text-center text-xl font-semibold text-white sm:mb-12 sm:text-6xl">Powered by</h2>
   

@@ -4,7 +4,7 @@ export default function FeaturesSection() {
   return (
     <div className="bg-black">
       <div id="features" className="container relative mx-auto overflow-hidden 2xl:max-w-screen-2xl">
-        <div className="mx-auto flex max-w-6xl flex-col gap-6 px-4 py-16 lg:flex-row 2xl:max-w-7xl">
+        <div className="mx-auto flex max-w-6xl flex-col gap-6 px-4 pt-12 md:pt-24 lg:flex-row 2xl:max-w-7xl">
           <div className="flex !w-full flex-col gap-6">
             <div className="flex flex-col items-center gap-4 rounded-3xl border border-white/10 bg-[#15131D] p-4 md:flex-row md:p-10">
               <img src="/images/100x.svg" alt="" />

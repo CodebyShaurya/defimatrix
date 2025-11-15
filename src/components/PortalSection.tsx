@@ -55,7 +55,7 @@ const portals = [
 export default function PortalSection() {
   return (
     <div className="bg-black">
-      <div id="portals" className="container relative mx-auto px-4 py-12 text-center lg:px-8 2xl:max-w-screen-2xl">
+      <div id="portals" className="container relative mx-auto px-4 pt-12 md:pt-36 text-center lg:px-8 2xl:max-w-screen-2xl">
       
         <div className="mx-auto mb-4 w-auto">
           <Image

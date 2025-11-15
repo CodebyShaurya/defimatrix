@@ -54,7 +54,7 @@ export default function WhyChooseSpedax() {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl text-white sm:text-4xl lg:text-5xl mb-6">
-            Why Choose the <span className='text-[#C450D5] transition-colors hover:text-purple-300'>Chainbased Card ?</span> 
+            Why Choose the <span className='text-[#C450D5] transition-colors hover:text-purple-300'>DeFiMatrix Card ?</span> 
           </h2>
         </div>
 
@@ -75,7 +75,7 @@ export default function WhyChooseSpedax() {
 
           {/* SpedaxAI Column */}
           <div className="relative rounded-3xl bg-white/5 backdrop-blur-xl border border-white/10 px-8 py-8 -my-8">
-            <h3 className="text-2xl font-semibold text-white text-center mb-8">Chainbased Cards</h3>
+            <h3 className="text-2xl font-semibold text-white text-center mb-8">DeFiMatrix Cards</h3>
             <div className="space-y-6">
               {comparisonData.map((row, index) => (
                 <div key={index} className="py-4 text-center">
@@ -111,7 +111,7 @@ export default function WhyChooseSpedax() {
               {/* Comparison */}
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <p className="text-sm text-white/60 mb-2">Chainbased Cards</p>
+                  <p className="text-sm text-white/60 mb-2">DeFiMatrix Cards</p>
                   <p className="text-white font-medium">{row.spedaxai}</p>
                 </div>
                 <div>

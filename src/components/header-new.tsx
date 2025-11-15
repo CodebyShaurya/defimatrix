@@ -244,7 +244,7 @@ export default function HeaderNew() {
   const aboutCloseRef = useRef<any>(null);
 
   return (
-    <header className="sticky top-0 z-50 mx-auto mt-4 max-w-7xl rounded-full  p-[3px] animated-border-gradient animated-border-glow header-animated">
+    <header className="sticky top-0 z-50 mx-auto mt-4 max-w-7xl rounded-full bg-gradient-to-r from-pink-500 via-purple-500 to-violet-500 p-[3px] animated-border-gradient animated-border-glow header-animated">
       <nav
         aria-label="Global"
         className={`relative z-10 flex items-center justify-between rounded-full p-6 backdrop-blur-md lg:px-8 bg-black text-white`}

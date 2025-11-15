@@ -606,7 +606,7 @@ export default function HeaderNew() {
               </button>
             </div>
             <div className=" hidden lg:flex items-center gap-x-6">
-                    <Link href="https://www.defimatrix.io/" target="_blank" className="relative p-[3px]">
+                    <Link href="https://app.defimatrix.io/" target="_blank" className="relative p-[3px]">
                       <div className="absolute inset-0 rounded-2xl bg-gradient-to-b from-purple-400 to-pink-400" />
                       <div className="group relative rounded-2xl bg-black px-5 py-2 text-xs font-semibold uppercase text-white transition duration-200 hover:bg-transparent">
                         Launch App
@@ -724,7 +724,7 @@ export default function HeaderNew() {
                 <div className="space-y-2 py-6">
                   
                   <a
-                    href="https://www.defimatrix.io/"
+                    href="https://app.defimatrix.io/"
                     className="-mx-3 block rounded-lg bg-white px-3 py-2.5 text-center text-base/7 font-semibold text-purple-900 hover:bg-purple-100 focus:outline-none focus:ring-0"
                   >
                     Launch App

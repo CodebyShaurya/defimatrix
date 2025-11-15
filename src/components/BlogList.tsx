@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { memo, useMemo } from "react";
 import BlogCard from "./BlogCard";
 
 interface BlogPost {
@@ -24,32 +24,18 @@ interface BlogListProps {
   selectedCategory?: string;
 }
 
-const container = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-    },
-  },
-};
-
-const BlogList = ({ posts, selectedCategory }: BlogListProps) => {
-  // Filter posts by selected category if one is specified
-  const filteredPosts =
-    selectedCategory && selectedCategory !== "All"
+const BlogList = memo(({ posts, selectedCategory }: BlogListProps) => {
+  // Memoize filtered posts to prevent recalculation on every render
+  const filteredPosts = useMemo(() => {
+    return selectedCategory && selectedCategory !== "All"
       ? posts.filter((post) => {
           return post.categories?.some((cat) => cat.name === selectedCategory);
         })
       : posts;
+  }, [posts, selectedCategory]);
 
   return (
-    <motion.div
-      variants={container}
-      initial="hidden"
-      animate="show"
-      className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3"
-    >
+    <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
       {filteredPosts.map((post) => (
         <BlogCard
           key={post.slug}
@@ -65,8 +51,10 @@ const BlogList = ({ posts, selectedCategory }: BlogListProps) => {
           coverImage={post.coverImage}
         />
       ))}
-    </motion.div>
+    </div>
   );
-};
+});
+
+BlogList.displayName = "BlogList";
 
 export default BlogList;

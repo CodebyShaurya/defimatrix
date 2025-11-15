@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { supabase } from "@/utils/supabase";
 import BlogList from "./BlogList";
 import FeaturedPost from "./FeaturedPost";
@@ -27,18 +27,10 @@ interface RealtimeBlogListProps {
 
 const RealtimeBlogList = ({ initialPosts }: RealtimeBlogListProps) => {
   const [posts, setPosts] = useState<BlogPost[]>(initialPosts);
-  const [featuredPost, setFeaturedPost] = useState<BlogPost | null>(
-    posts.length > 0 ? posts[0] : null
-  );
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
 
-  // Get unique category names for filtering
-  const allCategories = posts
-    .flatMap((post) => post.categories?.map((cat) => cat.name) || [])
-    .filter((value, index, self) => self.indexOf(value) === index);
-
-  useEffect(() => {
-    // Filter out invalid posts
+  // Memoize featured post to prevent unnecessary re-renders
+  const featuredPost = useMemo(() => {
     const validPosts = posts.filter(
       (post) =>
         post &&
@@ -49,72 +41,72 @@ const RealtimeBlogList = ({ initialPosts }: RealtimeBlogListProps) => {
         post.coverImage &&
         post.status === "published"
     );
+    return validPosts.length > 0 ? validPosts[0] : null;
+  }, [posts]);
 
-    // Update featured post
-    if (validPosts.length > 0) {
-      setFeaturedPost(validPosts[0]);
-    } else {
-      setFeaturedPost(null);
-    }
+  // Memoize category list to prevent recalculation on every render
+  const allCategories = useMemo(() => {
+    return posts
+      .flatMap((post) => post.categories?.map((cat) => cat.name) || [])
+      .filter((value, index, self) => self.indexOf(value) === index);
   }, [posts]);
 
   useEffect(() => {
-    // Set up realtime subscription
+    // Disable realtime subscription to improve performance
+    // Posts will update on page refresh instead
+    // If realtime is needed, consider implementing debouncing and batch updates
+    
+    // Optional: Uncomment below to re-enable realtime with optimizations
+    /*
+    let updateTimeout: NodeJS.Timeout;
     const subscription = supabase
       .channel("public:posts")
       .on(
         "postgres_changes",
         { event: "*", schema: "public", table: "posts" },
         async (payload) => {
-          console.log("Change received!", payload);
-          
-          // Fetch the updated post data including categories
-          if (payload.eventType === "INSERT" || payload.eventType === "UPDATE") {
-            const { data: updatedPost, error } = await supabase
-              .from("posts")
-              .select(
-                `
-                *,
-                post_categories(category_id),
-                categories:post_categories(categories(name, slug))
-              `
-              )
-              .eq("id", payload.new.id)
-              .single();
+          // Debounce updates to prevent excessive re-renders
+          clearTimeout(updateTimeout);
+          updateTimeout = setTimeout(async () => {
+            if (payload.eventType === "INSERT" || payload.eventType === "UPDATE") {
+              const { data: updatedPost, error } = await supabase
+                .from("posts")
+                .select(`*, post_categories(category_id), categories:post_categories(categories(name, slug))`)
+                .eq("id", payload.new.id)
+                .eq("status", "published")
+                .single();
 
-            if (!error && updatedPost) {
-              // Transform the post to match our interface
-              const transformedPost = {
-                ...updatedPost,
-                coverImage: updatedPost.featured_image,
-                categories: updatedPost.categories?.map((cat: any) => cat.categories) || [],
-              };
+              if (!error && updatedPost) {
+                const transformedPost = {
+                  ...updatedPost,
+                  coverImage: updatedPost.featured_image,
+                  categories: updatedPost.categories?.map((cat: any) => cat.categories) || [],
+                };
 
-              // Update posts state based on event type
-              if (payload.eventType === "INSERT") {
-                setPosts((currentPosts) => [transformedPost, ...currentPosts]);
-              } else if (payload.eventType === "UPDATE") {
-                setPosts((currentPosts) =>
-                  currentPosts.map((post) =>
+                setPosts((currentPosts) => {
+                  if (payload.eventType === "INSERT") {
+                    return [transformedPost, ...currentPosts];
+                  }
+                  return currentPosts.map((post) =>
                     post.id === transformedPost.id ? transformedPost : post
-                  )
-                );
+                  );
+                });
               }
+            } else if (payload.eventType === "DELETE") {
+              setPosts((currentPosts) =>
+                currentPosts.filter((post) => post.id !== payload.old.id)
+              );
             }
-          } else if (payload.eventType === "DELETE") {
-            // Remove deleted post from state
-            setPosts((currentPosts) =>
-              currentPosts.filter((post) => post.id !== payload.old.id)
-            );
-          }
+          }, 500);
         }
       )
       .subscribe();
 
-    // Cleanup subscription on unmount
     return () => {
+      clearTimeout(updateTimeout);
       supabase.removeChannel(subscription);
     };
+    */
   }, []);
 
   // Handle category selection

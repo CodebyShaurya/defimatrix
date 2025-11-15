@@ -24,7 +24,7 @@ export default function Home() {
       <DefiManagement />
       <DefiTools />
       <AiToolsSection />
-      <FeaturesSection />
+      <FeaturesSection /> 
       <div className="bg-black pt-12 md:pt-24">
         <h2 className="mx-auto px-4 pb-10 text-center text-3xl font-bold tracking-tight text-white">
           Supported on 67+ chains

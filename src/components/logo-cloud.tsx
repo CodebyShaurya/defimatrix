@@ -53,12 +53,7 @@ export default function LogoCloud() {
     <div className="py-12 md:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <h2 className="mb-8 text-center text-xl font-semibold text-white sm:mb-12 sm:text-6xl">Powered by</h2>
-   <div className="flex items-center justify-center gap-4 relative mb-8 z-10  max-w-4xl mx-auto ">
-        <div className="bg-black/60 flex items-center rounded-2xl px-4 py-2 border-2 border-gray-700">
-          <span className="text-xs sm:text-sm uppercase tracking-wide text-gray-400">Built on</span>
-          <img src="/logo3.png" alt="Built on logo" className="h-3 sm:h-6 w-auto ml-3" />
-        </div>
-      </div>
+  
         {/* Mobile view - stacked grid */}
         <div className="grid grid-cols-2 gap-8 md:hidden">
           {partnerLogos.map((logo) => (
@@ -118,6 +113,12 @@ export default function LogoCloud() {
             ))}
           </div>
         </div>
+         <div className="flex items-center justify-center gap-4 relative mb-8 z-10  max-w-4xl mx-auto ">
+        <div className="bg-black/60 flex items-center rounded-2xl px-4 py-2 mt-7">
+          <span className="text-xs sm:text-2xl uppercase tracking-wide text-gray-400">Built on</span>
+          <img src="/logo3.png" alt="Built on logo" className="h-3 sm:h-6 w-auto ml-3" />
+        </div>
+      </div>
       </div>
     </div>
   );

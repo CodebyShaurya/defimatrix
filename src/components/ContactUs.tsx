@@ -12,7 +12,7 @@ export default function ContactUs() {
         />
       </div>
       <div className="pt-16 sm:pt-24 lg:mx-auto lg:grid lg:max-w-6xl lg:grid-cols-2 lg:px-8 lg:pt-32 2xl:max-w-7xl">
-        <div className="p-4 sm:rounded-3xl sm:bg-black/20 sm:p-8">
+        <div className="p-4 sm:rounded-3xl sm:bg-black/20 sm:py-8">
           <div className="max-w-xl lg:max-w-lg">
             <h2 className="text-3xl font-bold tracking-tight text-white">Get in touch</h2>
             <p className="mt-2 text-lg leading-8 text-white/80">
@@ -50,9 +50,9 @@ export default function ContactUs() {
 
           <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 md:justify-start">
               <div className="flex items-end justify-center gap-x-6 mt-4 w-full">
-            <Link href="mailto:support@defimatrix.io" target="_blank" className="relative p-[3px]">
+            <Link href="mailto:support@defimatrix.io" target="_blank" className="relative p-[3px] w-full">
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-b from-purple-400 to-pink-400" />
-              <div className="group relative rounded-2xl bg-black px-8 py-3.5 text-xs font-semibold uppercase text-white transition duration-200 hover:bg-transparent flex">
+              <div className="group relative rounded-2xl bg-black px-8 py-3.5 text-xs font-semibold uppercase text-white transition duration-200 hover:bg-transparent flex items-center justify-center">
                 <IconMail className="mr-2 h-5 w-5 text-white" />
                 Contact by email
               </div>
@@ -60,9 +60,9 @@ export default function ContactUs() {
           </div>
 
           <div className="flex items-end justify-center gap-x-6 mt-4 w-full">
-            <Link href="https://x.com/DeFiMatrixOS" target="_blank" className="relative p-[3px]">
+            <Link href="https://x.com/DeFiMatrixOS" target="_blank" className="relative p-[3px] w-full">
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-b from-purple-400 to-pink-400" />
-              <div className="group relative rounded-2xl bg-black px-8 py-3.5 text-xs font-semibold uppercase text-white transition duration-200 hover:bg-transparent flex">
+              <div className="group relative rounded-2xl bg-black px-8 py-3.5 text-xs font-semibold uppercase text-white transition duration-200 hover:bg-transparent flex items-center justify-center">
                 <IconBrandX className="mr-2 h-5 w-5 text-white" />
                 Contact on X
               </div>

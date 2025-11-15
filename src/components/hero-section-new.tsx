@@ -83,13 +83,13 @@ export default function HeroSectionNew() {
       </svg>
     </a>
     <div className="mb-6 md:mb-0">
-      <p className="max-w-xl text-sm text-gray-400 sm:text-base">
-        DeFiMatrix.io, the Autonomous AI DeFi Revolution. Redefining the future of decentralized finance by empowering intelligent capital deployment, automated portfolio management, and seamless optimization across DeFi Banking, Digital Payments, and Blockchain Ecosystems
+      <p className="max-w-2xl text-xs text-gray-400 sm:text-sm">
+        DeFiMatrix.io delivers autonomous AI-driven DeFi, enabling intelligent capital deployment, automated portfolios, and seamless optimization across digital payments, DeFi banking, and blockchain ecosystems.
       </p>
     </div>
     <div className="flex flex-col space-y-3 sm:flex-row sm:space-x-4 sm:space-y-0">
       <div className="flex items-center gap-x-6">
-        <Link href="https://app.defimatrix.io/" target="_blank" className="relative p-[3px]">
+        <Link href="https://docs.google.com/forms/d/e/1FAIpQLSdOX0jlgPL6MwDgYApNRl1d8exeX3toD5zvSD9VAaOzQ-1-sw/viewform" target="_blank" className="relative p-[3px]">
           <div className="absolute inset-0 rounded-2xl bg-gradient-to-b from-purple-400 to-pink-400" />
           <div className="group relative rounded-2xl bg-black px-8 py-3.5 text-xs font-semibold uppercase text-white transition duration-200 hover:bg-transparent">
             Build with DefiGPT

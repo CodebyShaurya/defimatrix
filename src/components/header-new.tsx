@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Dialog, DialogPanel, Popover, PopoverButton, PopoverGroup, PopoverPanel } from "@headlessui/react";
 import {
   ArrowPathIcon,
@@ -202,11 +203,6 @@ const aboutUsItems = [
     name: "About Us",
     href: "/about-us",
     description: "Learn how DeFiMatrix is redefining decentralized finance with autonomous AI-driven solutions.",
-  },
-  {
-    name: "Company",
-    href: "/company",
-    description: "Explore our mission, leadership, and commitment to building the future of DeFi.",
   },
   {
     name: "Affiliate",
@@ -510,7 +506,7 @@ export default function HeaderNew() {
                       </div>
                       <h3 className="mb-2 text-xl font-bold text-white">About DeFiMatrix</h3>
                       <p className="text-sm leading-relaxed text-gray-400 break-words whitespace-normal">
-                        Next-generation Web3 banking tools for seamless, intelligent, and instant use of digital assets
+                        Next-generation Web3 tools for seamless, intelligent, and instant use of digital assets
                         every day.
                       </p>
                     </div>
@@ -574,15 +570,23 @@ export default function HeaderNew() {
                 )}
               </button>
             </div>
+            <div className=" hidden lg:flex items-center gap-x-6">
+                    <Link href="https://www.defimatrix.io/" target="_blank" className="relative p-[3px]">
+                      <div className="absolute inset-0 rounded-2xl bg-gradient-to-b from-purple-400 to-pink-400" />
+                      <div className="group relative rounded-2xl bg-black px-5 py-2 text-xs font-semibold uppercase text-white transition duration-200 hover:bg-transparent">
+                        Launch App
+                      </div>
+                    </Link>
+                  </div>
 
-            <div className="hidden lg:flex lg:items-center lg:gap-x-4">
+            {/* <div className="hidden lg:flex lg:items-center lg:gap-x-4">
               <a
                 href="https://www.defimatrix.io/"
                 className="rounded-full bg-white px-5 py-2 text-sm font-semibold text-purple-900 shadow-sm hover:bg-purple-100 whitespace-nowrap focus:outline-none focus:ring-0"
               >
-                Launch App
+                
               </a>
-            </div>
+            </div> */}
           </div>
       </nav>
       <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">

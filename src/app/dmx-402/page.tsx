@@ -167,6 +167,92 @@ export default function DMX402Page() {
           This entire cycle can be completed in seconds, enabling a seamless and real-time pay-per-use experience for autonomous systems.
         </p>
 
+        <div className="bg-gradient-to-br from-gray-900 to-purple-900/20 rounded-lg p-6 mb-8 border border-purple-500/20">
+          <h4 className="text-lg font-semibold mb-4 text-purple-300 text-center">Figure 1: DMX-402 Payment Flow</h4>
+          <div className="bg-black rounded-lg p-6 overflow-x-auto">
+            <pre className="text-xs text-gray-300 leading-relaxed font-mono">
+{`═══════════════════════════════════════════════════════════════════════════════
+
+┌──────────────┐         ┌──────────────┐         ┌──────────────┐         ┌──────────────┐
+│              │         │              │         │              │         │              │
+│  AI Agent /  │         │ API Server / │         │  AI Intent   │         │  Multi-Chain │
+│ Application  │         │   Service    │         │    Layer     │         │  Settlement  │
+│              │         │              │         │  (DeFiGPT)   │         │   Networks   │
+└──────┬───────┘         └──────┬───────┘         └──────┬───────┘         └──────┬───────┘
+       │                        │                        │                        │
+       │                        │                        │                        │
+  [1]  │  GET /api/premium-data │                        │                        │
+       ├───────────────────────>│                        │                        │
+       │                        │                        │                        │
+       │                        │                        │                        │
+  [2]  │   402 Payment Required │                        │                        │
+       │   {amount, chains,     │                        │                        │
+       │    paymentAddress...}  │                        │                        │
+       │<───────────────────────┤                        │                        │
+       │                        │                        │                        │
+       │                        │                        │                        │
+  [3]  │  Parse Payment Request │                        │                        │
+       │  & Evaluate Intent     │                        │                        │
+       ├────────────────────────┼───────────────────────>│                        │
+       │                        │                        │                        │
+       │                        │                        │                        │
+  [4]  │                        │  Select Optimal Chain  │                        │
+       │                        │  (Arbitrum/Base/NEAR)  │                        │
+       │<───────────────────────┼────────────────────────┤                        │
+       │                        │                        │                        │
+       │                        │                        │                        │
+  [5]  │  Retry Request with    │                        │                        │
+       │  Signed Payment (EIP-712)                       │                        │
+       ├───────────────────────>│                        │                        │
+       │                        │                        │                        │
+       │                        │                        │                        │
+  [6]  │                        │  Verify Signature      │                        │
+       │                        │  & Broadcast Tx        │                        │
+       │                        ├────────────────────────┼───────────────────────>│
+       │                        │                        │                        │
+       │                        │                        │   [Arbitrum/Base/NEAR] │
+       │                        │                        │   Transaction Submitted│
+       │                        │                        │                        │
+  [7]  │                        │                        │   Confirmation (~200ms)│
+       │                        │<───────────────────────┼────────────────────────┤
+       │                        │                        │                        │
+       │                        │                        │                        │
+  [8]  │  200 OK                │                        │                        │
+       │  {premium data...}     │                        │                        │
+       │<───────────────────────┤                        │                        │
+       │                        │                        │                        │
+       │                        │                        │                        │
+
+═══════════════════════════════════════════════════════════════════════════════`}
+            </pre>
+          </div>
+          <div className="mt-6 space-y-4">
+            <div>
+              <h5 className="text-sm font-semibold mb-2 text-purple-300">LEGEND:</h5>
+              <ul className="text-xs text-gray-300 space-y-1">
+                <li><strong className="text-purple-300">[1]</strong> Client initiates request to protected API endpoint</li>
+                <li><strong className="text-purple-300">[2]</strong> Server responds with HTTP 402 and payment details</li>
+                <li><strong className="text-purple-300">[3]</strong> AI agent parses payment requirements and evaluates against intent</li>
+                <li><strong className="text-purple-300">[4]</strong> AI Intent Layer selects optimal blockchain for settlement</li>
+                <li><strong className="text-purple-300">[5]</strong> Agent retries request with cryptographically signed payment authorization</li>
+                <li><strong className="text-purple-300">[6]</strong> Server verifies signature and broadcasts transaction to selected chain</li>
+                <li><strong className="text-purple-300">[7]</strong> Blockchain confirms transaction (near-instant on Layer-2)</li>
+                <li><strong className="text-purple-300">[8]</strong> Server grants access and returns requested data/service</li>
+              </ul>
+            </div>
+            <div>
+              <h5 className="text-sm font-semibold mb-2 text-purple-300">KEY FEATURES:</h5>
+              <ul className="text-xs text-gray-300 space-y-1">
+                <li>• Fully autonomous payment process (no human intervention)</li>
+                <li>• Multi-chain settlement optimization (Arbitrum, Base, NEAR, ICP, Solana)</li>
+                <li>• AI-driven decision making via DeFiGPT integration</li>
+                <li>• Cryptographic security via EIP-712 structured data signing</li>
+                <li>• Sub-second settlement finality on Layer-2 networks</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
         <h2 className="text-3xl font-semibold mb-4 text-purple-400">4. DMX-402 Enables Frictionless Agentic Finance</h2>
         <p className="text-gray-300 leading-relaxed mb-6">
           The primary goal of DMX-402 is to eliminate the friction that plagues existing payment systems, thereby unlocking the full potential of agentic finance. The protocol achieves this by fundamentally redesigning the payment process for machine-first interaction.
@@ -250,7 +336,260 @@ export default function DMX402Page() {
           <li><strong className="text-purple-300">Smart Contract Auditing:</strong> Automated auditing tools can charge per contract scan, making security more accessible to a broader range of projects.</li>
         </ul>
 
-        <h2 className="text-3xl font-semibold mb-4 text-purple-400">7. Use Cases: Real-World Applications in Agentic DeFi</h2>
+        <h2 className="text-3xl font-semibold mb-4 text-purple-400">7. Simplifying DeFi Operations</h2>
+        <p className="text-gray-300 leading-relaxed mb-6">
+          Beyond enabling new business models, DMX-402 dramatically simplifies the operational complexities associated with building and using DeFi applications. By standardizing the payment process and leveraging the inherent security of blockchain technology, the protocol mitigates risk and reduces overhead for developers.
+        </p>
+
+        <h3 className="text-2xl font-semibold mb-3 text-purple-300">7.1. Eliminating Fraud and Counterparty Risk</h3>
+        <p className="text-gray-300 leading-relaxed mb-6">
+          One of the most significant advantages of DMX-402 is the elimination of chargebacks and payment fraud. Because all transactions are settled on-chain with cryptographic finality, they are irreversible. This removes the significant financial and operational burden of managing disputes and chargebacks, which is a major pain point for businesses using traditional payment rails. The use of cryptographic signatures for payment authorization also ensures that all transactions are authentic and tamper-proof, protecting both the service provider and the consumer.
+        </p>
+
+        <h3 className="text-2xl font-semibold mb-3 text-purple-300">7.2. Multi-Chain and Token-Agnostic Flexibility</h3>
+        <p className="text-gray-300 leading-relaxed mb-8">
+          The DeFi ecosystem is increasingly multi-chain, and DMX-402 is designed to thrive in this environment. The protocol's blockchain-agnostic settlement layer allows developers to accept payments on any supported chain, giving users the flexibility to pay from their preferred network. This is complemented by token-agnostic support, enabling payments in a variety of assets, including stablecoins (like USDC, USDT, and DAI), major cryptocurrencies (like ETH), and native ecosystem tokens (like DMX). This flexibility simplifies the user experience and broadens the potential customer base for any DMX-402-enabled service.
+        </p>
+
+        <h2 className="text-3xl font-semibold mb-4 text-purple-400">8. The DMX-402 Specification: An Overview</h2>
+        <p className="text-gray-300 leading-relaxed mb-6">
+          The DMX-402 specification is designed to be lightweight, flexible, and easy to integrate. It provides a standardized framework for communicating payment requirements and verifying transactions, while giving developers the freedom to implement it in a way that best suits their needs.
+        </p>
+
+        <h3 className="text-2xl font-semibold mb-3 text-purple-300">8.1. Middleware Configuration</h3>
+        <p className="text-gray-300 leading-relaxed mb-4">
+          For service providers, integrating DMX-402 is as simple as adding a middleware function to their API endpoints. This middleware is configured with the basic payment parameters, such as the required amount, the accepted currency, and the destination wallet address. A typical middleware configuration might look like this:
+        </p>
+
+        <div className="bg-gray-900 rounded-lg p-6 mb-8 border border-purple-500/20 overflow-x-auto">
+          <pre className="text-sm text-gray-300">
+{`dmxPaymentMiddleware({
+  amount: "0.10",
+  currency: "USDC",
+  chains: ["arbitrum", "base"],
+  paymentAddress: "0x1234...",
+  description: "Access to premium DeFi analytics"
+});`}
+          </pre>
+        </div>
+
+        <p className="text-gray-300 leading-relaxed mb-8">
+          This single line of code is all that is needed to protect an API endpoint and require a DMX-402 payment for access.
+        </p>
+
+        <h3 className="text-2xl font-semibold mb-3 text-purple-300">8.2. Handling Payment Required Responses</h3>
+        <p className="text-gray-300 leading-relaxed mb-8">
+          When a client attempts to access a protected resource without a valid payment, the middleware automatically returns an HTTP 402 response. The body of this response is a JSON object that provides the client with all the information it needs to construct and sign a valid payment transaction. This includes the maximum amount required, the supported chains and tokens, the destination address, and a unique nonce to prevent replay attacks. This machine-readable format ensures that an AI agent can parse the response and handle the entire payment process autonomously.
+        </p>
+
+        <h2 className="text-3xl font-semibold mb-4 text-purple-400">9. Technical Specifications</h2>
+        <p className="text-gray-300 leading-relaxed mb-6">
+          The DMX-402 protocol provides a standardized, yet flexible, set of technical specifications for defining payment requests, authorizing transactions, and settling payments across multiple blockchain networks. This section outlines the core components of the specification.
+        </p>
+
+        <h3 className="text-2xl font-semibold mb-3 text-purple-300">9.1. DMX-402 Payment Request Format</h3>
+        <p className="text-gray-300 leading-relaxed mb-4">
+          When a server returns an HTTP 402 response, it includes a JSON payload that precisely defines the payment requirements. This structured format is designed to be machine-readable, enabling an AI agent to parse the request and construct the appropriate transaction.
+        </p>
+
+        <p className="text-purple-300 font-semibold mb-2">Example 402 Payment Required JSON Body:</p>
+
+        <div className="bg-gray-900 rounded-lg p-6 mb-6 border border-purple-500/20 overflow-x-auto">
+          <pre className="text-sm text-gray-300">
+{`{
+  "maxAmountRequired": "0.50",
+  "currency": "USDC",
+  "supportedChains": ["arbitrum", "base", "near"],
+  "paymentAddress": "0xAb5801a7D398351b8bE11C439e05C5B3259aeC9B",
+  "contractAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+  "expiresAt": 1735689600,
+  "nonce": "a7d39835-1b8b-439e-9e05-c5b3259aec9b",
+  "paymentId": "dmx-pay-a1b2c3d4e5",
+  "description": "Access to real-time DeFi yield aggregator API",
+  "metadata": {
+    "service": "yield-optimizer-v2",
+    "rateLimit": "100 requests/hour",
+    "dataFreshness": "5 seconds"
+  }
+}`}
+          </pre>
+        </div>
+
+        <div className="bg-gradient-to-br from-gray-900 to-purple-900/20 rounded-lg p-6 mb-8 border border-purple-500/20 overflow-x-auto">
+          <table className="w-full text-left text-sm">
+            <thead>
+              <tr className="border-b border-purple-500/30">
+                <th className="pb-3 pr-4 text-purple-400 font-semibold">Field</th>
+                <th className="pb-3 pr-4 text-purple-400 font-semibold">Type</th>
+                <th className="pb-3 text-purple-400 font-semibold">Description</th>
+              </tr>
+            </thead>
+            <tbody className="text-gray-300">
+              <tr className="border-b border-purple-500/10">
+                <td className="py-3 pr-4 font-mono">maxAmountRequired</td>
+                <td className="py-3 pr-4">String</td>
+                <td className="py-3">The maximum payment amount required, formatted as a string to avoid floating-point precision issues.</td>
+              </tr>
+              <tr className="border-b border-purple-500/10">
+                <td className="py-3 pr-4 font-mono">currency</td>
+                <td className="py-3 pr-4">String</td>
+                <td className="py-3">The ticker symbol of the required token (e.g., "USDC", "DMX").</td>
+              </tr>
+              <tr className="border-b border-purple-500/10">
+                <td className="py-3 pr-4 font-mono">supportedChains</td>
+                <td className="py-3 pr-4">Array</td>
+                <td className="py-3">A list of blockchain network identifiers where the payment can be settled.</td>
+              </tr>
+              <tr className="border-b border-purple-500/10">
+                <td className="py-3 pr-4 font-mono">paymentAddress</td>
+                <td className="py-3 pr-4">String</td>
+                <td className="py-3">The destination wallet address that will receive the payment.</td>
+              </tr>
+              <tr className="border-b border-purple-500/10">
+                <td className="py-3 pr-4 font-mono">contractAddress</td>
+                <td className="py-3 pr-4">String</td>
+                <td className="py-3">The smart contract address of the token being transferred (required for ERC-20 tokens).</td>
+              </tr>
+              <tr className="border-b border-purple-500/10">
+                <td className="py-3 pr-4 font-mono">expiresAt</td>
+                <td className="py-3 pr-4">Integer</td>
+                <td className="py-3">A Unix timestamp indicating when the payment request is no longer valid.</td>
+              </tr>
+              <tr className="border-b border-purple-500/10">
+                <td className="py-3 pr-4 font-mono">nonce</td>
+                <td className="py-3 pr-4">String</td>
+                <td className="py-3">A unique, server-generated string used to prevent replay attacks. Each nonce can only be used once.</td>
+              </tr>
+              <tr className="border-b border-purple-500/10">
+                <td className="py-3 pr-4 font-mono">paymentId</td>
+                <td className="py-3 pr-4">String</td>
+                <td className="py-3">A unique identifier for the payment request, useful for logging and reconciliation.</td>
+              </tr>
+              <tr className="border-b border-purple-500/10">
+                <td className="py-3 pr-4 font-mono">description</td>
+                <td className="py-3 pr-4">String</td>
+                <td className="py-3">A human-readable description of the service or resource being accessed.</td>
+              </tr>
+              <tr>
+                <td className="py-3 pr-4 font-mono">metadata</td>
+                <td className="py-3 pr-4">Object</td>
+                <td className="py-3">An optional field for additional structured data about the service, such as rate limits or service tiers.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 className="text-2xl font-semibold mb-3 text-purple-300">9.2. Payment Authorization: EIP-712 and AI Intent Signing</h3>
+        <p className="text-gray-300 leading-relaxed mb-4">
+          To authorize a payment, the client (e.g., an AI agent) must cryptographically sign the payment details. DMX-402 utilizes the EIP-712 standard for typed structured data hashing and signing. This provides a more readable and secure signing experience compared to raw message signing, as it presents the data in a structured, human-readable format in compatible wallets.
+        </p>
+
+        <p className="text-gray-300 leading-relaxed mb-6">
+          The data to be signed includes all fields from the payment request, along with the actual amount the client intends to pay (which must be less than or equal to maxAmountRequired) and a timestamp of the authorization.
+        </p>
+
+        <p className="text-gray-300 leading-relaxed mb-8">
+          <strong className="text-purple-300">AI Intent Signing</strong> is a crucial extension of this process. For autonomous agents, the signing key may be held within a secure environment like a Multi-Party Computation (MPC) wallet. The agent's decision to sign is based on its programmed intent and operational parameters. For example, an agent can be configured with rules such as "approve payments up to $1.00 for data APIs on Arbitrum." The signing action is therefore not just a cryptographic operation but the final step in an AI-driven decision-making process.
+        </p>
+
+        <h3 className="text-2xl font-semibold mb-3 text-purple-300">9.3. Multi-Chain Smart Contract Settlement Model</h3>
+        <p className="text-gray-300 leading-relaxed mb-4">
+          DMX-402 provides a flexible, multi-chain settlement model that can be adapted to various use cases. The server-side component is responsible for monitoring the designated blockchains for incoming payments that match the authorized requests.
+        </p>
+
+        <ul className="list-disc list-inside text-gray-300 mb-8 space-y-3">
+          <li><strong className="text-purple-300">Direct On-Chain Settlement:</strong> For simple use cases, the settlement can be a standard token transfer to the paymentAddress. The server monitors the chain for a transaction matching the signed amount, currency, and destination from a validated payer address.</li>
+          <li><strong className="text-purple-300">Layer-2 Settlement:</strong> For high-frequency, low-cost transactions, settlement on Layer-2 networks like Arbitrum or Base is preferred. These networks offer near-instant finality and minimal gas fees, making them ideal for micropayments.</li>
+          <li><strong className="text-purple-300">Smart Contract-Based Settlement:</strong> For more complex interactions, the payment can be sent to a dedicated smart contract. This contract can perform additional logic, such as atomically granting access to a resource upon receipt of payment, distributing funds to multiple parties, or escrowing funds pending the completion of a service. This model provides the highest degree of trustlessness and automation.</li>
+          <li><strong className="text-purple-300">Cross-Chain Settlement:</strong> In scenarios where the agent and the service are on different blockchains, DMX-402 can integrate with cross-chain interoperability protocols (e.g., Chainlink CCIP, LayerZero) to facilitate seamless settlement. The AI agent can intelligently route the payment through the most efficient bridge based on cost, speed, and security.</li>
+        </ul>
+
+        <h2 className="text-3xl font-semibold mb-4 text-purple-400">10. Integration Examples</h2>
+        <p className="text-gray-300 leading-relaxed mb-6">
+          DMX-402 is designed for rapid and straightforward integration. The protocol is supported by a suite of open-source libraries and SDKs that abstract away the complexities of payment authorization and settlement verification. Below are examples illustrating how to implement DMX-402 on both the server and client side.
+        </p>
+
+        <h3 className="text-2xl font-semibold mb-3 text-purple-300">10.1. Server-Side Implementation (Node.js/Express)</h3>
+        <p className="text-gray-300 leading-relaxed mb-4">
+          Protecting an API endpoint with DMX-402 can be accomplished with just a few lines of code using the official middleware for Express.js. The middleware handles the logic of checking for a valid payment and returning a 402 response if one is not found.
+        </p>
+
+        <div className="bg-gray-900 rounded-lg p-6 mb-8 border border-purple-500/20 overflow-x-auto">
+          <pre className="text-sm text-gray-300">
+{`// 1. Install the DeFiMatrix middleware
+// npm install @defimatrix/dmx402-middleware
+
+const express = require('express');
+const { dmx402Middleware } = require('@defimatrix/dmx402-middleware');
+
+const app = express();
+
+// 2. Protect an endpoint with the DMX-402 middleware
+app.get(
+  '/api/premium-data',
+  dmx402Middleware({
+    amount: "0.25",
+    currency: "USDC",
+    chains: ["arbitrum", "base"],
+    paymentAddress: "0xAb5801a7D398351b8bE11C439e05C5B3259aeC9B",
+    description: "Access to real-time DeFi market data"
+  }),
+  (req, res) => {
+    // 3. This code only executes after a valid payment is received
+    res.json({
+      data: "Premium DeFi analytics payload...",
+      timestamp: Date.now()
+    });
+  }
+);
+
+app.listen(3000, () => {
+  console.log('DMX-402 protected server running on port 3000');
+});`}
+          </pre>
+        </div>
+
+        <h3 className="text-2xl font-semibold mb-3 text-purple-300">10.2. AI Agent SDK Integration (Python)</h3>
+        <p className="text-gray-300 leading-relaxed mb-4">
+          For AI agents, the DeFiMatrix AI Agent SDK provides a high-level interface for interacting with DMX-402 protected services. The SDK automates the process of handling 402 responses, signing payments based on the agent's intent, and retrying requests.
+        </p>
+
+        <div className="bg-gray-900 rounded-lg p-6 mb-8 border border-purple-500/20 overflow-x-auto">
+          <pre className="text-sm text-gray-300">
+{`# 1. Install the DeFiMatrix AI Agent SDK
+# pip install defimatrix-agent-sdk
+
+from defimatrix_agent_sdk import DMX402Agent
+from defimatrix_agent_sdk.wallets import MPCWallet
+
+# 2. Initialize the agent with a secure MPC wallet and operational parameters
+agent = DMX402Agent(
+    wallet=MPCWallet(api_key="...", private_key_share="..."),
+    ruleset={
+        "max_payment_per_request": 1.0,  // Max $1.00 per request
+        "allowed_chains": ["arbitrum", "base", "near"],
+        "allowed_currencies": ["USDC", "DMX"]
+    }
+)
+
+# 3. The agent autonomously handles the DMX-402 payment flow
+print("Attempting to access premium data...")
+response = agent.request(
+    url="http://localhost:3000/api/premium-data",
+    intent="Fetch the latest DeFi analytics for portfolio optimization."
+)
+
+if response.success:
+    print("Successfully accessed data:", response.data)
+else:
+    print("Failed to access data:", response.error)`}
+          </pre>
+        </div>
+
+        <h2 className="text-3xl font-semibold mb-4 text-purple-400">11. Use Cases: Real-World Applications in Agentic DeFi</h2>
+        <p className="text-gray-300 leading-relaxed mb-6">
+          DMX-402 is not a theoretical construct; it is a practical solution for a wide range of real-world applications at the intersection of AI and DeFi. The protocol's ability to facilitate autonomous, pay-per-use transactions opens up numerous possibilities for developers, businesses, and AI agents.
+        </p>
         
         <div className="bg-gradient-to-br from-gray-900 to-purple-900/20 rounded-lg p-6 mb-8 border border-purple-500/20 overflow-x-auto">
           <table className="w-full text-left">
@@ -268,22 +607,42 @@ export default function DMX402Page() {
                 <td className="py-3">An AI trading agent pays $0.001 per query to access a real-time price feed from a Chainlink oracle.</td>
               </tr>
               <tr className="border-b border-purple-500/10">
-                <td className="py-3 pr-4 font-semibold align-top">AI-Powered DeFi</td>
+                <td className="py-3 pr-4 font-semibold align-top"></td>
+                <td className="py-3 pr-4 align-top">On-Chain Analytics</td>
+                <td className="py-3">A DeFi researcher pays $0.25 to download a CSV report of historical DEX trading volumes from an analytics API.</td>
+              </tr>
+              <tr className="border-b border-purple-500/10">
+                <td className="py-3 pr-4 font-semibold align-top">AI-Powered DeFi Services</td>
                 <td className="py-3 pr-4 align-top">Yield Optimization Agents</td>
                 <td className="py-3">An autonomous agent pays a 0.1% fee on yield earned to a service that automatically rebalances its portfolio.</td>
               </tr>
               <tr className="border-b border-purple-500/10">
-                <td className="py-3 pr-4 font-semibold align-top">Cross-Chain Ops</td>
+                <td className="py-3 pr-4 font-semibold align-top"></td>
+                <td className="py-3 pr-4 align-top">Trading Strategy APIs</td>
+                <td className="py-3">A hedge fund's algorithm pays $0.05 per inference to an AI model that provides real-time market sentiment scores.</td>
+              </tr>
+              <tr className="border-b border-purple-500/10">
+                <td className="py-3 pr-4 font-semibold align-top">Cross-Chain Operations</td>
                 <td className="py-3 pr-4 align-top">Automated Arbitrage</td>
                 <td className="py-3">An arbitrage bot pays for transaction execution on two different chains to capitalize on a price discrepancy.</td>
               </tr>
               <tr className="border-b border-purple-500/10">
-                <td className="py-3 pr-4 font-semibold align-top">Treasury Management</td>
+                <td className="py-3 pr-4 font-semibold align-top"></td>
+                <td className="py-3 pr-4 align-top">Liquidity Management</td>
+                <td className="py-3">A protocol's AI agent pays a fee to dynamically adjust its liquidity positions across multiple DEXs.</td>
+              </tr>
+              <tr className="border-b border-purple-500/10">
+                <td className="py-3 pr-4 font-semibold align-top">Autonomous Treasury Mgmt.</td>
                 <td className="py-3 pr-4 align-top">DAO Payment Automation</td>
                 <td className="py-3">A DAO's treasury autonomously pays monthly stipends to contributors via DMX-402-enabled payroll services.</td>
               </tr>
+              <tr className="border-b border-purple-500/10">
+                <td className="py-3 pr-4 font-semibold align-top"></td>
+                <td className="py-3 pr-4 align-top">Subscription Alternatives</td>
+                <td className="py-3">A DAO pays per-use for a suite of security monitoring tools, avoiding a costly annual subscription.</td>
+              </tr>
               <tr>
-                <td className="py-3 pr-4 font-semibold align-top">Machine-to-Machine</td>
+                <td className="py-3 pr-4 font-semibold align-top">Machine-to-Machine (M2M) DeFi</td>
                 <td className="py-3 pr-4 align-top">IoT-Enabled Services</td>
                 <td className="py-3">A smart electric vehicle autonomously pays for charging at a station using DMX-402 micropayments.</td>
               </tr>
@@ -291,7 +650,7 @@ export default function DMX402Page() {
           </table>
         </div>
 
-        <h2 className="text-3xl font-semibold mb-4 text-purple-400">8. The Future of Agentic DeFi Commerce</h2>
+        <h2 className="text-3xl font-semibold mb-4 text-purple-400">12. The Future of Agentic DeFi Commerce</h2>
         <p className="text-gray-300 leading-relaxed mb-6">
           The evolution of decentralized finance demands a payment infrastructure as autonomous and intelligent as the AI agents that will come to dominate it. DMX-402 removes the friction of traditional and early blockchain payment rails, enabling true machine-to-machine financial interactions at internet scale. As AI agents become more sophisticated, they will require seamless, on-demand access to data, computational resources, and complex DeFi services without the bottleneck of human intervention. DMX-402 provides the foundational payment layer that makes this vision of agentic DeFi commerce a reality.
         </p>
@@ -310,11 +669,14 @@ export default function DMX402Page() {
             The DMX-402 protocol is supported by a full suite of open-source resources available through the DeFiMatrix Protocol Lab. This includes:
           </p>
           <ul className="list-disc list-inside text-gray-300 space-y-2">
-            <li>Core Protocol Libraries: Open-source libraries for handling HTTP 402 responses and cryptographic signing.</li>
-            <li>Server-Side Middleware: Production-ready middleware for popular backend frameworks like Express.js (Node.js) and FastAPI (Python).</li>
-            <li>AI Agent SDKs: Client libraries in Python and JavaScript that empower AI agents to autonomously interact with DMX-402 protected services.</li>
-            <li>Smart Contracts: Reference implementations of settlement contracts for EVM chains and Solana.</li>
+            <li><strong className="text-purple-300">Core Protocol Libraries:</strong> Open-source libraries for handling HTTP 402 responses and cryptographic signing.</li>
+            <li><strong className="text-purple-300">Server-Side Middleware:</strong> Production-ready middleware for popular backend frameworks like Express.js (Node.js) and FastAPI (Python).</li>
+            <li><strong className="text-purple-300">AI Agent SDKs:</strong> Client libraries in Python and JavaScript that empower AI agents to autonomously interact with DMX-402 protected services.</li>
+            <li><strong className="text-purple-300">Smart Contracts:</strong> Reference implementations of settlement contracts for EVM chains and Solana.</li>
           </ul>
+          <p className="text-gray-300 leading-relaxed mt-4">
+            Developers can access all resources, including documentation, tutorials, and API references, at the DeFiMatrix developer portal.
+          </p>
         </div>
 
         <p className="text-center text-xl font-semibold text-purple-400 mb-8">

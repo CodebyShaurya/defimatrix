@@ -167,7 +167,7 @@ export default function DMX402Page() {
           This entire cycle can be completed in seconds, enabling a seamless and real-time pay-per-use experience for autonomous systems.
         </p>
 
-        <div className="bg-gradient-to-br from-gray-900 to-purple-900/20 rounded-lg p-6 mb-8 border border-purple-500/20">
+        <div className="bg-gradient-to-br from-gray-900 to-purple-900/20 rounded-lg p-1 sm:p-6 mb-8 border border-purple-500/20">
           <h4 className="text-lg font-semibold mb-4 text-purple-300 text-center">Figure 1: DMX-402 Payment Flow</h4>
           <div className="bg-black rounded-lg p-6 overflow-x-auto">
             <pre className="text-xs text-gray-300 leading-relaxed font-mono">
@@ -257,6 +257,87 @@ export default function DMX402Page() {
         <p className="text-gray-300 leading-relaxed mb-6">
           The primary goal of DMX-402 is to eliminate the friction that plagues existing payment systems, thereby unlocking the full potential of agentic finance. The protocol achieves this by fundamentally redesigning the payment process for machine-first interaction.
         </p>
+
+        <div className="bg-gradient-to-br from-gray-900 to-purple-900/20 rounded-lg p-1 sm:p-6 mb-8 border border-purple-500/20">
+          <h4 className="text-lg font-semibold mb-4 text-purple-300 text-center">Figure 2: Traditional Payment Process vs. DMX-402 Comparison</h4>
+          <div className="bg-black rounded-lg p-6 overflow-x-auto">
+            <pre className="text-xs text-gray-300 leading-relaxed font-mono">
+{`═══════════════════════════════════════════════════════════════════════════════
+
+┌────────────────────────────────────────┬────────────────────────────────────────┐
+│                                        │                                        │
+│    TRADITIONAL PAYMENT PROCESS         │      DMX-402 AGENTIC PAYMENT           │
+│    (Human-Centric, Manual)             │      (AI-Native, Autonomous)           │
+│                                        │                                        │
+└────────────────────────────────────────┴────────────────────────────────────────┘
+
+┌────────────────────────────────────────┐ ┌────────────────────────────────────────┐
+│  STEP 1: USER ACTION                   │ │  STEP 1: AGENTIC ACTION                │
+│  ────────────────────────────────────  │ │  ────────────────────────────────────  │
+│  Create account with API provider      │ │  AI agent sends HTTP request           │
+│  • Manual signup form                  │ │  • No account required                 │
+│  • Email verification                  │ │  • Instant onboarding                  │
+│  • KYC/identity checks (days)          │ │  • Zero setup time                     │
+│                                        │ │                                        │
+│  ⏱️  Time: Hours to Days                │ │  ⏱️  Time: Milliseconds                 │
+└────────────────────────────────────────┘ └────────────────────────────────────────┘
+                  │                                           │
+                  ▼                                           ▼
+┌────────────────────────────────────────┐ ┌────────────────────────────────────────┐
+│  STEP 2: USER ACTION                   │ │  STEP 2: AGENTIC ACTION                │
+│  ────────────────────────────────────  │ │  ────────────────────────────────────  │
+│  Add payment method                    │ │  Receive 402 Payment Required          │
+│  • Enter credit card details           │ │  • Parse payment details (JSON)        │
+│  • Bank account linking                │ │  • Evaluate against intent rules       │
+│  • Approval delays (1-3 days)          │ │  • Select optimal blockchain           │
+│  • Security risks (stored cards)       │ │  • No stored credentials               │
+│                                        │ │                                        │
+│  ⏱️  Time: 1-3 Days                     │ │  ⏱️  Time: Milliseconds                 │
+└────────────────────────────────────────┘ └────────────────────────────────────────┘
+                  │                                           │
+                  ▼                                           ▼
+┌────────────────────────────────────────┐ ┌────────────────────────────────────────┐
+│  STEP 3: USER ACTION                   │ │  STEP 3: AGENTIC ACTION                │
+│  ────────────────────────────────────  │ │  ────────────────────────────────────  │
+│  Subscribe or prepay for credits       │ │  Execute cryptographically signed      │
+│  • Monthly/annual commitment           │ │  payment transaction                   │
+│  • Overpayment for unused services     │ │  • Pay only for what's used            │
+│  • Manual cancellation required        │ │  • EIP-712 signature authorization     │
+│  • Risk of auto-renewal charges        │ │  • MPC wallet security                 │
+│                                        │ │                                        │
+│  ⏱️  Time: Minutes (+ ongoing billing)  │ │  ⏱️  Time: <1 Second (settlement)       │
+└────────────────────────────────────────┘ └────────────────────────────────────────┘
+                  │                                           │
+                  ▼                                           ▼
+┌────────────────────────────────────────┐ ┌────────────────────────────────────────┐
+│  STEP 4: USER ACTION                   │ │  RESULT: INSTANT ACCESS                │
+│  ────────────────────────────────────  │ │  ────────────────────────────────────  │
+│  Manage API keys and credentials       │ │  API access granted immediately        │
+│  • Generate and store API keys         │ │  • No API key management               │
+│  • Rotate keys periodically            │ │  • No manual approvals                 │
+│  • Security risk (key exposure)        │ │  • No subscription overhead            │
+│  • Manual revocation process           │ │  • Autonomous, frictionless access     │
+│                                        │ │                                        │
+│  ⏱️  Ongoing Security Overhead          │ │  ⏱️  Zero Ongoing Overhead              │
+└────────────────────────────────────────┘ └────────────────────────────────────────┘
+                  │
+                  ▼
+┌────────────────────────────────────────┐
+│  STEP 5: USER ACTION                   │
+│  ────────────────────────────────────  │
+│  Make payment for API usage            │
+│  • Slow settlement (days)              │
+│  • High transaction fees (2.9%+)       │
+│  • Chargeback risk (up to 120 days)    │
+│  • Manual invoicing and reconciliation │
+│                                        │
+│  ⏱️  Time: Days (+ dispute window)      │
+└────────────────────────────────────────┘
+
+═════════════════════════════════════════════════════════════════════════════`}
+            </pre>
+          </div>
+        </div>
 
         <div className="bg-gradient-to-br from-gray-900 to-purple-900/20 rounded-lg p-6 mb-8 border border-purple-500/20">
           <h3 className="text-xl font-semibold mb-4 text-purple-300">Key Advantages of DMX-402</h3>

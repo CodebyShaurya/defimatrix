@@ -30,7 +30,7 @@ export default function Home() {
           Supported on 67+ chains
         </h2>
         <Marquee className="items-center  w-screen" gradient gradientColor="#581c87">
-          <img className="sm:h-12 h-6" src="/images/support.png" alt="Inbox user interface" />
+          <img className="sm:h-12 h-6" src="/Group.png" alt="Inbox user interface" />
         </Marquee>
       </div>
       {/* <Feature3 /> */}

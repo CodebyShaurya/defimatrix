@@ -83,7 +83,7 @@ export default function DefiManagement() {
         </div>
 
         <div id="backed-by" className="mt-16"></div>
-        <h2 className="text-white text-md sm:text-2xl  mb-5 whitespace-nowrap text-center mt-16">The world's most innovative and trusted companies work with DeFiMatrix. </h2>
+        <h2 className="text-white text-md sm:text-2xl  mb-5 text-center mt-16">The world's most innovative and trusted companies work with DeFiMatrix. </h2>
         <div className="flex items-center gap-8">
 
           <div className=" flex mx-auto overflow-hidden mt-5">

@@ -13,68 +13,70 @@ export default function PricingPage() {
           <Header  />
         </div>
             <div className="group/tiers py-12">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-4xl text-center">
-          <p className="text-balance text-3xl font-thin tracking-tight text-white sm:text-6xl">
-            Spend Crypto Like <span className="font-normal text-[#C450D5]">Cash</span>
-          </p>
-        </div>
-        <p className="mx-auto mt-3 max-w-2xl text-pretty text-center text-lg font-medium text-white/80">
-          Use your crypto for everyday expenses seamlessly
-        </p>
-         <p className="mx-auto mt-2 max-w-2xl text-pretty text-center text-lg font-medium text-white">
-          Anytime. Anywhere.
-        </p>
-         <a
-                href="mailto:enterpriseplaninquiry@defimatrix.io"
-                className="mt-8 block  rounded-full bg-gradient-to-r from-purple-500 to-pink-500 px-6 py-3 text-center text-sm font-thin text-white transition-all duration-200 hover:from-purple-600 hover:to-pink-600    w-fit mx-auto"
-              >
-                Get Your Cards Now
-              </a>
-        <img src='/Card_1.png' alt='Get Your Card' className='  w-full  rounded-xl shadow-lg' />
-      
-        <div className="isolate mx-auto mt-10 grid max-w-md grid-cols-1 gap-4 md:max-w-2xl md:grid-cols-2 lg:max-w-4xl xl:mx-0 xl:max-w-none xl:grid-cols-4">
-     
-        </div>
-      </div>
+                <div className="mx-auto max-w-7xl px-6 lg:px-8">
+                  <div className="mx-auto max-w-4xl text-center">
+                    <p className="text-balance text-3xl font-thin tracking-tight text-white sm:text-6xl">
+                      Spend Crypto Like <span className="font-normal text-[#C450D5]">Cash</span>
+                    </p>
+                  </div>
+                  <p className="mx-auto mt-3 max-w-2xl text-pretty text-center text-lg font-medium text-white/80">
+                    Use your crypto for everyday expenses seamlessly
+                  </p>
+                  <p className="mx-auto mt-2 max-w-2xl text-pretty text-center text-lg font-medium text-white">
+                    Anytime. Anywhere.
+                  </p>
+                  <a
+                          href="mailto:enterpriseplaninquiry@defimatrix.io"
+                          className="mt-8 block  rounded-full bg-gradient-to-r from-purple-500 to-pink-500 px-6 py-3 text-center text-sm font-thin text-white transition-all duration-200 hover:from-purple-600 hover:to-pink-600    w-fit mx-auto"
+                        >
+                          Get Your Cards Now
+                        </a>
+                   <div className="mt-10 relative" aria-hidden="true" >
+                      <div className="relative w-[50vw] mx-auto mt-5 py-5">
+                        {/* Center main card image */}
+                        <img 
+                          src='/Iphone1.png' 
+                          alt='Get Your Card' 
+                          className='h-[30vh] sm:h-[80vh] rounded-xl shadow-lg animate-float mx-auto' 
+                        />
+                        
+                        {/* Top-left floating image */}
+                        <img 
+                          src='/imagelt.png' 
+                          alt='Feature 1' 
+                          className='absolute top-0 left-[-5%] sm:left-[-10%] h-[10vh] sm:h-[35vh] object-contain rounded-lg shadow-md animate-slide-from-left' 
+                        />
+                        
+                        {/* Bottom-left floating image */}
+                        <img 
+                          src='/imagelb.png' 
+                          alt='Feature 2' 
+                          className='absolute bottom-0 left-[-12%] h-[10vh] sm:h-[35vh] object-contain rounded-lg shadow-md animate-slide-from-left-delayed' 
+                        />
+                        
+                        {/* Mid-right floating image */}
+                        <img 
+                          src='/imagerc.png' 
+                          alt='Feature 3' 
+                          className='absolute top-1/2 right-[-10%] transform -translate-y-1/2 h-[25vh] sm:h-[80vh] object-contain rounded-lg shadow-md animate-slide-from-right' 
+                        />
+                      </div>
+                    </div>
+                
+                  <div className="isolate mx-auto mt-10 grid max-w-md grid-cols-1 gap-4 md:max-w-2xl md:grid-cols-2 lg:max-w-4xl xl:mx-0 xl:max-w-none xl:grid-cols-4">
+              
+                  </div>
+                </div>
 
-      <div className="mx-auto max-w-4xl text-center">
-          <p className="text-balance text-5xl font-thin tracking-tight text-white sm:text-6xl">
-            The Most Rewarding Crypto Card
-          </p>
-        </div>
-        <div className="mt-20 relative" aria-hidden="true" >
-            <div className="relative w-[50vw] mx-auto mt-5 py-5">
-              {/* Center main card image */}
-              <img 
-                src='/Iphone.png' 
-                alt='Get Your Card' 
-                className='h-[30vh] sm:h-[80vh] rounded-xl shadow-lg animate-float mx-auto' 
-              />
-              
-              {/* Top-left floating image */}
-              <img 
-                src='/Frame1.png' 
-                alt='Feature 1' 
-                className='absolute top-0 left-[-5%] sm:left-[-10%] h-[8vh] sm:h-[30vh] object-contain rounded-lg shadow-md animate-slide-from-left' 
-              />
-              
-              {/* Bottom-left floating image */}
-              <img 
-                src='/Frame.png' 
-                alt='Feature 2' 
-                className='absolute bottom-0 left-[-12%] h-[8vh] sm:h-[30vh] object-contain rounded-lg shadow-md animate-slide-from-left-delayed' 
-              />
-              
-              {/* Mid-right floating image */}
-              <img 
-                src='/DefiCard.png' 
-                alt='Feature 3' 
-                className='absolute top-1/2 right-[-10%] transform -translate-y-1/2 h-[15vh] sm:h-[50vh] object-contain rounded-lg shadow-md animate-slide-from-right' 
-              />
+              <div className="mx-auto max-w-4xl text-center">
+                  <p className="text-balance text-5xl font-thin tracking-tight text-white sm:text-6xl">
+                    The Most Rewarding Crypto Card
+                  </p>
+                </div>
+
+                <img src='/Card.png' alt='Get Your Card' className=' h-full sm:h-[80vh] mx-auto mt-10  rounded-xl shadow-lg' />
+                
             </div>
-          </div>
-    </div>
       <div className="hidden md:grid grid-cols-2 gap-8 max-w-7xl mx-auto px-6 lg:px-8 mb-16">
        
                 <div

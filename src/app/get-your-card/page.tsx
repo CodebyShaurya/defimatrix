@@ -35,7 +35,7 @@ export default function PricingPage() {
                       <div className="relative w-[50vw] mx-auto mt-5 py-5">
                         {/* Center main card image */}
                         <img 
-                          src='/Iphone1.png' 
+                          src='/Iphone16.png' 
                           alt='Get Your Card' 
                           className='h-[30vh] sm:h-[80vh] rounded-xl shadow-lg animate-float mx-auto' 
                         />
@@ -51,7 +51,7 @@ export default function PricingPage() {
                         <img 
                           src='/imagelb.png' 
                           alt='Feature 2' 
-                          className='absolute bottom-0 left-[-12%] h-[10vh] sm:h-[35vh] object-contain rounded-lg shadow-md animate-slide-from-left-delayed' 
+                          className='absolute bottom-0 left-[-12%] h-[8vh] sm:h-[22vh] object-contain rounded-lg shadow-md animate-slide-from-left-delayed' 
                         />
                         
                         {/* Mid-right floating image */}

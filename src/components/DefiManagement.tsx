@@ -2,7 +2,7 @@ import { AtomIcon, DiamondIcon, EthereumIcon, PolygonIcon } from "./icons";
 
 export default function DefiManagement() {
   return (
-    <div id="about" className="relative mx-auto overflow-hidden pt-8 lg:pt-24">
+    <div id="about" className="relative mx-auto overflow-hidden pt-8 lg:pt-20">
       {/* DeFi Portfolio Management Section with Video Background */}
       <section className="relative flex min-h-screen w-full items-center justify-center overflow-hidden py-8 md:py-1">
         {/* Video Background */}

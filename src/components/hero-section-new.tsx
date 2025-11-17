@@ -159,7 +159,7 @@ export default function HeroSectionNew() {
 
 
       {/* Bottom gradient fade */}
-      <div className="absolute -bottom-12 left-0 right-0 h-32 bg-gradient-to-t from-black to-transparent "></div>
+      <div className="absolute -bottom-10 left-0 right-0 h-32 bg-gradient-to-t from-black to-transparent "></div>
 
       <style jsx>{`
        

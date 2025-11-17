@@ -27,7 +27,36 @@ export default function Home() {
       <FeaturesSection /> 
       <div className="bg-black pt-12 md:pt-24">
         <h2 className="mx-auto px-4 pb-10 text-center text-3xl font-bold tracking-tight text-white">
-          Supported on 67+ chains
+          Supported on 67+ <span className=" flex flex-col items-center w-[5vw] text-center mx-auto">
+            <span className=""> chains</span>
+          <svg
+              className=" w-full pt-2"
+              viewBox="0 0 364 10"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1 8C63.6538 3.47226 223.769 -2.86658 363 8"
+                stroke="url(#paint0_radial_2482_631)"
+                strokeWidth="3"
+              />
+              <defs>
+                <radialGradient
+                  id="paint0_radial_2482_631"
+                  cx="0"
+                  cy="0"
+                  r="1"
+                  gradientUnits="userSpaceOnUse"
+                  gradientTransform="translate(158.651 6.91635) scale(777.036 11.0605)"
+                >
+                  <stop stopColor="#C450D5" />
+                  <stop offset="1" stopColor="#D43E76" />
+                </radialGradient>
+              </defs>
+            </svg>
+
+</span>
+            
         </h2>
         <Marquee className="items-center  w-screen" gradient gradientColor="#581c87">
           <img className="sm:h-12 h-6" src="/Group.png" alt="Inbox user interface" />

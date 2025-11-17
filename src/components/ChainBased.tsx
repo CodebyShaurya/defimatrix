@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function DefiManagement() {
   return (
-    <div  className="relative mx-auto overflow-hidden pt-12 sm:pt-24" style={{ backgroundImage: 'url(/Group1261155851.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+    <div  className="relative mx-auto overflow-hidden pt-12 sm:pt-24" >
        <div className=" sm:px-8 max-w-7xl mx-auto">
         {/* Trusted / CTA area */}
         <div className="text-center mb-6">
@@ -53,7 +53,7 @@ export default function DefiManagement() {
             <div className="relative w-[50vw] mx-auto mt-5 py-5">
               {/* Center main card image */}
               <img 
-                src='/Iphone1.png' 
+                src='/Iphone16.png' 
                 alt='Get Your Card' 
                 className='h-[30vh] sm:h-[80vh] rounded-xl shadow-lg animate-float mx-auto' 
               />
@@ -69,7 +69,7 @@ export default function DefiManagement() {
               <img 
                 src='/imagelb.png' 
                 alt='Feature 2' 
-                className='absolute bottom-0 left-[-12%] h-[10vh] sm:h-[35vh] object-contain rounded-lg shadow-md animate-slide-from-left-delayed' 
+                className='absolute bottom-0 left-[-12%] h-[10vh] sm:h-[25vh] object-contain rounded-lg shadow-md animate-slide-from-left-delayed' 
               />
               
               {/* Mid-right floating image */}

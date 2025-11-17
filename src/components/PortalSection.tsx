@@ -68,33 +68,34 @@ export default function PortalSection() {
         </div>
         <h2 className="mx-auto max-w-4xl text-left text-3xl font-medium tracking-tight text-white sm:leading-loose md:text-center md:text-5xl lg:text-6xl">
           Portals are open across{" "}
-          <span className="relative whitespace-nowrap">
-            {/* <svg
-              className="absolute -bottom-2 left-0 w-full max-w-xs pt-2 hidden sm:block"
-              viewBox="0 0 340 14"
-              xmlns="http://www.w3.org/2000/svg"
+           <span className="relative whitespace-nowrap">
+            <svg
+              className="absolute -bottom-2 left-0 w-full pt-2"
+              viewBox="0 0 364 10"
               fill="none"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <path stroke="url(#a)" strokeWidth={3} d="M.5 8.281c62.654-4.527 222.769-10.866 362 0" />
+              <path
+                d="M1 8C63.6538 3.47226 223.769 -2.86658 363 8"
+                stroke="url(#paint0_radial_2482_631)"
+                strokeWidth="3"
+              />
               <defs>
                 <radialGradient
-                  id="a"
-                  cx={0}
-                  cy={0}
-                  r={1}
-                  gradientTransform="matrix(0 3 -181 0 181.5 5.281)"
+                  id="paint0_radial_2482_631"
+                  cx="0"
+                  cy="0"
+                  r="1"
                   gradientUnits="userSpaceOnUse"
+                  gradientTransform="translate(158.651 6.91635) scale(777.036 11.0605)"
                 >
-                  <stop offset={0.099} stopColor="#FFC876" />
-                  <stop offset={0.526} stopColor="#ACFF8E" />
-                  <stop offset={0.74} stopColor="#9453FF" />
-                  <stop offset={0.913} stopColor="#FF89C2" />
+                  <stop stopColor="#C450D5" />
+                  <stop offset="1" stopColor="#D43E76" />
                 </radialGradient>
               </defs>
-            </svg> */}
-            <span className="relative">
-              DeFi <br />{" "}
-            </span>
+            </svg>
+
+            <span className="relative"> Defi</span>
           </span>
         </h2>
         <p className="mx-auto mt-6 max-w-4xl text-left text-lg tracking-tight text-gray-300 md:text-center">

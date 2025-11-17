@@ -27,7 +27,7 @@ export default function Home() {
       <FeaturesSection /> 
       <div className="bg-black pt-12 md:pt-24">
         <h2 className="mx-auto px-4 pb-10 text-center text-3xl font-bold tracking-tight text-white">
-          Supported on 67+ <span className=" flex flex-col items-center w-[5vw] text-center mx-auto">
+          Supported on 67+ <span className=" flex flex-col items-center w-20 sm:w-[5vw] text-center mx-auto">
             <span className=""> chains</span>
           <svg
               className=" w-full pt-2"

@@ -626,7 +626,7 @@ export default function HeaderNew() {
       </nav>
       <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
         <div className="fixed inset-0 z-10" />
-        <DialogPanel className="fixed inset-y-0 right-0 z-10 flex w-full flex-col justify-between overflow-y-auto bg-gradient-to-b from-black via-purple-900 to-violet-900 sm:max-w-sm sm:ring-1 sm:ring-white/10">
+        <DialogPanel className="fixed inset-y-0 right-0 z-10 flex w-full flex-col justify-between overflow-y-auto bg-gradient-to-b from-black via-purple-900 to-violet-900 sm:max-w-sm sm:ring-1 sm:ring-white/10 z-[98]">
           <div className="p-6">
             <div className="flex items-center justify-between">
               <a href="/" className="-m-1.5 p-1.5">

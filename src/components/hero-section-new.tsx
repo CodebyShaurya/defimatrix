@@ -89,7 +89,7 @@ export default function HeroSectionNew() {
       </p>
     </div>
     </div>
-    <div className="flex flex-col space-y-3 sm:flex-row sm:space-x-4 sm:space-y-0 justify-center md:justify-end items-center z-[98]">
+    <div className="flex flex-col space-y-3 sm:flex-row sm:space-x-4 sm:space-y-0 justify-center md:justify-end items-center z-[50]">
       <div className="flex items-center gap-x-6">
         <Link href="https://docs.google.com/forms/d/e/1FAIpQLSdOX0jlgPL6MwDgYApNRl1d8exeX3toD5zvSD9VAaOzQ-1-sw/viewform" target="_blank" className="relative p-[3px]">
           <div className="absolute inset-0 rounded-2xl bg-gradient-to-b from-purple-400 to-pink-400" />
@@ -128,38 +128,11 @@ export default function HeroSectionNew() {
      
     
 
-      {/* Overlay content */}
-      {/* <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4 ">
-       
-        <svg
-          viewBox="0 0 343 30"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className="w-64 mb-6"
-        >
-          <path
-            d="M20.2447 5.95L6.54473 29.6C6.39473 29.85..."
-            fill="currentColor"
-          />
-        </svg>
-
-
-       
-    </div> */}
+    
     
     
     </div>
-        
-      {/* Header */}
-      
-
-      
-
-       
-
-
-      {/* Bottom gradient fade */}
-      <div className="absolute -bottom-10 left-0 right-0 h-32 bg-gradient-to-t from-black to-transparent "></div>
+      <div className="absolute -bottom-10 left-0 right-0 h-32 bg-gradient-to-t from-black to-transparent z-[10] "></div>
 
       <style jsx>{`
        

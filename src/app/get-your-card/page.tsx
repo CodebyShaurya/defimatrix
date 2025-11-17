@@ -47,7 +47,7 @@ export default function PricingPage() {
             <div className="relative w-[50vw] mx-auto mt-5 py-5">
               {/* Center main card image */}
               <img 
-                src='/Card1.png' 
+                src='/Iphone.png' 
                 alt='Get Your Card' 
                 className='h-[30vh] sm:h-[80vh] rounded-xl shadow-lg animate-float mx-auto' 
               />

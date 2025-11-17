@@ -31,7 +31,7 @@ export default function PricingPage() {
               >
                 Get Your Cards Now
               </a>
-        <img src='/Card-your.png' alt='Get Your Card' className='  w-full  rounded-xl shadow-lg' />
+        <img src='/Card_1.png' alt='Get Your Card' className='  w-full  rounded-xl shadow-lg' />
       
         <div className="isolate mx-auto mt-10 grid max-w-md grid-cols-1 gap-4 md:max-w-2xl md:grid-cols-2 lg:max-w-4xl xl:mx-0 xl:max-w-none xl:grid-cols-4">
      

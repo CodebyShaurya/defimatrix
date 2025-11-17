@@ -53,30 +53,30 @@ export default function DefiManagement() {
             <div className="relative w-[50vw] mx-auto mt-5 py-5">
               {/* Center main card image */}
               <img 
-                src='/Iphone.png' 
+                src='/Iphone1.png' 
                 alt='Get Your Card' 
                 className='h-[30vh] sm:h-[80vh] rounded-xl shadow-lg animate-float mx-auto' 
               />
               
               {/* Top-left floating image */}
               <img 
-                src='/Frame1.png' 
+                src='/imagelt.png' 
                 alt='Feature 1' 
-                className='absolute top-0 left-[-5%] sm:left-[-10%] h-[8vh] sm:h-[30vh] object-contain rounded-lg shadow-md animate-slide-from-left' 
+                className='absolute top-0 left-[-5%] sm:left-[-10%] h-[10vh] sm:h-[35vh] object-contain rounded-lg shadow-md animate-slide-from-left' 
               />
               
               {/* Bottom-left floating image */}
               <img 
-                src='/Frame.png' 
+                src='/imagelb.png' 
                 alt='Feature 2' 
-                className='absolute bottom-0 left-[-12%] h-[8vh] sm:h-[30vh] object-contain rounded-lg shadow-md animate-slide-from-left-delayed' 
+                className='absolute bottom-0 left-[-12%] h-[10vh] sm:h-[35vh] object-contain rounded-lg shadow-md animate-slide-from-left-delayed' 
               />
               
               {/* Mid-right floating image */}
               <img 
-                src='/DefiCard.png' 
+                src='/imagerc.png' 
                 alt='Feature 3' 
-                className='absolute top-1/2 right-[-10%] transform -translate-y-1/2 h-[15vh] sm:h-[50vh] object-contain rounded-lg shadow-md animate-slide-from-right' 
+                className='absolute top-1/2 right-[-10%] transform -translate-y-1/2 h-[25vh] sm:h-[80vh] object-contain rounded-lg shadow-md animate-slide-from-right' 
               />
             </div>
           </div>

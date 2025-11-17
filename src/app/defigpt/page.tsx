@@ -13,7 +13,7 @@ export default function DeFiGPTPage() {
           <img
             src="/Banners/DEFIGPT.png"
             alt="DeFiGPT banner"
-            className="w-full h-[450px] md:object-cover object-fit h-24 rounded-xl shadow-lg"
+            className="w-full sm:h-[450px] md:object-cover object-fit h-[35vh] rounded-xl shadow-lg"
           />
         </div>
         <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-pink-500 via-purple-500 to-violet-500 bg-clip-text text-transparent">

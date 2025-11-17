@@ -43,7 +43,7 @@ export default function Features() {
 
   const getImageName = (n: number) => {
     // return the full filename for the feature image
-    if (n === 1) return '/sec_two_one.png'
+    if (n === 1) return '/sec_two_one1.png'
     if (n === 2) return '/sec_two_two.png'
     if (n === 3) return '/sec_two_thre.png'
     if (n === 4) return '/sec_two_four.png'

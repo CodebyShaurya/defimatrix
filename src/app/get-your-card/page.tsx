@@ -117,18 +117,24 @@ export default function PricingPage() {
 
         <WhyChooseSpedax />
 
-        <h2 className="text-white text-md sm:text-3xl  mb-5 whitespace-nowrap text-center">Backed By </h2>
+        <h2 className="text-white text-md sm:text-2xl  mb-5 whitespace-nowrap text-center mt-16">The world's most innovative and trusted companies work with DeFiMatrix. </h2>
         <div className="flex items-center gap-8">
 
-          <div className=" flex mx-auto overflow-hidden">
+          <div className=" flex mx-auto overflow-hidden mt-5">
             <div className="flex flex-col sm:flex-row items-center justify-center  gap-12 sm:gap-24">
               {/* First set of logos */}
-              <img src="/logo1.png" alt="Company 1" className="h-12 " />
-              <img src="/logo2.png" alt="Company 2" className="h-12 " />
-              {/* <img src="/logo3.png" alt="Company 3" className="h-8 " /> */}
-              <img src="/logo4.png" alt="Company 4" className="h-16 " />
-              {/* <img src="/logo5.png" alt="Company 5" className="h-8 " /> */}
-              <img src="/logo6.png" alt="Company 6" className="h-12 " />
+              <a href="https://emoney.io/" target="_blank" rel="noopener noreferrer">
+                <img src="/logo1.png" alt="Company 1" className="h-12 hover:opacity-80 transition-opacity" />
+              </a>
+              <a href="https://sumsub.com/" target="_blank" rel="noopener noreferrer">
+                <img src="/logo2.png" alt="Company 2" className="h-12 hover:opacity-80 transition-opacity" />
+              </a>
+              <a href="https://www.mastercard.co.in/en-in.html" target="_blank" rel="noopener noreferrer">
+                <img src="/logo4.png" alt="Company 4" className="h-16 hover:opacity-80 transition-opacity" />
+              </a>
+              <a href="https://cuttlecard.com/cuttle-app/landingm" target="_blank" rel="noopener noreferrer">
+                <img src="/logo6.png" alt="Company 6" className="h-12 hover:opacity-80 transition-opacity" />
+              </a>
               {/* Duplicate set for seamless loop */}
             
             </div>

@@ -40,7 +40,7 @@ export default function DefiManagement() {
             DeFiMatrix offers the fastest and most seamless way to use your crypto like cash — anytime, anywhere.
           </h1>
           <div className="flex items-end justify-center gap-x-6 mt-4">
-            <Link href="/get-your-card" target="_blank" className="relative p-[3px]">
+            <Link href="/get-your-card"  className="relative p-[3px]">
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-b from-purple-400 to-pink-400" />
               <div className="group relative rounded-2xl bg-black px-8 py-3.5 text-xs font-semibold uppercase text-white transition duration-200 hover:bg-transparent">
                 Get your card Now

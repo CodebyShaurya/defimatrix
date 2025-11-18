@@ -109,27 +109,28 @@ const defiBankingItems = [
   {
     name: "DeFiMatrix Pay (App)",
     description:
-      "A unified DeFi banking app combining traditional finance simplicity with onchain automation and AI-driven security.",
+      "A unified DeFi banking app designed to merge traditional financial convenience with on-chain automation and intelligent asset management. Users can send payments, manage portfolios, convert currencies, and access decentralized tools with AI-enhanced security and real-time transparency from one seamless interface.",
     href: "/defimatrix-pay",
     icon: DevicePhoneMobileIcon,
   },
   {
     name: "DeFiMatrix Card",
     description:
-      "Spend your crypto anywhere — online or in-store — just like fiat, accepted by millions of merchants worldwide.",
+      "The DeFiMatrix Card allows you to spend crypto effortlessly at millions of online and in-store merchants worldwide. It offers instant conversion at checkout, low fees, global acceptance, and smooth integration with your DeFiMatrix wallet. Enjoy everyday purchases using digital assets with the same convenience as traditional payment cards.",
     href: "/defimatrix-card",
     icon: CreditCardIcon,
   },
   {
     name: "DeFiMatrix Business Card",
-    description: "Manage company funds, payments, and team spending with real-time analytics and Web3 transparency.",
+    description: 
+    "Built for modern teams, the DeFiMatrix Business Card helps companies manage spending, payments, and multi-asset treasury operations. Real-time dashboards, spending controls, and Web3-native transparency provide full visibility and governance, enabling businesses to operate efficiently across global markets and digital ecosystems.",
     href: "/defimatrix-business-card",
     icon: BuildingOfficeIcon,
   },
   {
     name: "Security",
     description:
-      "Enterprise-grade blockchain security with AI monitoring and encrypted wallet protection for complete peace of mind.",
+      "DeFiMatrix delivers enterprise-grade security combining AI-driven monitoring, advanced encryption, and multi-layer wallet protection. Continuous risk analysis and anomaly detection safeguard every transaction, while secure key management and blockchain-native controls ensure complete peace of mind for individual users and businesses alike.",
     href: "/security",
     icon: ShieldCheckIcon,
   },
@@ -477,10 +478,6 @@ export default function HeaderNew() {
                             A next-generation modular blockchain built for AI-powered decentralized finance. Unifies
                             performance, scalability, and intelligence through dual-core architecture.
                           </p>
-                        </div>
-                        <div className="mt-6 flex gap-2">
-                          <button className="rounded-full bg-gradient-to-r from-pink-500 to-purple-600 px-4 py-2 text-xs font-semibold text-white hover:from-pink-600 hover:to-purple-700">GET DMX</button>
-                          <button className="rounded-full bg-purple-900/50 px-4 py-2 text-xs font-semibold text-white ring-1 ring-purple-500/30 hover:bg-purple-800/50">GET MFI</button>
                         </div>
                       </div>
 

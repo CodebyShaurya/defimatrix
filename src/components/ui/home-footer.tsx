@@ -149,7 +149,7 @@ export default function Footer() {
                 </form>
               </div>
             </div>
-            <div className="flex gap-12 sm:flex-row">
+            <div className="flex flex-col md:flex-row gap-12">
               {/* Main Navigation */}
               <div className="space-y-4">
                 {navigation.main.map((item) => (
@@ -170,6 +170,34 @@ export default function Footer() {
                     </a>
                   </div>
                 ))}
+              </div>
+
+              {/* Markets / Price Links */}
+              <div className="space-y-4">
+                <div className="text-gray-300 font-semibold">Markets</div>
+                <div className="flex flex-col space-y-3">
+                  <a href="https://coinmarketcap.com/currencies/bitcoin/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white">
+                    Bitcoin Price
+                  </a>
+                  <a href="https://coinmarketcap.com/currencies/ethereum/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white">
+                    Ethereum Price
+                  </a>
+                  <a href="https://coinmarketcap.com/currencies/near-protocol/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white">
+                    NEAR Price
+                  </a>
+                  <a href="https://coinmarketcap.com/currencies/arbitrum/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white">
+                    Arbitrum Price
+                  </a>
+                  <a href="https://coinmarketcap.com/currencies/solana/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white">
+                    Solana Price
+                  </a>
+                  <a href="https://coinmarketcap.com/currencies/bnb/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white">
+                    BNB Price
+                  </a>
+                  <a href="https://coinmarketcap.com/currencies/tron/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white">
+                    TRON Price
+                  </a>
+                </div>
               </div>
             </div>
           </div>

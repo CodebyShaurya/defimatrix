@@ -479,6 +479,9 @@ export default function HeaderNew() {
                             performance, scalability, and intelligence through dual-core architecture.
                           </p>
                         </div>
+                        <div className="mt-6">
+                          <Image src="/defimatrix-logo.svg" alt="DeFiMatrix" width={200} height={100} className="w-32 opacity-50" />
+                        </div>
                       </div>
 
                       <div className="grid flex-1 grid-cols-3 gap-3">

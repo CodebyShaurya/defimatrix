@@ -171,7 +171,7 @@ export default function DMX402Page() {
           <h4 className="text-lg font-semibold mb-4 text-purple-300 text-center">Figure 1: DMX-402 Payment Flow</h4>
           <div className="bg-black rounded-lg p-6 overflow-x-auto">
             <pre className="text-xs text-gray-300 leading-relaxed font-mono">
-{`═══════════════════════════════════════════════════════════════════════════════
+{`
 
 ┌──────────────┐         ┌──────────────┐         ┌──────────────┐         ┌──────────────┐
 │              │         │              │         │              │         │              │
@@ -222,8 +222,7 @@ export default function DMX402Page() {
        │<───────────────────────┤                        │                        │
        │                        │                        │                        │
        │                        │                        │                        │
-
-═══════════════════════════════════════════════════════════════════════════════`}
+`}
             </pre>
           </div>
           <div className="mt-6 space-y-4">
@@ -262,7 +261,7 @@ export default function DMX402Page() {
           <h4 className="text-lg font-semibold mb-4 text-purple-300 text-center">Figure 2: Traditional Payment Process vs. DMX-402 Comparison</h4>
           <div className="bg-black rounded-lg p-6 overflow-x-auto">
             <pre className="text-xs text-gray-300 leading-relaxed font-mono">
-{`═══════════════════════════════════════════════════════════════════════════════
+{`
 
 ┌────────────────────────────────────────┬────────────────────────────────────────┐
 │                                        │                                        │
@@ -333,8 +332,7 @@ export default function DMX402Page() {
 │                                        │
 │  ⏱️  Time: Days (+ dispute window)      │
 └────────────────────────────────────────┘
-
-═════════════════════════════════════════════════════════════════════════════`}
+`}
             </pre>
           </div>
         </div>

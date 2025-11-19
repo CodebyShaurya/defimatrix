@@ -98,7 +98,7 @@ export default function Footer() {
   return (
     <>
       <CTABanner />
-      <footer className="bg-black text-white">
+       <footer className="bg-black text-white">
         <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8">
           {/* Navigation Section */}
           <div className="mt-12 flex flex-col justify-between sm:flex-row">
@@ -149,7 +149,7 @@ export default function Footer() {
                 </form>
               </div>
             </div>
-            <div className="flex gap-12 sm:flex-row">
+            <div className="flex flex-col md:flex-row gap-12">
               {/* Main Navigation */}
               <div className="space-y-4">
                 {navigation.main.map((item) => (
@@ -171,6 +171,31 @@ export default function Footer() {
                   </div>
                 ))}
               </div>
+
+              {/* Markets / Price Links */}
+                <div className="flex flex-col space-y-3">
+                  <a href="https://coinmarketcap.com/currencies/bitcoin/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white">
+                    Bitcoin Price
+                  </a>
+                  <a href="https://coinmarketcap.com/currencies/ethereum/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white">
+                    Ethereum Price
+                  </a>
+                  <a href="https://coinmarketcap.com/currencies/near-protocol/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white">
+                    NEAR Price
+                  </a>
+                  <a href="https://coinmarketcap.com/currencies/arbitrum/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white">
+                    Arbitrum Price
+                  </a>
+                  <a href="https://coinmarketcap.com/currencies/solana/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white">
+                    Solana Price
+                  </a>
+                  <a href="https://coinmarketcap.com/currencies/bnb/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white">
+                    BNB Price
+                  </a>
+                  <a href="https://coinmarketcap.com/currencies/tron/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white">
+                    TRON Price
+                  </a>
+                </div>
             </div>
           </div>
 
@@ -179,8 +204,11 @@ export default function Footer() {
             <img src="/images/footer-logo.svg" alt="defimatrix-logo" className="h-auto w-full" />
           </div>
           {/* Copyright */}
-          <div className="mt-12 text-center">
-            <p className="text-sm text-gray-400">© 2025 DefiMatrix, Inc. All rights reserved.</p>
+          <div className="mt-10 text-center">
+            <p className="text-xs text-gray-600"><span className="font-bold">Disclaimer:</span>
+Digital assets, cryptocurrencies, and tokenized products may be unregulated or subject to limited regulatory oversight in certain jurisdictions. The value of digital currencies can fluctuate significantly and may decrease as well as increase. You should carefully consider your risk tolerance before engaging in any digital asset transactions. Any gains may be subject to capital gains tax or other applicable taxes in your jurisdiction. Please seek independent legal, financial, or tax advice if you are unsure about your obligations.
+</p>
+            <p className="text-sm text-gray-400 mt-2">© 2025 DefiMatrix, Inc. All rights reserved.</p>
           </div>
         </div>
       </footer>

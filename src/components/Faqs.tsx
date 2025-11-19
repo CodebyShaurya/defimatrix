@@ -89,7 +89,7 @@ const futures = [
 export default function Faqs() {
   return (
     <div className="bg-black">
-      <div id="faqs" className="container relative z-50 mx-auto 2xl:max-w-screen-2xl pt-12 md:pt-24">
+      <div id="faqs" className="container relative z-50 mx-auto 2xl:max-w-screen-2xl pt-12 md:pt-16">
         <div className="mx-auto max-w-6xl px-4 py-16 lg:px-8 2xl:max-w-7xl">
           <div className="mx-auto mb-14 w-auto text-center">
             <img className="inline-block animate-pulse" src="/images/slider-element.svg" alt="" />

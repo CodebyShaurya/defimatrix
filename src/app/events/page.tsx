@@ -121,7 +121,7 @@ const allEvents: Event[] = [
 export default function Events() {
   return (
     <>
-      <div className="w-full pt-4">
+      <div className="w-full pt-2">
         <Header />
       </div>
       <div className="min-h-screen bg-black pt-20 text-white">

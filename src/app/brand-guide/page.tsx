@@ -41,7 +41,7 @@ const BrandGuidePage = () => {
 
   return (
     <>
-      <div className="w-full pt-4">
+      <div className="w-full pt-2">
         <Header />
       </div>
       <main className="relative min-h-screen bg-black pt-20 text-white">

@@ -27,7 +27,7 @@ export default function Home() {
       <FeaturesSection /> 
       <div className="bg-black pt-12 md:pt-24">
 
-        <div className="flex flex-row justify-center mx-auto px-4 pb-10 text-center ">
+        <div className="flex flex-col sm:flex-row justify-center mx-auto px-4 pb-10 text-center ">
             <h2 className="text-3xl font-bold tracking-tight text-white">
               Supported on 67+
                 

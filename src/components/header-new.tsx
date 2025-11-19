@@ -419,7 +419,7 @@ export default function HeaderNew() {
                                 {item.name}
                                 <span className="absolute inset-0" />
                               </a>
-                              <p className="mt-1 line-clamp-2 text-xs text-gray-400  break-words whitespace-normal">{item.description}</p>
+                              <p className="mt-1  text-xs text-gray-400  break-words whitespace-normal">{item.description}</p>
                             </div>
                           </div>
                         ))}

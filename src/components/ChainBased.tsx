@@ -90,19 +90,19 @@ export default function DefiManagement() {
             <div className="flex flex-col md:flex-row items-center justify-center  gap-12 md:gap-16">
               {/* First set of logos */}
               <a href="https://emoney.io/" target="_blank" rel="noopener noreferrer">
-                <img src="/logo1.png" alt="Company 1" className="h-12 hover:opacity-80 transition-opacity" />
+                <img src="/logo1.png" alt="Company 1" className="h-8 2xl:h-12 hover:opacity-80 transition-opacity" />
               </a>
               <a href="https://chainbased.io/" target="_blank" rel="noopener noreferrer">
-                <img src="partner-logos/chainbased.png" alt="Company 1" className="h-8 hover:opacity-80 transition-opacity" />
+                <img src="partner-logos/chainbased.png" alt="Company 1" className="h-6 2xl:h-8 hover:opacity-80 transition-opacity" />
               </a>
               <a href="https://sumsub.com/" target="_blank" rel="noopener noreferrer">
-                <img src="/logo2.png" alt="Company 2" className="h-12 hover:opacity-80 transition-opacity" />
+                <img src="/logo2.png" alt="Company 2" className="h-8 2xl:h-12 hover:opacity-80 transition-opacity" />
               </a>
               <a href="https://www.mastercard.co.in/en-in.html" target="_blank" rel="noopener noreferrer">
-                <img src="/logo4.png" alt="Company 4" className="h-16 hover:opacity-80 transition-opacity" />
+                <img src="/logo4.png" alt="Company 4" className="h-12 2xl:h-16 hover:opacity-80 transition-opacity" />
               </a>
               <a href="https://cuttlecard.com/cuttle-app/landingm" target="_blank" rel="noopener noreferrer">
-                <img src="/logo6.png" alt="Company 6" className="h-12 hover:opacity-80 transition-opacity" />
+                <img src="/logo6.png" alt="Company 6" className="h-8 2xl:h-12 hover:opacity-80 transition-opacity" />
               </a>
               {/* Duplicate set for seamless loop */}
             

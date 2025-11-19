@@ -173,8 +173,6 @@ export default function Footer() {
               </div>
 
               {/* Markets / Price Links */}
-              <div className="space-y-4">
-                <div className="text-gray-300 font-semibold">Markets</div>
                 <div className="flex flex-col space-y-3">
                   <a href="https://coinmarketcap.com/currencies/bitcoin/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white">
                     Bitcoin Price
@@ -198,7 +196,6 @@ export default function Footer() {
                     TRON Price
                   </a>
                 </div>
-              </div>
             </div>
           </div>
 

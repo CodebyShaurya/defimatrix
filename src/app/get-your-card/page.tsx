@@ -26,11 +26,11 @@ export default function PricingPage() {
                     Anytime. Anywhere.
                   </p>
                   <a
-                          href="mailto:enterpriseplaninquiry@defimatrix.io"
-                          className="mt-8 block  rounded-full bg-gradient-to-r from-purple-500 to-pink-500 px-6 py-3 text-center text-sm font-thin text-white transition-all duration-200 hover:from-purple-600 hover:to-pink-600    w-fit mx-auto"
-                        >
-                          Get Your Cards Now
-                        </a>
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSdopQCz9-g_TTRwqCI0TLh9eaLfSOvHt45ldUQAEMuxIJvPpA/viewform?pli=1"
+                    className="mt-8 block  rounded-full bg-gradient-to-r from-purple-500 to-pink-500 px-6 py-3 text-center text-sm font-thin text-white transition-all duration-200 hover:from-purple-600 hover:to-pink-600    w-fit mx-auto"
+                  >
+                    Get Your Cards Now
+                  </a>
                    <div className="mt-10 relative" aria-hidden="true" >
                       <div className="relative w-[50vw] mx-auto mt-5 py-5">
                         {/* Center main card image */}
@@ -72,6 +72,8 @@ export default function PricingPage() {
                   <p className="text-balance text-5xl font-thin tracking-tight text-white sm:text-6xl">
                     The Most Rewarding Crypto Card
                   </p>
+                  <p className="text-sm text-gray-400 mt-2">Experience a new standard in crypto spending. Our card rewards you more with every purchase, combining seamless usability with industry-leading benefits—making everyday transactions smarter, faster, and more valuable.</p>
+                  
                 </div>
 
                 <img src='/Card.png' alt='Get Your Card' className=' h-full sm:h-[80vh] mx-auto mt-10  rounded-xl shadow-lg' />

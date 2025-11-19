@@ -121,7 +121,7 @@ export default function LogoCloud() {
               src="/logo3.png"
               alt="Built on logo"
               className="h-6 w-auto ml-3"
-              style={{ filter: "grayscale(1) brightness(0.85) contrast(0.9)" }}
+              style={{ filter: "grayscale(3) brightness(0.65) contrast(0.9)" }}
             />
           </a>
         </div>

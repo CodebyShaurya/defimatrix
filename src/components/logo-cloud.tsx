@@ -117,7 +117,12 @@ export default function LogoCloud() {
         <div className="bg-black/60 flex items-center rounded-2xl px-4 py-2 mt-7">
           <span className="text-lg sm:text-2xl uppercase tracking-wide text-gray-400">Built on</span>
           <a href="https://www.near.org/" target="_blank" rel="noopener noreferrer">
-            <img src="/logo3.png" alt="Built on logo" className="h-6 w-auto ml-3" />
+            <img
+              src="/logo3.png"
+              alt="Built on logo"
+              className="h-6 w-auto ml-3"
+              style={{ filter: "grayscale(1) brightness(0.85) contrast(0.9)" }}
+            />
           </a>
         </div>
       </div>

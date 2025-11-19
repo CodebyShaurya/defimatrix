@@ -205,7 +205,9 @@ export default function Footer() {
           </div>
           {/* Copyright */}
           <div className="mt-10 text-center">
-            <p className="text-xs text-gray-600"><span className="font-bold">Disclaimer:</span>
+            <p className="text-sm text-gray-400 mt-2"><span className="font-bold">Disclaimer:</span></p>
+          
+            <p className="text-xs text-gray-600">
 Digital assets, cryptocurrencies, and tokenized products may be unregulated or subject to limited regulatory oversight in certain jurisdictions. The value of digital currencies can fluctuate significantly and may decrease as well as increase. You should carefully consider your risk tolerance before engaging in any digital asset transactions. Any gains may be subject to capital gains tax or other applicable taxes in your jurisdiction. Please seek independent legal, financial, or tax advice if you are unsure about your obligations.
 </p>
             <p className="text-sm text-gray-400 mt-2">© 2025 DefiMatrix, Inc. All rights reserved.</p>

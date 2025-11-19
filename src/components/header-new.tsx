@@ -212,7 +212,7 @@ const aboutUsItems = [
   },
   {
     name: "Build with DeFiGPT",
-    href: "https://app.defimatrix.io/",
+    href: "https://docs.google.com/forms/d/e/1FAIpQLSdOX0jlgPL6MwDgYApNRl1d8exeX3toD5zvSD9VAaOzQ-1-sw/viewform",
     description: "Integrate AI-powered DeFi tools and automate strategies using DeFiGPT technology.",
   },
   {

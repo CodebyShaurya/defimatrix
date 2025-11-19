@@ -85,10 +85,10 @@ export default function DocumentationPage() {
             Join our developer community on Discord or reach out to our support team for assistance with your integration.
           </p>
           <div className="flex gap-4 justify-center">
-            <a href="#" className="rounded-full bg-gradient-to-r from-pink-500 to-purple-600 px-6 py-3 text-sm font-semibold text-white hover:from-pink-600 hover:to-purple-700">
-              Join Discord
+            <a href="https://x.com/DeFiMatrixOS" className="rounded-full bg-gradient-to-r from-pink-500 to-purple-600 px-6 py-3 text-sm font-semibold text-white hover:from-pink-600 hover:to-purple-700">
+              Join X
             </a>
-            <a href="#" className="rounded-full bg-purple-900/50 px-6 py-3 text-sm font-semibold text-white ring-1 ring-purple-500/30 hover:bg-purple-800/50">
+            <a href="mailto:support@defimatrix.io" className="rounded-full bg-purple-900/50 px-6 py-3 text-sm font-semibold text-white ring-1 ring-purple-500/30 hover:bg-purple-800/50">
               Contact Support
             </a>
           </div>

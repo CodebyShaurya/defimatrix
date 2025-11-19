@@ -33,7 +33,7 @@ export default function SubscribePage() {
             Explore our flexible plans designed for individuals, teams, and enterprises. Each tier unlocks powerful features tailored to your DeFi needs.
           </p>
           <a 
-            href="https://www.defimatrix.io/pricing" 
+            href="/pricing" 
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block rounded-full bg-gradient-to-r from-pink-500 to-purple-600 px-8 py-4 text-lg font-semibold text-white hover:from-pink-600 hover:to-purple-700"

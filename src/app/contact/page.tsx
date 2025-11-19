@@ -86,7 +86,7 @@ const ContactPage = () => {
 
   return (
     <>
-      <div className="w-full pt-2">
+      <div className="w-full pt-0">
         <Header />
       </div>
       <main className="relative min-h-screen bg-black pt-20 text-white">

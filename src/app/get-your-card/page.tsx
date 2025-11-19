@@ -116,8 +116,7 @@ export default function PricingPage() {
           </div>
 
 
-    <Features />
-        {/* <EnterprisePlan /> */}
+          <Features />
 
         <WhyChooseSpedax />
 
@@ -125,10 +124,13 @@ export default function PricingPage() {
         <div className="flex items-center gap-8">
 
           <div className=" flex mx-auto overflow-hidden mt-5">
-            <div className="flex flex-col sm:flex-row items-center justify-center  gap-12 sm:gap-24">
+            <div className="flex flex-col md:flex-row items-center justify-center  gap-12 md:gap-16">
               {/* First set of logos */}
               <a href="https://emoney.io/" target="_blank" rel="noopener noreferrer">
                 <img src="/logo1.png" alt="Company 1" className="h-12 hover:opacity-80 transition-opacity" />
+              </a>
+              <a href="https://chainbased.io/" target="_blank" rel="noopener noreferrer">
+                <img src="partner-logos/chainbased.png" alt="Company 1" className="h-8 hover:opacity-80 transition-opacity" />
               </a>
               <a href="https://sumsub.com/" target="_blank" rel="noopener noreferrer">
                 <img src="/logo2.png" alt="Company 2" className="h-12 hover:opacity-80 transition-opacity" />

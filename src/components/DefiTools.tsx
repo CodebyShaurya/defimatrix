@@ -4,7 +4,7 @@ export default function DefiTools() {
   return (
     <div className="relative mx-auto overflow-hidden">
       {/* DeFi Tools Section */}
-      <section className="relative  w-full bg-[url('/defi-blue-bg.png')] bg-contain bg-center bg-no-repeat py-8 md:py-32">
+      <section className="relative  w-full bg-[url('/defi-blue-bg.png')] bg-contain bg-center bg-no-repeat pt-8 md:pt-16">
         <div className="relative z-20 mx-auto flex w-full max-w-7xl flex-col gap-8 px-4 lg:flex-row">
           {/* Left Column */}
           <div className="w-full px-6 pt-8 lg:w-1/3 lg:px-8">

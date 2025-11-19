@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const AiToolsSection = () => {
   return (
-    <section className="bg-black pt-12 md:pt-24">
+    <section className="bg-black pt-12 md:pt-16">
       <div className="mx-auto h-full max-w-7xl">
         <div className="relative flex h-full flex-col justify-around">
           <section className="relative">

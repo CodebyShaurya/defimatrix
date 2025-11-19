@@ -101,9 +101,9 @@ export default function Footer() {
        <footer className="bg-black text-white">
         <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8">
           {/* Navigation Section */}
-          <div className="mt-12 flex flex-col justify-between sm:flex-row">
+          <div className="mt-12 flex flex-col justify-between sm:flex-row items-stretch">
             {/* Header Section */}
-            <div className="mb-8">
+            <div className="mb-8 flex-1">
               <h2 className="mb-4 text-3xl font-semibold">
                 Defimatrix #1 Intent-Driven
                 <br />
@@ -149,7 +149,7 @@ export default function Footer() {
                 </form>
               </div>
             </div>
-            <div className="flex flex-col md:flex-row gap-12">
+            <div className="flex flex-col md:flex-row gap-12 flex-1">
               {/* Main Navigation */}
               <div className="space-y-4">
                 {navigation.main.map((item) => (
@@ -173,7 +173,7 @@ export default function Footer() {
               </div>
 
               {/* Markets / Price Links */}
-                <div className="flex flex-col space-y-3">
+                <div className="flex flex-col space-y-4">
                   <a href="https://coinmarketcap.com/currencies/bitcoin/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white">
                     Bitcoin Price
                   </a>

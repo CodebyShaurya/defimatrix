@@ -81,7 +81,7 @@ export const DisclaimerModal: React.FC<DisclaimerModalProps> = ({
                   >
                     Terms and Conditions
                   </a>
-                   and 
+                   {" "}and 
                   <a
                     href="https://www.defimatrix.io/privacy-policy"
                     target="_blank"

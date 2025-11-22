@@ -67,8 +67,8 @@ export const DisclaimerModal: React.FC<DisclaimerModalProps> = ({
               <div className="flex items-start space-x-2">
                 <input
                   type="checkbox"
-                  checked={checkboxes[3]}
-                  onChange={() => handleCheckboxChange(3)}
+                  checked={checkboxes[4]}
+                  onChange={() => handleCheckboxChange(4)}
                   className="h-5 w-5 text-pink-500 border-gray-300 rounded focus:ring-pink-500"
                 />
                 <p className="text-white/80 text-sm">

@@ -42,13 +42,29 @@ export const DisclaimerModal: React.FC<DisclaimerModalProps> = ({
             />
              User Disclaimer
           </DialogTitle>
-          <DialogDescription className="text-white/90 space-y-2">
-            <p className="text-sm leading-relaxed">
-              By accessing or using DeFiMatrix.io, I acknowledge and agree to the
-              following:
+          <DialogDescription className="text-white/90 space-y-4">
+            <p className="text-sm leading-relaxed text-center">
+              I hereby confirm your acceptance of, and continued agreement to, the
+              <a
+                href="https://www.defimatrix.io/terms-policy"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-pink-500 underline ml-1"
+              >
+                DeFiMatrix Terms and Conditions
+              </a>
+              {" "}and
+              <a
+                href="https://www.defimatrix.io/privacy-policy"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-pink-500 underline ml-1"
+              >
+                Privacy Policy
+              </a>.
             </p>
 
-            <div className="space-y-1 text-left">
+            <div className="space-y-4 text-left">
               {(
                 [
                   "I understand that DeFiMatrix.io operates solely as a bridge aggregator that routes transactions to third-party bridging protocols. DeFiMatrix.io does not at any point take custody of user funds.",
@@ -70,7 +86,7 @@ export const DisclaimerModal: React.FC<DisclaimerModalProps> = ({
             </div>
             <img src="/disclaimer.png" alt="Disclaimer Illustration" className="w-full my-4 rounded-xl h-36" />
 
-            <div className="pt-62 flex justify-center">
+            <div className="pt-2 flex justify-center">
               <button
                 onClick={onAgree}
                 disabled={!allChecked}

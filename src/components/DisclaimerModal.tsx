@@ -43,26 +43,7 @@ export const DisclaimerModal: React.FC<DisclaimerModalProps> = ({
              User Disclaimer
           </DialogTitle>
           <DialogDescription className="text-white/90 space-y-4">
-            <p className="text-sm leading-relaxed text-center">
-              I hereby confirm your acceptance of, and continued agreement to, the
-              <a
-                href="https://www.defimatrix.io/terms-policy"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-pink-500 underline ml-1"
-              >
-                DeFiMatrix Terms and Conditions
-              </a>
-              {" "}and
-              <a
-                href="https://www.defimatrix.io/privacy-policy"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-pink-500 underline ml-1"
-              >
-                Privacy Policy
-              </a>.
-            </p>
+       
 
             <div className="space-y-4 text-left">
               {(
@@ -70,7 +51,7 @@ export const DisclaimerModal: React.FC<DisclaimerModalProps> = ({
                   "I understand that DeFiMatrix.io operates solely as a bridge aggregator that routes transactions to third-party bridging protocols. DeFiMatrix.io does not at any point take custody of user funds.",
                   "I accept that any fees displayed for a selected route are estimates and may vary based on network conditions, third-party protocol fees, or market fluctuations.",
                   "I acknowledge that all bridging times shown are approximations. DeFiMatrix.io does not control the execution speed of external bridges or protocols, and actual transfer durations may occasionally exceed the estimates provided.",
-                  "I confirm that I am legally permitted to access and use DeFiMatrix.io under the laws and regulations of the jurisdiction in which I reside and am physically located.",
+                  "I confirm that I am legally permitted to access and use DeFiMatrix.io under the laws and regulations of the jurisdiction in which I reside and am physically located."
                 ] as const
               ).map((point, index) => (
                 <div key={index} className="flex items-start space-x-2">
@@ -83,6 +64,34 @@ export const DisclaimerModal: React.FC<DisclaimerModalProps> = ({
                   <p className="text-white/80 text-sm">{point}</p>
                 </div>
               ))}
+              <div className="flex items-start space-x-2">
+                <input
+                  type="checkbox"
+                  checked={checkboxes[3]}
+                  onChange={() => handleCheckboxChange(3)}
+                  className="h-5 w-5 text-pink-500 border-gray-300 rounded focus:ring-pink-500"
+                />
+                <p className="text-white/80 text-sm">
+                  I hereby confirm your acceptance of, and continued agreement to, the
+                  <a
+                    href="https://www.defimatrix.io/terms-policy"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-pink-500 underline ml-1"
+                  >
+                    Terms and Conditions
+                  </a>
+                   and 
+                  <a
+                    href="https://www.defimatrix.io/privacy-policy"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-pink-500 underline ml-1"
+                  >
+                    Privacy Policy
+                  </a>.
+                </p>
+              </div>
             </div>
             <img src="/disclaimer.png" alt="Disclaimer Illustration" className="w-full my-4 rounded-xl h-36" />
 

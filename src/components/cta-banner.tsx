@@ -1,4 +1,11 @@
+"use client";
+
+import { useState } from "react";
+import { DisclaimerModal } from "@/components/DisclaimerModal";
+
 export const CTABanner = () => {
+  const [disclaimerOpen, setDisclaimerOpen] = useState(false);
+
   return (
     <div className="mx-auto mt-16 max-w-7xl px-6 lg:px-8">
       <div className="relative mb-16 overflow-hidden rounded-[32px] bg-[#7B2E8E] px-8 py-16">
@@ -19,13 +26,12 @@ export const CTABanner = () => {
             world of decentralized finance.
           </p>
           <div className="flex w-full flex-wrap gap-4">
-            <a
-              href="https://app.defimatrix.io/"
-              target="_blank"
+            <button
+              onClick={() => setDisclaimerOpen(true)}
               className="w-full rounded-lg bg-white px-6 py-3 text-center font-semibold text-[#7B2E8E] transition-colors hover:bg-gray-100 sm:w-max"
             >
               Launch App
-            </a>
+            </button>
             <a
               href="https://defimatrix-new-docs.vercel.app/docs/Introduction/introduction"
               target="_blank"
@@ -36,6 +42,15 @@ export const CTABanner = () => {
           </div>
         </div>
       </div>
+
+      <DisclaimerModal
+        isOpen={disclaimerOpen}
+        onClose={() => setDisclaimerOpen(false)}
+        onAgree={() => {
+          setDisclaimerOpen(false);
+          window.open("https://app.defimatrix.io/", "_blank");
+        }}
+      />
     </div>
   );
 };

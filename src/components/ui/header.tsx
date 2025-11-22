@@ -6,6 +6,7 @@ import Image from "next/image";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { Dialog, Popover, Transition } from "@headlessui/react";
 import { Button } from "@/components/ui/button";
+import { DisclaimerModal } from "@/components/DisclaimerModal";
 
 // Updated navigation links
 const mainNavigation = [
@@ -28,6 +29,7 @@ const mainNavigation = [
 
 export function Header({ transparent = false }: { transparent?: boolean }) {
   const [isOpen, setIsOpen] = React.useState(false);
+  const [disclaimerOpen, setDisclaimerOpen] = React.useState(false);
 
   return (
     <header className={`sticky top-0 z-40 w-full ${transparent ? "" : "bg-black"}`}>
@@ -76,11 +78,9 @@ export function Header({ transparent = false }: { transparent?: boolean }) {
             {/* Launch App button */}
             <div className="hidden lg:block">
               {/* <Link href="/defigpt">*/}
-              <Link href="https://app.defimatrix.io/ " target="_blank">
-                <button className="rounded-full border border-white/20 bg-black/50 px-6 py-3 text-base font-medium tracking-wider text-white hover:bg-black/70">
-                  Launch App
-                </button>
-              </Link>
+              <button onClick={() => setDisclaimerOpen(true)} className="rounded-full border border-white/20 bg-black/50 px-6 py-3 text-base font-medium tracking-wider text-white hover:bg-black/70">
+                Launch App
+              </button>
             </div>
           </div>
         </div>
@@ -127,17 +127,30 @@ export function Header({ transparent = false }: { transparent?: boolean }) {
                   ))}
                 </div>
                 <div>
-                  <Link href="https://app.defimatrix.io/ " target="_blank">
-                    <button className="rounded-full border border-white/20 bg-black/50 px-6 py-3 text-base font-medium tracking-wider text-white hover:bg-black/70">
-                      Launch App
-                    </button>
-                  </Link>
+                  <button
+                    onClick={() => {
+                      setIsOpen(false);
+                      setDisclaimerOpen(true);
+                    }}
+                    className="rounded-full border border-white/20 bg-black/50 px-6 py-3 text-base font-medium tracking-wider text-white hover:bg-black/70"
+                  >
+                    Launch App
+                  </button>
                 </div>
               </div>
             </div>
           </Dialog.Panel>
         </div>
       </Dialog>
+
+      <DisclaimerModal
+        isOpen={disclaimerOpen}
+        onClose={() => setDisclaimerOpen(false)}
+        onAgree={() => {
+          setDisclaimerOpen(false);
+          window.open("https://app.defimatrix.io/", "_blank");
+        }}
+      />
     </header>
   );
 }

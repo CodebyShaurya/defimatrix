@@ -1,9 +1,11 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import Header from "@/components/header-new";
 import Footer from "@/components/Footer";
 import Link from "next/link";
+import { DisclaimerModal } from "@/components/DisclaimerModal";
 import {
   ArrowRight,
   Brain,
@@ -25,6 +27,8 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 const AboutUsPage = () => {
+  const [disclaimerOpen, setDisclaimerOpen] = useState(false);
+
   const fadeIn = {
     initial: { opacity: 0, y: 20 },
     animate: {
@@ -460,14 +464,13 @@ const AboutUsPage = () => {
             </p>
 
             <div className="flex flex-wrap justify-center gap-4">
-              <Link
-                href="https://app.defimatrix.io/"
-                target="_blank"
+              <button
+                onClick={() => setDisclaimerOpen(true)}
                 className="group flex items-center space-x-2 rounded-full bg-[#C450D5] px-6 py-3 text-white transition-all hover:bg-[#C450D5]/90"
               >
                 <span>🚀 Launch App</span>
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </Link>
+              </button>
               <Link
                 href="/contact"
                 className="group flex items-center space-x-2 rounded-full bg-[#1A1F2F] px-6 py-3 text-white transition-all hover:bg-[#1A1F2F]/80"
@@ -487,6 +490,15 @@ const AboutUsPage = () => {
         </div>
       </main>
       <Footer />
+
+      <DisclaimerModal
+        isOpen={disclaimerOpen}
+        onClose={() => setDisclaimerOpen(false)}
+        onAgree={() => {
+          setDisclaimerOpen(false);
+          window.open("https://app.defimatrix.io/", "_blank");
+        }}
+      />
     </>
   );
 };

@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { MotionValue, motion, useScroll, useTransform } from "framer-motion";
+import { DisclaimerModal } from "@/components/DisclaimerModal";
 import {
   IconBrightnessDown,
   IconBrightnessUp,
@@ -44,6 +45,7 @@ export const MacbookScroll = ({
   });
 
   const [isMobile, setIsMobile] = useState(false);
+  const [disclaimerOpen, setDisclaimerOpen] = useState(false);
 
   useEffect(() => {
     if (window && window.innerWidth < 768) {
@@ -142,7 +144,7 @@ export const MacbookScroll = ({
                     the journey.
                   </p>
                   <div className="mt-10 flex items-center justify-center gap-x-6">
-                    <button className="relative p-[3px]">
+                    <button onClick={() => setDisclaimerOpen(true)} className="relative p-[3px]">
                       <div className="absolute inset-0 rounded-lg bg-gradient-to-b from-indigo-400 to-fuchsia-400" />
                       <div className="group relative rounded bg-black px-8 py-3.5 text-xs font-semibold uppercase text-white transition duration-200 hover:bg-transparent">
                         Launch App
@@ -184,6 +186,15 @@ export const MacbookScroll = ({
           </div>
         </div>
       </div>
+
+      <DisclaimerModal
+        isOpen={disclaimerOpen}
+        onClose={() => setDisclaimerOpen(false)}
+        onAgree={() => {
+          setDisclaimerOpen(false);
+          window.open("https://app.defimatrix.io/", "_blank");
+        }}
+      />
     </>
   );
 };

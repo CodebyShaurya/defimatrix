@@ -3,6 +3,7 @@
 import { useState, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { DisclaimerModal } from "@/components/DisclaimerModal";
 import { Dialog, DialogPanel, Popover, PopoverButton, PopoverGroup, PopoverPanel } from "@headlessui/react";
 import {
   ArrowPathIcon,
@@ -239,6 +240,7 @@ export default function HeaderNew() {
   const [openBanking, setOpenBanking] = useState(false);
   const [openBlockchain, setOpenBlockchain] = useState(false);
   const [openAbout, setOpenAbout] = useState(false);
+  const [disclaimerOpen, setDisclaimerOpen] = useState(false);
   const deFiCloseRef = useRef<any>(null);
   const bankingCloseRef = useRef<any>(null);
   const blockchainCloseRef = useRef<any>(null);
@@ -606,12 +608,12 @@ export default function HeaderNew() {
               </button>
             </div>
             <div className=" hidden lg:flex items-center gap-x-6">
-                    <Link href="https://app.defimatrix.io/" target="_blank" className="relative p-[3px]">
+                    <button onClick={() => setDisclaimerOpen(true)} className="relative p-[3px]">
                       <div className="absolute inset-0 rounded-2xl bg-gradient-to-b from-purple-400 to-pink-400" />
                       <div className="group relative rounded-2xl bg-black px-5 py-2 text-xs font-semibold uppercase text-white transition duration-200 hover:bg-transparent">
                         Launch App
                       </div>
-                    </Link>
+                    </button>
                   </div>
 
             {/* <div className="hidden lg:flex lg:items-center lg:gap-x-4">
@@ -723,18 +725,30 @@ export default function HeaderNew() {
                 </div>
                 <div className="space-y-2 py-6">
                   
-                  <a
-                    href="https://app.defimatrix.io/"
-                    className="-mx-3 block rounded-lg bg-white px-3 py-2.5 text-center text-base/7 font-semibold text-purple-900 hover:bg-purple-100 focus:outline-none focus:ring-0"
+                  <button
+                    onClick={() => {
+                      setMobileMenuOpen(false);
+                      setDisclaimerOpen(true);
+                    }}
+                    className="-mx-3 block w-full rounded-lg bg-white px-3 py-2.5 text-center text-base/7 font-semibold text-purple-900 hover:bg-purple-100 focus:outline-none focus:ring-0"
                   >
                     Launch App
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
           </div>
         </DialogPanel>
       </Dialog>
+
+      <DisclaimerModal
+        isOpen={disclaimerOpen}
+        onClose={() => setDisclaimerOpen(false)}
+        onAgree={() => {
+          setDisclaimerOpen(false);
+          window.open("https://app.defimatrix.io/", "_blank");
+        }}
+      />
     </header>
   );
 }
